@@ -93,7 +93,7 @@ public class LaunchFlower : MonoBehaviour {
 			
 		if(Input.GetMouseButtonDown(0) && !isLaunched && !isBacking && !isHooked && canLaunch)
 		{
-//			this.GetComponent<CircleCollider2D> ().enabled = true;
+			this.GetComponent<CircleCollider2D> ().enabled = true;
 			liane.SetActive (true);
 			lianeActive = true;
 			bodyFlower.velocity = mousePos.normalized * flowerSpeed * Time.fixedDeltaTime;
@@ -134,7 +134,7 @@ public class LaunchFlower : MonoBehaviour {
 		bodyFlower.velocity = dirToPlace.normalized * flowerSpeedBack * Time.fixedDeltaTime;
 		if(Vector2.Distance(player.transform.position, transform.position)< 10f)
 		{
-//			this.GetComponent<CircleCollider2D> ().enabled = false;
+			this.GetComponent<CircleCollider2D> ().enabled = false;
 			liane.SetActive (false);
 			lianeActive = false;
 			isBacking = false;
