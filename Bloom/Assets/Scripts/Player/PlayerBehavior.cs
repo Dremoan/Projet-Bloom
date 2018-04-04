@@ -135,5 +135,17 @@ public class PlayerBehavior : MonoBehaviour {
 		body.velocity = move.normalized * actualSpeed;
 	}
 
+	void CancelMovements()
+	{
+		body.velocity = Vector2.zero;
+		isMoving = false;
+		canJump = false;
+		canMove = false;
+	}
 
+	void EnableMovements()
+	{
+		canJump = true;
+		canMove = true;
+	}
 }
