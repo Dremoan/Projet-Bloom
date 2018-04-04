@@ -4404,12 +4404,12 @@ Prefab:
     - target: {fileID: 199366916968987038, guid: 8158c9283713e2245815b036ebfdeaf3,
         type: 2}
       propertyPath: m_SortingLayerID
-      value: 1208666273
+      value: -1449625567
       objectReference: {fileID: 0}
     - target: {fileID: 199366916968987038, guid: 8158c9283713e2245815b036ebfdeaf3,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4379684964848150, guid: 8158c9283713e2245815b036ebfdeaf3, type: 2}
       propertyPath: m_LocalPosition.x
@@ -6935,7 +6935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2049051282}
   m_Layer: 0
-  m_Name: Particules
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
