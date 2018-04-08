@@ -25,9 +25,15 @@ public class LaunchFlower : MonoBehaviour {
 	private bool isBacking = false;
 	private bool isHooked = false;
 	private bool onWater = false;
-	public bool canLaunch = true;
+	public bool canLaunch = false;
 	public bool hitGoat = false;
 	public bool holdsWater = false;
+
+
+	void Start()
+	{
+		
+	}
 
 	void Update () 
 	{
@@ -93,6 +99,7 @@ public class LaunchFlower : MonoBehaviour {
 			
 		if(Input.GetMouseButtonDown(0) && !isLaunched && !isBacking && !isHooked && canLaunch)
 		{
+			canLaunch = false;
 			this.GetComponent<CircleCollider2D> ().enabled = true;
 			liane.SetActive (true);
 			lianeActive = true;
@@ -119,7 +126,8 @@ public class LaunchFlower : MonoBehaviour {
 
 	IEnumerator lianeSprite()
 	{
-		yield return new WaitForSeconds (0.05f);
+		liane.GetComponent<SpriteRenderer> ().size = Vector2.zero;
+		yield return new WaitForSeconds (0.1f);
 		Vector2 dirToFlower = lianePlace.transform.position - transform.position;
 		float rot_Z = Mathf.Atan2 (dirToFlower.y, dirToFlower.x) * Mathf.Rad2Deg;
 		liane.transform.rotation = Quaternion.Euler (0f, 0f, rot_Z - 90f);
@@ -132,8 +140,9 @@ public class LaunchFlower : MonoBehaviour {
 	{
 		Vector2 dirToPlace = flowerPlace.transform.position - transform.position;
 		bodyFlower.velocity = dirToPlace.normalized * flowerSpeedBack * Time.fixedDeltaTime;
-		if(Vector2.Distance(player.transform.position, transform.position)< 10f)
+		if(Vector2.Distance(player.transform.position, transform.position)< 20f)
 		{
+			canLaunch = true;
 			this.GetComponent<CircleCollider2D> ().enabled = false;
 			liane.SetActive (false);
 			lianeActive = false;

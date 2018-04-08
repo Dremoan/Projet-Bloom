@@ -22,6 +22,7 @@ public class PlayerBehavior : MonoBehaviour {
 	private bool holdsWater;
 
 	public Transform player;
+	public Transform holdingPlayer;
 	public GameObject eau;
 	public LaunchFlower Fleur;
 	public Rigidbody2D body;

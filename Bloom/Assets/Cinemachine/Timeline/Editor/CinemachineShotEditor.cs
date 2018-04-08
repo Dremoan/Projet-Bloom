@@ -12,12 +12,12 @@ namespace Cinemachine.Timeline
         private static readonly GUIContent kVirtualCameraLabel
             = new GUIContent("Virtual Camera", "The virtual camera to use for this shot");
 
-//        private void OnEnable()
-//        {
-//            if (serializedObject != null)
-//                mVirtualCameraProperty = serializedObject.FindProperty("VirtualCamera");
-//        }
-//
+        private void OnEnable()
+        {
+            if (serializedObject != null)
+                mVirtualCameraProperty = serializedObject.FindProperty("VirtualCamera");
+        }
+
         private void OnDisable()
         {
             DestroyComponentEditors();

@@ -1,5 +1,0 @@
-Cactus : Bonjour toi !
-Fleur : Bonjour !
-Fleur : J'ai faim.
-Cactus : Moi ça va!
-Fleur : Trouve la clé !
