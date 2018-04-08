@@ -7,6 +7,7 @@ public class SlingShot : MonoBehaviour {
 	public GoatInSand goatScript;
 	public GameObject flower;
 	public GameObject liane;
+	public GameObject lianeFlower;
 	public GameObject flowerTarget;
 	private bool lianeActive;
 
@@ -32,6 +33,7 @@ public class SlingShot : MonoBehaviour {
 	void DrawLine()
 	{
 		liane.SetActive (true);
+		lianeFlower.SetActive (false);
 		lianeActive = true;
 
 		if (lianeActive) 

@@ -26,7 +26,7 @@ public class DoorScript : MonoBehaviour {
 		}
 		else if(interactingZone.GetComponent<InteractingScript>().canInteract == false)
 		{
-			isNearDoor = true;
+			isNearDoor = false;
 		}
 
 		if(isNearDoor && player.GetComponent<PlayerBehavior>().pressingA && player.GetComponent<PlayerBehavior> ().hasKey)

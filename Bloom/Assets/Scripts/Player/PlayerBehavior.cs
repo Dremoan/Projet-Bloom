@@ -22,6 +22,7 @@ public class PlayerBehavior : MonoBehaviour {
 	private bool holdsWater;
 
 	public Transform player;
+	public Transform holdingPlayer;
 	public GameObject eau;
 	public LaunchFlower Fleur;
 	public Rigidbody2D body;
@@ -135,5 +136,17 @@ public class PlayerBehavior : MonoBehaviour {
 		body.velocity = move.normalized * actualSpeed;
 	}
 
+	void CancelMovements()
+	{
+		body.velocity = Vector2.zero;
+		isMoving = false;
+		canJump = false;
+		canMove = false;
+	}
 
+	void EnableMovements()
+	{
+		canJump = true;
+		canMove = true;
+	}
 }

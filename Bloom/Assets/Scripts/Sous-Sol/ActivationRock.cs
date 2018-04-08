@@ -7,18 +7,19 @@ public class ActivationRock : MonoBehaviour {
 
 	public GameObject keyRock;
 	public GameObject keyRockPlace;
+	public Animator anim;
 	public bool isActive = false;
 	private bool hasShake;
 	// Use this for initialization
 	void Start () 
 	{
-
+		
 	}
 
 	// Update is called once per frame
 	void Update () 
 	{
-		
+		anim.SetBool ("IsActive", isActive);
 	}
 
 	void OnTriggerEnter2D(Collider2D coll)

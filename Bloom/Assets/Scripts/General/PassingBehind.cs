@@ -7,6 +7,7 @@ public class PassingBehind : MonoBehaviour {
 	public SpriteRenderer ObjectToHide;
 	public SpriteRenderer ObjectToHide2;
 	public SpriteRenderer ObjectToHide3;
+	public ParticleSystemRenderer marcheSpit;
 	public int layerNumber;
 	private bool isBehind = false;
 	// Use this for initialization
@@ -26,6 +27,7 @@ public class PassingBehind : MonoBehaviour {
 	{
 		if (coll.gameObject.tag == "OrderLayer" && !isBehind)
 		{
+			marcheSpit.sortingOrder = ObjectToHide.sortingOrder - layerNumber;
 			ObjectToHide.sortingOrder = ObjectToHide.sortingOrder - layerNumber;
 			ObjectToHide2.sortingOrder = ObjectToHide.sortingOrder +1;
 			ObjectToHide3.sortingOrder = ObjectToHide.sortingOrder;
@@ -36,6 +38,7 @@ public class PassingBehind : MonoBehaviour {
 	{
 		if (coll.gameObject.tag == "OrderLayer" && isBehind)
 		{
+			marcheSpit.sortingOrder = ObjectToHide.sortingOrder + layerNumber;
 			ObjectToHide.sortingOrder = ObjectToHide.sortingOrder + layerNumber;
 			ObjectToHide2.sortingOrder = ObjectToHide.sortingOrder + 1;
 			ObjectToHide3.sortingOrder = ObjectToHide.sortingOrder +1;

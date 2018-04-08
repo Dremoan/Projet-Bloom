@@ -9,7 +9,9 @@ public class GoingUp : MonoBehaviour {
 	public GameObject player;
 	public GameObject flower;
 	public GameObject shadow;
+	public GameObject liane;
 	public GameObject goingDown;
+	public ParticleSystemRenderer marcheSpit;
 	public Collider2D highPlatform;
 	public Collider2D ladderCollider;
 	public Collider2D levelCollider;
@@ -38,7 +40,9 @@ public class GoingUp : MonoBehaviour {
 
 	IEnumerator ActiveCollider()
 	{
+		marcheSpit.sortingOrder += 8;
 		shadow.GetComponent<SpriteRenderer> ().sortingOrder += 8;
+		liane.GetComponent<SpriteRenderer> ().sortingOrder += 8;
 		player.GetComponent<SpriteRenderer> ().sortingOrder += 8;
 		flower.GetComponent<SpriteRenderer> ().sortingOrder += 8;
 		yield return new WaitForSeconds (waitTime);
