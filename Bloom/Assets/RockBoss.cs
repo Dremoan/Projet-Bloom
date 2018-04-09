@@ -30,7 +30,6 @@ public class RockBoss : MonoBehaviour {
 		{
 			countToReload += Time.deltaTime;
 		}
-		Debug.Log (countToReload);
 
 		if (countToReload >= 10) 
 		{
@@ -64,10 +63,10 @@ public class RockBoss : MonoBehaviour {
 		targetSprite.SetActive (true);
 		DropManagerComponent.SpawnDrop (canon.transform.position, Mathf.Atan2 (dirToPlayer.y, dirToPlayer.x) * Mathf.Rad2Deg);
 		yield return new WaitForSeconds (0.5f);
-		explosionArea.SetActive (true);
+		explosionArea.GetComponent<CircleCollider2D> ().enabled = true;
 		explosionArea.transform.position = targetSprite.transform.position;
-		yield return new WaitForSeconds (0.1f);
-		explosionArea.SetActive (false);
+		yield return new WaitForSeconds (0.2f);
+		explosionArea.GetComponent<CircleCollider2D> ().enabled =false;
 		targetSprite.SetActive (false);
 		yield return new WaitForSeconds (0.5f);
 		canLaunchRock = true;

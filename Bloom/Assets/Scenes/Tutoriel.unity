@@ -613,13 +613,14 @@ GameObject:
   - component: {fileID: 329432072}
   - component: {fileID: 329432073}
   - component: {fileID: 329432075}
+  - component: {fileID: 329432074}
   m_Layer: 0
   m_Name: ExplosionArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &329432072
 Transform:
   m_ObjectHideFlags: 0
@@ -677,13 +678,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &329432074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 329432071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728096a3aaeb5c744b2dd4f05b1997d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1714321263}
+  repulseForce: 50000
 --- !u!58 &329432075
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 329432071}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -701,11 +715,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4341082943556464, guid: bbb9b95fea796a1409b3ccd95baa2242, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1757.2
+      value: 1761
       objectReference: {fileID: 0}
     - target: {fileID: 4341082943556464, guid: bbb9b95fea796a1409b3ccd95baa2242, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -873
+      value: -925
       objectReference: {fileID: 0}
     - target: {fileID: 4341082943556464, guid: bbb9b95fea796a1409b3ccd95baa2242, type: 2}
       propertyPath: m_LocalPosition.z
@@ -758,6 +772,16 @@ Prefab:
       propertyPath: shootSpeed
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 114430866608551110, guid: bbb9b95fea796a1409b3ccd95baa2242,
+        type: 2}
+      propertyPath: Fleur
+      value: 
+      objectReference: {fileID: 1687808581}
+    - target: {fileID: 114430866608551110, guid: bbb9b95fea796a1409b3ccd95baa2242,
+        type: 2}
+      propertyPath: holdingPlayer
+      value: 
+      objectReference: {fileID: 825758561}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bbb9b95fea796a1409b3ccd95baa2242, type: 2}
   m_IsPrefabParent: 0
@@ -1048,7 +1072,7 @@ GameObject:
   - component: {fileID: 530097941}
   - component: {fileID: 530097942}
   m_Layer: 0
-  m_Name: InteractingZone
+  m_Name: DeadTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1070,14 +1094,14 @@ MonoBehaviour:
   showWhenInteractionIsPossible: []
   interactionKey: 101
   checkIfColliderHasTag: 
-  callbackScriptBeforeTalk: {fileID: 0}
+  callbackScriptBeforeTalk: {fileID: 1714321267}
   callbackFunctionBeforeTalk: CancelMovements
   lineToStart: 1
   lineToBreak: -1
   txtToParse: {fileID: 0}
-  callbackScriptAfterTalk: {fileID: 0}
+  callbackScriptAfterTalk: {fileID: 1714321267}
   callbackFunctionAfterTalk: EnableMovements
-  happenOnlyOnce: 0
+  happenOnlyOnce: 1
   alreadyHappened: 0
   triggerEnter: 1
   triggerExit: 0
@@ -1160,6 +1184,26 @@ Prefab:
       propertyPath: flowerTarget
       value: 
       objectReference: {fileID: 1589511420}
+    - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
+        type: 2}
+      propertyPath: flowerPlace
+      value: 
+      objectReference: {fileID: 1001588376}
+    - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
+        type: 2}
+      propertyPath: lianePlace
+      value: 
+      objectReference: {fileID: 719526348}
+    - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
+        type: 2}
+      propertyPath: bodyPlayer
+      value: 
+      objectReference: {fileID: 1714321269}
+    - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1714321263}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7f4c8ecab02a04439819a6f9ecd3576, type: 2}
   m_IsPrefabParent: 0
@@ -2064,7 +2108,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1860967596437374, guid: b7f4c8ecab02a04439819a6f9ecd3576, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
         type: 2}
@@ -2620,6 +2664,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1860967596437374, guid: b7f4c8ecab02a04439819a6f9ecd3576,
     type: 2}
   m_PrefabInternal: {fileID: 1209037652}
+--- !u!114 &1687808581 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
+    type: 2}
+  m_PrefabInternal: {fileID: 1209037652}
+  m_Script: {fileID: 11500000, guid: c6b502528d33b2d499f7019ef34376df, type: 3}
 --- !u!1 &1695995402
 GameObject:
   m_ObjectHideFlags: 0
@@ -2741,6 +2791,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1517652991125184, guid: bbb9b95fea796a1409b3ccd95baa2242,
     type: 2}
   m_PrefabInternal: {fileID: 351968144}
+--- !u!114 &1714321267 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114430866608551110, guid: bbb9b95fea796a1409b3ccd95baa2242,
+    type: 2}
+  m_PrefabInternal: {fileID: 351968144}
+  m_Script: {fileID: 11500000, guid: d8a7f45ce4e568049ade62fadb3fc581, type: 3}
 --- !u!50 &1714321269 stripped
 Rigidbody2D:
   m_PrefabParentObject: {fileID: 50670324831390516, guid: bbb9b95fea796a1409b3ccd95baa2242,
