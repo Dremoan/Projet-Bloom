@@ -15,73 +15,33 @@ public class LaunchFlower : MonoBehaviour {
 	public Rigidbody2D bodyPlayer;
 	public float flowerSpeed = 10f;
 	public float flowerSpeedBack = 20f;
-	public float maxDistanceToFlower = 1f;
+	public float maxDistanceToFlower = 125f;
+	public float maxDistanceToFlowerOffset = 25f;
 	public float hookTime = 2f;
-
-	private Vector2 mousePos;
-	private GameObject hookedThing;
-	[HideInInspector] public bool isLaunched = false;
-	private bool lianeActive = false;
-	private bool isBacking = false;
-	private bool isHooked = false;
-	private bool onWater = false;
 	public bool canLaunch = false;
 	public bool hitGoat = false;
 	public bool holdsWater = false;
+	[HideInInspector] public bool isLaunched = false;
+	[HideInInspector] public bool isBacking = false;
+	[HideInInspector] public bool isHooked = false;
+
+	[HideInInspector] public bool onBlockingRock = false;
+	[HideInInspector] public bool onGrapplinSpot = false;
+	[HideInInspector] public bool onLaunchingRock = false;
 
 
-	void Start()
-	{
-		
-	}
+	private Vector2 mousePos;
+	private GameObject hookedThing;
+	private bool lianeActive = false;
+	private bool onWater = false;
+
 
 	void Update () 
 	{
 		mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition) - transform.position;
-
-
-		if(!isLaunched && !isBacking && !isHooked)
-		{
-			transform.position = flowerPlace.position;
-		}
-
-
-
-		if(isBacking)
-		{
-			Back ();
-		}
-
-
-
-		if(maxDistanceToFlower < Vector2.Distance(player.transform.position, transform.position))
-		{
-			isLaunched = false;
-			isBacking = true;
-		}
-
-
-		if(hookedThing!= null && isHooked)
-		{
-			HookEnemy (hookedThing);
-		}
-
-
-
-		if(Vector2.Distance(player.transform.position, transform.position) > maxDistanceToFlower && isHooked)
-		{
-			isLaunched = false;
-			isBacking = true;
-		}
-
-		if(onWater && Input.GetMouseButtonDown(1))
-		{
-			onWater = false;
-			holdsWater = true;
-			isHooked = false;
-			isBacking = true;
-		}
-
+		 
+		OnWater ();
+		FlowerLaunch ();
 		Launch ();
 		Animations ();
 	}
@@ -114,7 +74,55 @@ public class LaunchFlower : MonoBehaviour {
 	}
 		
 
+	private void FlowerLaunch()
+	{
+		if(!isLaunched && !isBacking && !isHooked)
+		{
+			transform.position = flowerPlace.position;
+		}
 
+
+
+		if(isBacking)
+		{
+			Back ();
+		}
+
+
+
+		if(maxDistanceToFlower < Vector2.Distance(player.transform.position, transform.position))
+		{
+			isLaunched = false;
+			isBacking = true;
+		}
+
+
+		if(hookedThing!= null && isHooked)
+		{
+			HookEnemy (hookedThing);
+		}
+
+
+
+		if(Vector2.Distance(player.transform.position, transform.position) > maxDistanceToFlower + maxDistanceToFlowerOffset && isHooked)
+		{
+			isLaunched = false;
+			isHooked = false;
+			isBacking = true;
+		}
+	}
+
+
+	private void OnWater()
+	{
+		if(onWater && Input.GetMouseButtonDown(1))
+		{
+			onWater = false;
+			holdsWater = true;
+			isHooked = false;
+			isBacking = true;
+		}
+	}
 
 
 	IEnumerator hookDelay()
@@ -123,6 +131,7 @@ public class LaunchFlower : MonoBehaviour {
 		isHooked = false;
 		isBacking = true;
 	}
+
 
 	IEnumerator lianeSprite()
 	{
@@ -133,8 +142,7 @@ public class LaunchFlower : MonoBehaviour {
 		liane.transform.rotation = Quaternion.Euler (0f, 0f, rot_Z - 90f);
 		liane.GetComponent<SpriteRenderer> ().size = new Vector2 (3, Vector2.Distance (lianePlace.transform.position, transform.position));
 	}
-
-
+		
 
 	public void Back()
 	{
@@ -153,15 +161,20 @@ public class LaunchFlower : MonoBehaviour {
 	}
 
 
-
-
-
 	public void HookEnemy(GameObject hookThing)
 	{
 		transform.position = hookThing.transform.position;
 	}
+		
 
-
+	void Animations()
+	{
+		animFlower.SetFloat ("Horizontal", Input.GetAxisRaw ("Horizontal"));
+		animFlower.SetFloat ("Vertical", Input.GetAxisRaw ("Vertical"));
+		animFlower.SetFloat ("LastMoveX", player.GetComponent<PlayerBehavior> ().lastMove.x);
+		animFlower.SetFloat ("LastMoveY", player.GetComponent<PlayerBehavior> ().lastMove.y);
+		animFlower.SetBool ("IsMoving", player.GetComponent<PlayerBehavior>().isMoving);
+	}
 
 
 	void OnTriggerEnter2D(Collider2D coll)
@@ -181,19 +194,25 @@ public class LaunchFlower : MonoBehaviour {
 			isHooked = false;
 			isLaunched = false;
 		}
+		if(coll.gameObject.tag == "BlockingRock")
+		{
+			isHooked = true;
+			hookedThing = coll.gameObject;
+			onBlockingRock = true;
+		}
+		if(coll.gameObject.tag == "GrapplinSpot")
+		{
+			isHooked = true;
+			hookedThing = coll.gameObject;
+			onGrapplinSpot = true;
+		}
+		if(coll.gameObject.tag == "RockToLaunch")
+		{
+			isHooked = true;
+			hookedThing = coll.gameObject;
+			onLaunchingRock = true;
+		}
 	}
+		
 
-
-
-
-
-
-	void Animations()
-	{
-		animFlower.SetFloat ("Horizontal", Input.GetAxisRaw ("Horizontal"));
-		animFlower.SetFloat ("Vertical", Input.GetAxisRaw ("Vertical"));
-		animFlower.SetFloat ("LastMoveX", player.GetComponent<PlayerBehavior> ().lastMove.x);
-		animFlower.SetFloat ("LastMoveY", player.GetComponent<PlayerBehavior> ().lastMove.y);
-		animFlower.SetBool ("IsMoving", player.GetComponent<PlayerBehavior>().isMoving);
-	}
 }

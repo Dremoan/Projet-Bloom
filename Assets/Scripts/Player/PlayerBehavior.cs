@@ -103,8 +103,7 @@ public class PlayerBehavior : MonoBehaviour {
 			eau.SetActive (true);
 			if(Input.GetMouseButtonDown(1))
 			{
-				
-				DropManagerComponent.SpawnDrop (Fleur.transform.position, Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg);
+				DropManagerComponent.SpawnDropWater (Fleur.transform.position, Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg);
 				Fleur.holdsWater = false;
 			}
 		}
@@ -136,7 +135,7 @@ public class PlayerBehavior : MonoBehaviour {
 		body.velocity = move.normalized * actualSpeed;
 	}
 
-	void CancelMovements()
+	public void CancelMovements()
 	{
 		body.velocity = Vector2.zero;
 		isMoving = false;
@@ -144,7 +143,7 @@ public class PlayerBehavior : MonoBehaviour {
 		canMove = false;
 	}
 
-	void EnableMovements()
+	public void EnableMovements()
 	{
 		canJump = true;
 		canMove = true;

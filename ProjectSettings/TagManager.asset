@@ -14,6 +14,9 @@ TagManager:
   - HiddenObject
   - GoingUp
   - Activation
+  - BlockingRock
+  - GrapplinSpot
+  - RockToLaunch
   layers:
   - Default
   - TransparentFX

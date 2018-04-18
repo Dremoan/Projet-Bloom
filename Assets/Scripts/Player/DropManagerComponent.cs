@@ -6,7 +6,8 @@ public class DropManagerComponent : MonoBehaviour {
 
 
 	public static DropManagerComponent globalDropManager;
-	public Projectile[] projectilePool;
+	public Projectile[] WaterProjectilePool;
+	public Projectile[] RockProjectilePool;
 
 	void Start () 
 	{
@@ -14,16 +15,31 @@ public class DropManagerComponent : MonoBehaviour {
 	}
 
 
-	public static void SpawnDrop(Vector3 position, float rot_Z)
+	public static void SpawnDropWater(Vector3 position, float rot_Z)
 	{
-		for(int i = 0; i < globalDropManager.projectilePool.Length; i++)
+		for(int i = 0; i < globalDropManager.WaterProjectilePool.Length; i++)
 		{
-			if(globalDropManager.projectilePool[i].dispo)
+			if(globalDropManager.WaterProjectilePool[i].dispo)
 			{
-				globalDropManager.projectilePool[i].transform.position = position;
-				globalDropManager.projectilePool [i].transform.rotation = Quaternion.Euler (0, 0, rot_Z);
-				globalDropManager.projectilePool [i].gameObject.SetActive (true);
-				globalDropManager.projectilePool [i].dispo = false;
+				globalDropManager.WaterProjectilePool[i].transform.position = position;
+				globalDropManager.WaterProjectilePool [i].transform.rotation = Quaternion.Euler (0, 0, rot_Z);
+				globalDropManager.WaterProjectilePool [i].gameObject.SetActive (true);
+				globalDropManager.WaterProjectilePool [i].dispo = false;
+				return;
+			}
+		}
+	}
+
+	public static void SpawnDropRock(Vector3 position, float rot_Z)
+	{
+		for(int i = 0; i < globalDropManager.RockProjectilePool.Length; i++)
+		{
+			if(globalDropManager.RockProjectilePool[i].dispo)
+			{
+				globalDropManager.RockProjectilePool[i].transform.position = position;
+				globalDropManager.RockProjectilePool [i].transform.rotation = Quaternion.Euler (0, 0, rot_Z);
+				globalDropManager.RockProjectilePool [i].gameObject.SetActive (true);
+				globalDropManager.RockProjectilePool [i].dispo = false;
 				return;
 			}
 		}

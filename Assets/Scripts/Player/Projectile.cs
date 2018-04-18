@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour {
+public class Projectile : MonoBehaviour 
+	{
 
 	public float shootSpeed;
 	public Rigidbody2D projectileBody;
@@ -11,20 +12,12 @@ public class Projectile : MonoBehaviour {
 	public GameObject target;
 	[HideInInspector]public bool dispo = true;
 
-
 	private Vector2 dirToTarget;
 
-	// Use this for initialization
-	void Start () 
-	{
-		
-	}
-	
-	// Update is called once per frame
+
 	void Update () 
 	{
 		dirToTarget = target.transform.position - launchPlace.transform.position;
-		Debug.DrawRay (launchPlace.transform.position, dirToTarget);
 		Shoot ();
 	}
 
@@ -36,7 +29,6 @@ public class Projectile : MonoBehaviour {
 			DropManagerComponent.RemoveDrop (this);
 		}
 	}
-
 	void OnTriggerEnter2D(Collider2D coll)
 	{
 		if(coll.gameObject.tag == "ModifyingZone")

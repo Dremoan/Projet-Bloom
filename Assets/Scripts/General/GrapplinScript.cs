@@ -1,0 +1,34 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GrapplinScript : MonoBehaviour {
+
+	public ModifyingZone modifyScript;
+	public LaunchFlower flowerScript;
+	public Rigidbody2D playerBody;
+	public float grapplinSpeed = 0;
+	private Vector3 dirToFlower;
+	void Update () 
+	{
+		if(flowerScript.onGrapplinSpot && Input.GetMouseButtonDown(1))
+		{
+				StartCoroutine(Grapplin());
+		}
+	}
+
+	IEnumerator Grapplin()
+	{
+		flowerScript.transform.position = this.transform.position;
+		dirToFlower = flowerScript.transform.position - playerBody.transform.position;
+		playerBody.velocity = Vector2.zero;
+		FindObjectOfType<PlayerBehavior> ().CancelMovements ();
+		playerBody.velocity = dirToFlower.normalized * grapplinSpeed * Time.fixedDeltaTime;
+		yield return new WaitForSeconds (1f);
+		flowerScript.isHooked = false;
+		flowerScript.isBacking = true;
+		flowerScript.onGrapplinSpot = false;
+		FindObjectOfType<PlayerBehavior> ().EnableMovements ();
+
+	}
+}
