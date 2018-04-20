@@ -34,7 +34,7 @@ public class DetectionTimeline : MonoBehaviour {
 	}
 
 
-	void RockSlotActive()
+	public void RockSlotActive()
 	{
 		if(activationItem.GetComponent<ActivationRock>().isActive && canPlayWaterSourceTimeline)
 		{

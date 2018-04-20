@@ -6,7 +6,6 @@ public class LaunchFlower : MonoBehaviour {
 
 	public GameObject player;
 	public GameObject liane;
-	public GameObject flowerTarget;
 	public GoatInSand goatInSandScript;
 	public Animator animFlower;
 	public Transform flowerPlace;
@@ -185,7 +184,7 @@ public class LaunchFlower : MonoBehaviour {
 			hookedThing = coll.gameObject;
 			onWater = true;
 		}
-		if(coll.gameObject.Equals(flowerTarget))
+		if(coll.gameObject.tag == "FlowerTarget")
 		{
 			goatInSandScript.isCharging = true;
 			lianeActive = false;

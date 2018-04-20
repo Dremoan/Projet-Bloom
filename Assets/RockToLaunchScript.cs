@@ -24,7 +24,6 @@ public class RockToLaunchScript : MonoBehaviour {
 //		{
 //			this.gameObject.SetActive (false);
 //		}
-		Debug.Log (countBeforeLaunch);
 
 		if(flowerScript.onLaunchingRock && Input.GetMouseButton(1))
 		{

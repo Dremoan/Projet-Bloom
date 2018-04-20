@@ -17,6 +17,7 @@ TagManager:
   - BlockingRock
   - GrapplinSpot
   - RockToLaunch
+  - FlowerTarget
   layers:
   - Default
   - TransparentFX

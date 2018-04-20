@@ -30,6 +30,7 @@ public class PlayerBehavior : MonoBehaviour {
 	public Vector3 eauPos;
 	[HideInInspector] public Vector2 lastMove;
 
+	private float idleCount = 0;
 	private Animator anim;
 	private Vector2 mousePos;
 
@@ -40,6 +41,7 @@ public class PlayerBehavior : MonoBehaviour {
 
 	void Update () 
 	{
+		Debug.Log (idleCount);
 		mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition) - transform.position;
 
 		if (canJump && canMove) 
@@ -47,7 +49,6 @@ public class PlayerBehavior : MonoBehaviour {
 			Move ();
 		}
 
-			aimWater ();
 
 		if (Input.GetKeyDown (KeyCode.A)) 
 		{
@@ -65,7 +66,9 @@ public class PlayerBehavior : MonoBehaviour {
 			StartCoroutine (dashingDelay ());
 		}
 
-			
+		LaunchActionIdle ();
+		aimWater ();
+
 		float horizontal = Input.GetAxisRaw ("Horizontal");
 		float vertical = Input.GetAxisRaw ("Vertical");
 		anim.SetBool ("isMoving", isMoving);
@@ -147,5 +150,22 @@ public class PlayerBehavior : MonoBehaviour {
 	{
 		canJump = true;
 		canMove = true;
+	}
+
+	void LaunchActionIdle()
+	{
+		if(!isMoving)
+		{
+			idleCount += Time.deltaTime;
+		}
+		if(isMoving)
+		{
+			idleCount = 0;
+		}
+		if(idleCount > 2.75f)
+		{
+			anim.Play ("PlayerActionIdle");
+			Fleur.GetComponent<Animator> ().Play ("FlowerActionIdle");
+		}
 	}
 }
