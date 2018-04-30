@@ -20,7 +20,6 @@ public class ActivationRock : MonoBehaviour {
 	void Update () 
 	{
 		anim.SetBool ("IsActive", isActive);
-		Debug.Log (isActive);
 	}
 
 	void OnTriggerEnter2D(Collider2D coll)

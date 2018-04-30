@@ -18,6 +18,7 @@ public class PlayerBehavior : MonoBehaviour {
 	[HideInInspector] public bool isAiming = false;
 	[HideInInspector] public bool hasKey = false;
 	[HideInInspector] public bool isMoving;
+	[HideInInspector] public bool canLaunchAction = true;
 
 	private bool holdsWater;
 
@@ -41,7 +42,6 @@ public class PlayerBehavior : MonoBehaviour {
 
 	void Update () 
 	{
-		Debug.Log (idleCount);
 		mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition) - transform.position;
 
 		if (canJump && canMove) 
@@ -65,8 +65,10 @@ public class PlayerBehavior : MonoBehaviour {
 			canCharge = true;
 			StartCoroutine (dashingDelay ());
 		}
-
-		LaunchActionIdle ();
+		if(FindObjectOfType<LaunchFlower>().gameObject.activeInHierarchy && canLaunchAction)
+		{
+			LaunchActionIdle ();
+		}
 		aimWater ();
 
 		float horizontal = Input.GetAxisRaw ("Horizontal");
@@ -140,6 +142,7 @@ public class PlayerBehavior : MonoBehaviour {
 
 	public void CancelMovements()
 	{
+		canLaunchAction = false;
 		body.velocity = Vector2.zero;
 		isMoving = false;
 		canJump = false;
@@ -148,6 +151,7 @@ public class PlayerBehavior : MonoBehaviour {
 
 	public void EnableMovements()
 	{
+		canLaunchAction = true;
 		canJump = true;
 		canMove = true;
 	}

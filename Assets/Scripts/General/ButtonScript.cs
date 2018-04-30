@@ -9,18 +9,16 @@ public class ButtonScript : MonoBehaviour {
 	public GameObject interrupteur1;
 	public GameObject interrupteur2;
 	public GameObject keyRock;
-	public bool isActive;
+	public float waitBeforeSpawn = 1f;
 
-	void Start () 
-	{
-		
-	}
+	[HideInInspector ]public bool isActive;
+
 
 	void Update ()
 	{
 		if(interrupteur1.GetComponent<ButtonScript>().isActive && interrupteur2.GetComponent<ButtonScript>().isActive)
 		{
-			keyRock.SetActive (true);
+			StartCoroutine (RockActive ());
 		}
 	}
 
@@ -31,5 +29,12 @@ public class ButtonScript : MonoBehaviour {
 		{
 			isActive = true;
 		}
+	}
+
+
+	IEnumerator RockActive()
+	{
+		yield return new WaitForSeconds (waitBeforeSpawn);
+		keyRock.SetActive (true);
 	}
 }
