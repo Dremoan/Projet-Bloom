@@ -42,6 +42,7 @@ public class PlayerBehavior : MonoBehaviour {
 
 	void Update () 
 	{
+		
 		mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition) - transform.position;
 
 		if (canJump && canMove) 

@@ -58,6 +58,7 @@ public class LaunchFlower : MonoBehaviour {
 			
 		if(Input.GetMouseButtonDown(0) && !isLaunched && !isBacking && !isHooked && canLaunch)
 		{
+			player.GetComponent<PlayerBehavior> ().canLaunchAction = false;
 			canLaunch = false;
 			this.GetComponent<CircleCollider2D> ().enabled = true;
 			liane.SetActive (true);
@@ -79,8 +80,6 @@ public class LaunchFlower : MonoBehaviour {
 		{
 			transform.position = flowerPlace.position;
 		}
-
-
 
 		if(isBacking)
 		{
@@ -156,6 +155,7 @@ public class LaunchFlower : MonoBehaviour {
 			isBacking = false;
 			isHooked = false;
 			isLaunched = false;
+			player.GetComponent<PlayerBehavior> ().canLaunchAction = true;
 		}
 	}
 

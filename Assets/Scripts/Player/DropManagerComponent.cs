@@ -30,7 +30,7 @@ public class DropManagerComponent : MonoBehaviour {
 		}
 	}
 
-	public static void SpawnDropRock(Vector3 position, float rot_Z)
+	public static void SpawnDropRock(Vector3 position, float rot_Z, Vector3 targetPosition)
 	{
 		for(int i = 0; i < globalDropManager.RockProjectilePool.Length; i++)
 		{
@@ -38,6 +38,7 @@ public class DropManagerComponent : MonoBehaviour {
 			{
 				globalDropManager.RockProjectilePool[i].transform.position = position;
 				globalDropManager.RockProjectilePool [i].transform.rotation = Quaternion.Euler (0, 0, rot_Z);
+				globalDropManager.RockProjectilePool [i].targetPosition = targetPosition;
 				globalDropManager.RockProjectilePool [i].gameObject.SetActive (true);
 				globalDropManager.RockProjectilePool [i].dispo = false;
 				return;
@@ -49,5 +50,6 @@ public class DropManagerComponent : MonoBehaviour {
 	{
 		removedDrop.gameObject.SetActive (false);
 		removedDrop.dispo = true;
+		removedDrop.needForce = true;
 	}
 }
