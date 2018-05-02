@@ -8,15 +8,8 @@ public class JumpingThru : MonoBehaviour {
 	public GameObject player;
 	private bool touchedPlayer;
 
-	void Start () 
-	{
-		
-	}
-	
-	// Update is called once per frame
 	void Update () 
 	{
-		Debug.Log (touchedPlayer);
 		if(player.GetComponent<PlayerBehavior>().isJumping)
 		{
 			StartCoroutine (InactiveCollider ());
