@@ -1,11 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class CameraBehavior : MonoBehaviour {
+public class BoundCamera : MonoBehaviour {
 
 	public Transform target;
-
-	public float smoothSpeed = 0.125f;
-	public Vector3 offset;
 
 	public bool YMaxEnabled = false;
 	public float YMaxValue = 0;
@@ -19,8 +18,7 @@ public class CameraBehavior : MonoBehaviour {
 	public bool XMinEnabled = false;
 	public float XMinValue = 0;
 
-
-	void FixedUpdate()
+	void Update () 
 	{
 		Vector3 targetPos = target.position;
 
@@ -51,12 +49,5 @@ public class CameraBehavior : MonoBehaviour {
 		{
 			targetPos.x = Mathf.Clamp(target.position.x, target.position.x,XMaxValue);
 		}
-
-
-
-
-		Vector3 desiredPosition = target.position + offset;
-		Vector3 smoothedPosition = Vector3.Lerp (transform.position, desiredPosition, smoothSpeed);
-		transform.position = smoothedPosition;
 	}
 }

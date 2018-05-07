@@ -29,7 +29,7 @@ public class LaunchFlower : MonoBehaviour {
 	[HideInInspector] public bool onLaunchingRock = false;
 
 
-	private Vector2 mousePos;
+	public Vector2 mousePos;
 	private GameObject hookedThing;
 	private bool lianeActive = false;
 	private bool onWater = false;
