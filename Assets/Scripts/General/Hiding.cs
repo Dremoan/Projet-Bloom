@@ -6,10 +6,6 @@ public class Hiding : MonoBehaviour {
 
 	public GameObject[] hidingZones;
 
-	void Start () 
-	{
-		
-	}
 	
 
 	void Update () 

@@ -109,7 +109,7 @@ public class PlayerBehavior : MonoBehaviour {
 			eau.SetActive (true);
 			if(Input.GetMouseButtonDown(1))
 			{
-				DropManagerComponent.SpawnDropWater (Fleur.transform.position, Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg);
+				DropManagerComponent.SpawnDropWater (Fleur.transform.position, Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg, eauPos);
 				Fleur.holdsWater = false;
 			}
 		}

@@ -15,7 +15,7 @@ public class DropManagerComponent : MonoBehaviour {
 	}
 
 
-	public static void SpawnDropWater(Vector3 position, float rot_Z)
+	public static void SpawnDropWater(Vector3 position, float rot_Z, Vector3 targetPosition)
 	{
 		for(int i = 0; i < globalDropManager.WaterProjectilePool.Length; i++)
 		{
@@ -23,6 +23,7 @@ public class DropManagerComponent : MonoBehaviour {
 			{
 				globalDropManager.WaterProjectilePool[i].transform.position = position;
 				globalDropManager.WaterProjectilePool [i].transform.rotation = Quaternion.Euler (0, 0, rot_Z);
+				globalDropManager.WaterProjectilePool [i].targetPosition = targetPosition;
 				globalDropManager.WaterProjectilePool [i].gameObject.SetActive (true);
 				globalDropManager.WaterProjectilePool [i].dispo = false;
 				return;
