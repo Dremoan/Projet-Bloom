@@ -6,6 +6,7 @@ public class HidingCave : MonoBehaviour {
 
 	public GameObject grotte;
 	public Animator anim;
+	public CameraBehavior cameraScript;
 
 	void Update () 
 	{
@@ -18,6 +19,10 @@ public class HidingCave : MonoBehaviour {
 		{
 			grotte.SetActive (false);
 			anim.Play ("LightCave");
+			cameraScript.XMaxValue = -265f;
+			cameraScript.XMinValue = -1050f;
+			cameraScript.YMaxEnabled = false;
+			cameraScript.YMinEnabled = false;
 		}
 	}
 }

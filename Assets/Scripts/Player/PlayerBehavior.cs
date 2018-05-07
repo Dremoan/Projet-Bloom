@@ -148,10 +148,12 @@ public class PlayerBehavior : MonoBehaviour {
 		isMoving = false;
 		canJump = false;
 		canMove = false;
+//		FindObjectOfType<LaunchFlower> ().canLaunch = false;
 	}
 
 	public void EnableMovements()
 	{
+//		FindObjectOfType<LaunchFlower> ().canLaunch = true;
 		canLaunchAction = true;
 		canJump = true;
 		canMove = true;

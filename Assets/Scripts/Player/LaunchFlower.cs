@@ -195,6 +195,8 @@ public class LaunchFlower : MonoBehaviour {
 		}
 		if(coll.gameObject.tag == "BlockingRock")
 		{
+			FindObjectOfType<CanvasGestion> ().activeFirstImage = false;
+			FindObjectOfType<CanvasGestion> ().activeSecondImage = true;
 			isHooked = true;
 			hookedThing = coll.gameObject;
 			onBlockingRock = true;

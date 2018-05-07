@@ -13,6 +13,7 @@ public class BlockingRockScript : MonoBehaviour {
 
 	void Update ()
 	{
+
 		if(flowerScript.onBlockingRock && Input.GetMouseButton(1))
 		{
 				backingCount += Time.deltaTime;
@@ -25,10 +26,11 @@ public class BlockingRockScript : MonoBehaviour {
 
 	private void BackingAndDeleteRock()
 	{
+		FindObjectOfType<CanvasGestion> ().activeSecondImage = false;
 		flowerScript.isBacking = true;
 		flowerScript.isHooked = false;
 		backingCount = 0;
-		animWater.Play ("WaterFalling");
+		animWater.Play ("FillingFountain");
 		blockingRockAnim.Play ("DestroyRock");
 	}
 }
