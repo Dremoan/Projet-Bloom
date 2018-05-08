@@ -13,10 +13,9 @@ public class RockBoss : MonoBehaviour {
 	public GameObject canon;
 	public GameObject explosionArea;
 	public GameObject targetSprite;
-	public GameObject[] targetSpriteArray;
-	public float waitTillLaunch = 0.25f;
+	public float waitTillLaunch = 1f;
 	private bool inZone = false;
-	public float timeBeforeRelaunch = 3f;
+	public float timeBeforeRelaunch = 0.5f;
 	private float timeElapsed = 0f;
 
 	void Update () 
@@ -30,7 +29,7 @@ public class RockBoss : MonoBehaviour {
 		if (countToReload >= 10 && canLaunchRock && !phase2) 
 		{
 			explosionArea.GetComponent<CircleCollider2D> ().enabled = false;
-			targetSprite.SetActive (false);
+//			targetSprite.SetActive (false);
 			StopAllCoroutines ();
 			StartCoroutine (Reload ());
 		}
@@ -90,15 +89,13 @@ public class RockBoss : MonoBehaviour {
 	{
 		canLaunchRock = false;
 		dirToPlayer = player.transform.position - canon.transform.position;
-		yield return new WaitForSeconds (waitTillLaunch);
-//		targetSprite.transform.position = player.transform.position;
 		targetSprite.SetActive (true);
+		targetSprite.transform.position = player.transform.position;
 		DropManagerComponent.SpawnDropRock (canon.transform.position, Mathf.Atan2 (dirToPlayer.y, dirToPlayer.x) * Mathf.Rad2Deg, player.transform.position);
 		yield return new WaitForSeconds (0.5f);
 		explosionArea.GetComponent<CircleCollider2D> ().enabled = true;
-		explosionArea.transform.position = targetSprite.transform.position;
-		targetSprite.SetActive (false);
 		yield return new WaitForSeconds (0.2f);
+		targetSprite.SetActive (false);
 		explosionArea.GetComponent<CircleCollider2D> ().enabled =false;
 		yield return new WaitForSeconds (1f);
 		canLaunchRock = true;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Explose : MonoBehaviour {
 
 	private Vector2 dirToRepulse;
-	public GameObject targetSprite;
+//	public GameObject targetSprite;
 	public GameObject player;
 	public float repulseForce;
 
@@ -13,7 +13,7 @@ public class Explose : MonoBehaviour {
 
 	void Update () 
 	{
-		dirToRepulse = player.transform.position - targetSprite.transform.position;
+		dirToRepulse = player.transform.position - transform.position;
 	}
 
 	void OnTriggerEnter2D(Collider2D col)

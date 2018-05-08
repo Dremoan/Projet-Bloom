@@ -30,6 +30,7 @@ public class DropManagerComponent : MonoBehaviour {
 			}
 		}
 	}
+		
 
 	public static void SpawnDropRock(Vector3 position, float rot_Z, Vector3 targetPosition)
 	{
