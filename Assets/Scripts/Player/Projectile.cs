@@ -37,6 +37,7 @@ public class Projectile : MonoBehaviour
 			DropManagerComponent.RemoveDrop (this);
 		}
 	}
+
 	void OnTriggerEnter2D(Collider2D coll)
 	{
 		if(coll.gameObject.tag == "ModifyingZone")

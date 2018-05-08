@@ -19,8 +19,8 @@ public class HidingCave : MonoBehaviour {
 		{
 			grotte.SetActive (false);
 			anim.Play ("LightCave");
-			cameraScript.XMaxValue = -265f;
-			cameraScript.XMinValue = -1050f;
+			cameraScript.XMaxValue = -709f;
+			cameraScript.XMinValue = -1100f;
 			cameraScript.YMaxEnabled = false;
 			cameraScript.YMinEnabled = false;
 		}

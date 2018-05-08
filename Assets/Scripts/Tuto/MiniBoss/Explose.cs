@@ -10,7 +10,6 @@ public class Explose : MonoBehaviour {
 	public float repulseForce;
 
 
-
 	void Update () 
 	{
 		dirToRepulse = player.transform.position - transform.position;
@@ -18,7 +17,7 @@ public class Explose : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if(col.gameObject.tag =="Player")
+		if (col.gameObject.tag == "Player")
 		{
 			StartCoroutine (Explosion());
 		}
@@ -30,6 +29,7 @@ public class Explose : MonoBehaviour {
 		player.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
 		player.GetComponent<Rigidbody2D> ().AddForce (dirToRepulse.normalized * repulseForce * Time.fixedDeltaTime, ForceMode2D.Impulse);
 		yield return new WaitForSeconds (0.25f);
+		FindObjectOfType<ProjectileRock> ().explosionArea.enabled = false;
 		player.GetComponent<PlayerBehavior> ().EnableMovements ();
 	}
 }

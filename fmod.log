@@ -8,7 +8,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000000004D5A9048 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000000004CBB4688 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -26,37 +26,19 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 185280
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 21312
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006CCDF5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000007416F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFCD27BE310
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFCD27BE2E0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFCD27BE3E0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFCD27BE490
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000004D7FA178
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD7463E310
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD7463E2E0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD7463E3E0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD7463E490
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000070D9AD08
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='JET_BULLE', format=2, channels=2, frequency=48000, lengthbytes=2336, lengthpcm=14768, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.967468.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 185280
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 21312
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006CCDF5FC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFCD27BE310
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFCD27BE2E0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFCD27BE3E0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFCD27BE490
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000004D7F94B8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Arbrefleuri', format=2, channels=2, frequency=48000, lengthbytes=24736, lengthpcm=127895, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.945374.
-[LOG] SoundI::release                          :  (0000000011F8CB88)
-[LOG] SoundI::release                          :     JET_BULLE (000000002123D198)
-[LOG] SoundI::release                          :  (0000000011F8D148)
-[LOG] SoundI::release                          :     Arbrefleuri (000000002123BAD8)
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='CACTUS_DASH', format=2, channels=2, frequency=48000, lengthbytes=2688, lengthpcm=10154, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] SoundI::release                          :  (000000001C3EDF98)
+[LOG] SoundI::release                          :     CACTUS_DASH (00000000709E9118)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients

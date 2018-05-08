@@ -51,14 +51,10 @@ public class RockBoss : MonoBehaviour {
 	IEnumerator LaunchRock()
 	{
 		canLaunchRock = false;
-		dirToPlayer = player.transform.position - canon.transform.position;
-		DropManagerComponent.SpawnDropRock (canon.transform.position, Mathf.Atan2 (dirToPlayer.y, dirToPlayer.x) * Mathf.Rad2Deg, player.transform.position);
-		yield return new WaitForSeconds (0.5f);
-		explosionArea.GetComponent<CircleCollider2D> ().enabled = true;
-		yield return new WaitForSeconds (0.2f);
+//		dirToPlayer = player.transform.position - canon.transform.position;
 		targetSprite.SetActive (true);
+		DropManagerComponent.SpawnDropRock (canon.transform.position, 0f, player.transform.position);
 		targetSprite.transform.position = player.transform.position;
-		explosionArea.GetComponent<CircleCollider2D> ().enabled =false;
 		yield return new WaitForSeconds (1f);
 		targetSprite.SetActive (false);
 		canLaunchRock = true;
