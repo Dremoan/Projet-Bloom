@@ -6,9 +6,6 @@ public class RockBoss : MonoBehaviour {
 
 	private Vector3 dirToPlayer;
 	private bool canLaunchRock = true;
-	private float countToReload = 0;
-	private bool timeCanRun = false;
-	private bool phase2 = false;
 	public GameObject player;
 	public GameObject canon;
 	public GameObject explosionArea;
@@ -21,35 +18,13 @@ public class RockBoss : MonoBehaviour {
 	void Update () 
 	{
 		timeElapsed += Time.deltaTime;
-		if (timeCanRun) 
-		{
-			countToReload += Time.deltaTime;
-		}
-
-		if (countToReload >= 10 && canLaunchRock && !phase2) 
-		{
-			explosionArea.GetComponent<CircleCollider2D> ().enabled = false;
-//			targetSprite.SetActive (false);
-			StopAllCoroutines ();
-			StartCoroutine (Reload ());
-		}
 
 		if (inZone && timeElapsed > timeBeforeRelaunch)
 		{
-			timeCanRun = true;
 			//StopAllCoroutines ();
 			StartCoroutine (LaunchRock ());
 			timeElapsed = 0f;
 		}
-
-//		if (countToReload >= 10 && canLaunchRock && phase2) 
-//		{
-//			explosionArea.GetComponent<CircleCollider2D> ().enabled = false;
-//			targetSprite.SetActive (false);
-//			StopAllCoroutines ();
-//			StartCoroutine (ReloadLonger ());
-//		}
-
 
 	}
 
@@ -57,19 +32,7 @@ public class RockBoss : MonoBehaviour {
 	{
 		if (col.gameObject.tag=="Player")
 			inZone = true;
-//		if (col.gameObject.tag=="Player" && canLaunchRock && !phase2)
-//		{
-//			timeCanRun = true;
-//			StopAllCoroutines ();
-//			StartCoroutine (LaunchRock ());
-//		}
 
-//		if (col.gameObject.tag=="Player" && canLaunchRock && phase2)
-//		{
-//			timeCanRun = true;
-//			StopAllCoroutines ();
-//			StartCoroutine (LaunchStayingRock ());
-//		}
 			
 	}
 
@@ -89,57 +52,17 @@ public class RockBoss : MonoBehaviour {
 	{
 		canLaunchRock = false;
 		dirToPlayer = player.transform.position - canon.transform.position;
-		targetSprite.SetActive (true);
-		targetSprite.transform.position = player.transform.position;
 		DropManagerComponent.SpawnDropRock (canon.transform.position, Mathf.Atan2 (dirToPlayer.y, dirToPlayer.x) * Mathf.Rad2Deg, player.transform.position);
 		yield return new WaitForSeconds (0.5f);
 		explosionArea.GetComponent<CircleCollider2D> ().enabled = true;
 		yield return new WaitForSeconds (0.2f);
-		targetSprite.SetActive (false);
+		targetSprite.SetActive (true);
+		targetSprite.transform.position = player.transform.position;
 		explosionArea.GetComponent<CircleCollider2D> ().enabled =false;
 		yield return new WaitForSeconds (1f);
+		targetSprite.SetActive (false);
 		canLaunchRock = true;
 
 	}
 
-//	IEnumerator LaunchStayingRock()
-//	{
-//		canExplode = false;
-//		canLaunchRock = false;
-//		dirToPlayer = player.transform.position - canon.transform.position;
-//		yield return new WaitForSeconds (waitTillLaunch);
-//		targetSprite.transform.position = player.transform.position;
-//		targetSprite.SetActive (true);
-//		DropManagerComponent.SpawnDropRock (canon.transform.position, Mathf.Atan2 (dirToPlayer.y, dirToPlayer.x) * Mathf.Rad2Deg);
-//		yield return new WaitForSeconds (0.5f);
-//		explosionArea.GetComponent<CircleCollider2D> ().enabled = true;
-//		explosionArea.transform.position = targetSprite.transform.position;
-//		targetSprite.SetActive (false);
-//		yield return new WaitForSeconds (0.2f);
-//		explosionArea.GetComponent<CircleCollider2D> ().enabled =false;
-//		yield return new WaitForSeconds (2f);
-//		canLaunchRock = true;
-//
-//	}
-		
-
-	IEnumerator Reload()
-	{
-		timeCanRun = false;
-		canLaunchRock = false;
-		countToReload = 0;
-		yield return new WaitForSeconds (3f);
-		canLaunchRock = true;
-		timeCanRun = true;
-	}
-//
-//	IEnumerator ReloadLonger()
-//	{
-//		timeCanRun = false;
-//		canLaunchRock = false;
-//		countToReload = 0;
-//		yield return new WaitForSeconds (5f);
-//		canLaunchRock = true;
-//		timeCanRun = true;
-//	}
 }
