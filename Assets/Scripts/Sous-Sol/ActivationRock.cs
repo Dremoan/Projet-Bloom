@@ -27,6 +27,7 @@ public class ActivationRock : MonoBehaviour {
 		if(coll.gameObject.Equals(keyRock) && !hasShake)
 		{
 			isActive = true;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/IMPACT_DOOR");
 			ShakeCamera ();
 			keyRock.transform.position = keyRockPlace.transform.position;
 			keyRock.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;

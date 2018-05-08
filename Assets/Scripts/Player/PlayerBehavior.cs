@@ -62,6 +62,7 @@ public class PlayerBehavior : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.Space) && canJump == true && !isJumping && !canCharge) 
 		{
+            FMODUnity.RuntimeManager.PlayOneShot("event:/CACTUS_DASH");
 			isJumping = true;
 			canCharge = true;
 			StartCoroutine (dashingDelay ());
@@ -109,6 +110,7 @@ public class PlayerBehavior : MonoBehaviour {
 			eau.SetActive (true);
 			if(Input.GetMouseButtonDown(1))
 			{
+                FMODUnity.RuntimeManager.PlayOneShot("event:/JET_BULLE");
 				DropManagerComponent.SpawnDropWater (Fleur.transform.position, Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg, eauPos);
 				Fleur.holdsWater = false;
 			}

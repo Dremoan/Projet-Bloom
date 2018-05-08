@@ -180,6 +180,7 @@ public class LaunchFlower : MonoBehaviour {
 	{
 		if (coll.gameObject.tag == "WaterSource" && isLaunched && holdsWater == false)
 		{
+            FMODUnity.RuntimeManager.PlayOneShot("event:/FLEUR_TOMBE_EAU");
 			isHooked = true;
 			hookedThing = coll.gameObject;
 			onWater = true;

@@ -10,10 +10,8 @@ public class ModifyingZone : MonoBehaviour
 	private bool hasShake;
 	public Animator anim;
 
-	void Start () 
-	{
-		
-	}
+    [FMODUnity.EventRef]
+    public string inputsound;
 
 	void Update () 
 	{
@@ -25,6 +23,7 @@ public class ModifyingZone : MonoBehaviour
 
 	public void Modified()
 	{
+        FMODUnity.RuntimeManager.PlayOneShot(inputsound);
 		modify = true;
 	}
 }

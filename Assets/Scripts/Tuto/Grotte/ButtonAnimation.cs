@@ -13,7 +13,7 @@ public class ButtonAnimation : MonoBehaviour {
 	public Animator buttonAnim;
 	private bool buttonPressed = false;
 	private bool canPlayParticles = true;
-
+    private bool canPlaySound = true;
 
 
 	void Update () 
@@ -21,6 +21,12 @@ public class ButtonAnimation : MonoBehaviour {
 		var light1main = light1.main;
 		var light2main = light2.main;
 		var gerbemain = gerbe.main;
+
+        if(interrupteur.GetComponent<ButtonScript>().isActive && canPlaySound)
+        {
+            canPlaySound = false;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/switches");
+        }
 
 		if(interrupteur.GetComponent<ButtonScript>().isActive && canPlayParticles)
 		{

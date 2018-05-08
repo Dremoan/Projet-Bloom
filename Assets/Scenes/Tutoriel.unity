@@ -195,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modify: 0
   anim: {fileID: 11780342}
+  inputsound: 
 --- !u!61 &11780344
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4193,6 +4194,7 @@ GameObject:
   - component: {fileID: 259385833}
   - component: {fileID: 259385832}
   - component: {fileID: 259385831}
+  - component: {fileID: 259385834}
   m_Layer: 0
   m_Name: KeyRock
   m_TagString: Untagged
@@ -4306,6 +4308,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &259385834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 259385829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/PUSH_ROCK
+  PlayEvent: 9
+  StopEvent: 10
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &267267500 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1860967596437374, guid: b7f4c8ecab02a04439819a6f9ecd3576,
@@ -11726,6 +11750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modify: 0
   anim: {fileID: 1190775252}
+  inputsound: event:/Arbrefleuri
 --- !u!58 &1190775254
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11837,6 +11862,11 @@ Prefab:
     - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
         type: 2}
       propertyPath: canLaunch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
+        type: 2}
+      propertyPath: holdsWater
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -12796,7 +12826,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1337573801}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 488, y: 322, z: 0}
+  m_LocalPosition: {x: 456, y: 280.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1482924341}
@@ -14223,7 +14253,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1714321263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1230, y: -851, z: 0}
+  m_LocalPosition: {x: 16, y: -616, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 1944701004}
