@@ -7,8 +7,6 @@ public class ProjectileRock : Projectile
 	public CircleCollider2D explosionArea;
 	public float waitTillLaunch = 0.5f;
 	private bool canExplode = true;
-	public Animator bossAnim;
-
 
 	protected override void Shoot()
 	{
@@ -18,8 +16,10 @@ public class ProjectileRock : Projectile
 	IEnumerator removeDrop()
 	{
 		yield return new WaitForSeconds (0.25f);
+		GetComponent<PolygonCollider2D> ().enabled = true;
 		explosionArea.enabled = false;
 		yield return new WaitForSeconds (5f);
+		GetComponent<PolygonCollider2D> ().enabled = false;
 		canExplode = true;
 		projectileBody.mass = 1;
 		DropManagerComponent.RemoveDrop (this);
@@ -30,7 +30,6 @@ public class ProjectileRock : Projectile
 		yield return new WaitForSeconds (waitTillLaunch);
 		if (needForce)
 		{
-			bossAnim.Play ("MiniBossLaunch");
 			dirToTarget = targetPosition - launchPlace.transform.position;
 			projectileBody.velocity = dirToTarget * shootSpeed * Time.fixedDeltaTime;
 			needForce = false;
@@ -40,7 +39,6 @@ public class ProjectileRock : Projectile
 			canExplode = false;
 			projectileBody.velocity = Vector2.zero;
 			projectileBody.mass = 100;
-			GetComponent<PolygonCollider2D> ().enabled = true;
 			explosionArea.enabled = true;
 			StartCoroutine (removeDrop ());
 		}

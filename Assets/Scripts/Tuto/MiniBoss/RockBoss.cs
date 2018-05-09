@@ -5,14 +5,13 @@ using UnityEngine;
 public class RockBoss : MonoBehaviour {
 
 	private Vector3 dirToPlayer;
-	private bool canLaunchRock = true;
 	public GameObject player;
 	public GameObject canon;
 	public GameObject explosionArea;
 	public GameObject targetSprite;
-	public float waitTillLaunch = 1f;
-	private bool inZone = false;
+	public Animator bossAnim;
 	public float timeBeforeRelaunch = 0.5f;
+	private bool inZone = false;
 	private float timeElapsed = 0f;
 
 	void Update () 
@@ -21,7 +20,6 @@ public class RockBoss : MonoBehaviour {
 
 		if (inZone && timeElapsed > timeBeforeRelaunch)
 		{
-			//StopAllCoroutines ();
 			StartCoroutine (LaunchRock ());
 			timeElapsed = 0f;
 		}
@@ -50,15 +48,12 @@ public class RockBoss : MonoBehaviour {
 
 	IEnumerator LaunchRock()
 	{
-		canLaunchRock = false;
-//		dirToPlayer = player.transform.position - canon.transform.position;
+		bossAnim.Play ("MiniBossLaunch");
 		targetSprite.SetActive (true);
 		DropManagerComponent.SpawnDropRock (canon.transform.position, 0f, player.transform.position);
 		targetSprite.transform.position = player.transform.position;
 		yield return new WaitForSeconds (1f);
 		targetSprite.SetActive (false);
-		canLaunchRock = true;
-
 	}
 
 }
