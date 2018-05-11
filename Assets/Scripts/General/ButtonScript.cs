@@ -9,7 +9,8 @@ public class ButtonScript : MonoBehaviour {
 	public GameObject interrupteur1;
 	public GameObject interrupteur2;
 	public GameObject keyRock;
-	public float waitBeforeSpawn = 1f;
+	public Animator animKeyRock;
+	public float waitBeforeSpawn = 0.5f;
 
 	[HideInInspector ]public bool isActive;
 
@@ -18,6 +19,8 @@ public class ButtonScript : MonoBehaviour {
 	{
 		if(interrupteur1.GetComponent<ButtonScript>().isActive && interrupteur2.GetComponent<ButtonScript>().isActive)
 		{
+			FindObjectOfType<CanvasGestion> ().InstructionsPilarInactive ();
+			FindObjectOfType<ActivationRock> ().hasPrintHelp = false;
 			StartCoroutine (RockActive ());
 		}
 	}
@@ -34,6 +37,8 @@ public class ButtonScript : MonoBehaviour {
 
 	IEnumerator RockActive()
 	{
+		yield return new WaitForSeconds (0.6f);
+		animKeyRock.Play ("KeyRockAppear");
 		yield return new WaitForSeconds (waitBeforeSpawn);
 		keyRock.SetActive (true);
 	}

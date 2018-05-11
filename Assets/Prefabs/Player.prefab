@@ -24,28 +24,12 @@ GameObject:
   - component: {fileID: 114247939860212750}
   - component: {fileID: 58288819275430456}
   m_Layer: 0
-  m_Name: EauLancee
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!1 &1116592889149816
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4213745974990458}
-  - component: {fileID: 114848756775253120}
-  m_Layer: 0
-  m_Name: DropManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1157430820448196
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,25 +198,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1157430820448196}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2579623, y: 0.70176166, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4749788864771090}
   m_Father: {fileID: 4341082943556464}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4213745974990458
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1116592889149816}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2579623, y: 0.70176166, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4341082943556464}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4236067192049346
 Transform:
@@ -241,11 +212,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1243200218373132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3, y: -12.7, z: 0}
+  m_LocalPosition: {x: -0.3, y: -13, z: 0}
   m_LocalScale: {x: 1.9741226, y: 0.79800045, z: 2.902638}
   m_Children: []
   m_Father: {fileID: 4341082943556464}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4248076023735084
 Transform:
@@ -258,7 +229,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 4341082943556464}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4341082943556464
 Transform:
@@ -267,11 +238,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1517652991125184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 258.3, y: 250.8, z: 0}
+  m_LocalPosition: {x: 927.8, y: 31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 4586352544561714}
-  - {fileID: 4213745974990458}
   - {fileID: 4248076023735084}
   - {fileID: 4064745563219230}
   - {fileID: 4952011377770082}
@@ -332,7 +302,7 @@ Transform:
   m_LocalScale: {x: 3.7755299, y: 3.7755291, z: 3.7755291}
   m_Children: []
   m_Father: {fileID: 4341082943556464}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4952011377770082
 Transform:
@@ -345,7 +315,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 4341082943556464}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50339992131815272
 Rigidbody2D:
@@ -417,8 +387,8 @@ BoxCollider2D:
   m_Offset: {x: 0.00091552734, y: -4.651085}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 40, y: 40}
+    pivot: {x: 0.5, y: 0.58}
+    oldSize: {x: 34, y: 40}
     newSize: {x: 40, y: 40}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -472,12 +442,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c24ea314eb4b74fb2b4d132fcb44ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootSpeed: 10000
+  shootSpeed: 100
   projectileBody: {fileID: 50339992131815272}
   launcher: {fileID: 50670324831390516}
-  player: {fileID: 1198902083770306}
   launchPlace: {fileID: 0}
   target: {fileID: 1902301653413336}
+  targetPosition: {x: 0, y: 0, z: 0}
+  needForce: 1
   dispo: 1
 --- !u!114 &114277571046930802
 MonoBehaviour:
@@ -506,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a7f45ce4e568049ade62fadb3fc581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 85
   jumpSpeed: 15000
   jumpTime: 0.5
   jumpCoolDown: 1
@@ -520,6 +491,7 @@ MonoBehaviour:
   isAiming: 0
   hasKey: 0
   isMoving: 0
+  canLaunchAction: 1
   player: {fileID: 4341082943556464}
   holdingPlayer: {fileID: 0}
   eau: {fileID: 1902301653413336}
@@ -528,19 +500,6 @@ MonoBehaviour:
   move: {x: 0, y: 0}
   eauPos: {x: 0, y: 0, z: 0}
   lastMove: {x: 0, y: 0}
---- !u!114 &114848756775253120
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1116592889149816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d13d907e97b254468b4ef54f3a5618d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePool:
-  - {fileID: 114247939860212750}
 --- !u!198 &198268886038310222
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -601,7 +560,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1485538684
+  randomSeed: 776762561
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -1054,11 +1013,11 @@ ParticleSystem:
     m_Rotation: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
+    m_MeshMaterialIndex: 0
+    m_MeshNormalOffset: 0
     m_Mesh: {fileID: 0}
     m_MeshRenderer: {fileID: 0}
     m_SkinnedMeshRenderer: {fileID: 0}
-    m_MeshMaterialIndex: 0
-    m_MeshNormalOffset: 0
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
     alignToDirection: 0
@@ -1819,6 +1778,47 @@ ParticleSystem:
         - serializedVersion: 2
           time: 1
           value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    speedModifier:
+      serializedVersion: 2
+      minMaxState: 0
+      scalar: 1
+      minScalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 2
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - serializedVersion: 2
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 2
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - serializedVersion: 2
+          time: 1
+          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -2951,7 +2951,7 @@ ParticleSystem:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-    range: {x: -0.001, y: 0}
+    range: {x: 0, y: 0}
   CollisionModule:
     enabled: 0
     serializedVersion: 3
@@ -3216,6 +3216,7 @@ ParticleSystem:
     maxLights: 20
   TrailModule:
     enabled: 0
+    mode: 0
     ratio: 1
     lifetime:
       serializedVersion: 2
@@ -3260,12 +3261,14 @@ ParticleSystem:
         m_RotationOrder: 4
     minVertexDistance: 0.2
     textureMode: 0
+    ribbonCount: 1
     worldSpace: 0
     dieWithParticles: 1
     sizeAffectsWidth: 1
     sizeAffectsLifetime: 0
     inheritParticleColor: 1
     generateLightingData: 0
+    splitSubEmitterRibbons: 0
     colorOverLifetime:
       serializedVersion: 2
       minMaxState: 0
@@ -4167,7 +4170,7 @@ SpriteRenderer:
   m_SortingLayerID: 1208666273
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7544c46ca0dd3094bbbd9b5f865310bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ed149d83a6e3194a9b54d1d43626509, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -10,16 +10,26 @@ public class ActivationRock : MonoBehaviour {
 	public Animator anim;
 	public bool isActive = false;
 	private bool hasShake;
-	// Use this for initialization
-	void Start () 
-	{
-		
-	}
+	[HideInInspector] public bool hasPrintHelp;
+	private float timeToPrintHelp = 0;
 
-	// Update is called once per frame
+
+
 	void Update () 
 	{
 		anim.SetBool ("IsActive", isActive);
+
+		if (!hasPrintHelp && !isActive) 
+		{
+			timeToPrintHelp += Time.deltaTime;
+		}
+
+		if(timeToPrintHelp> 12.5f && !hasPrintHelp)
+		{
+			hasPrintHelp = true;
+			FindObjectOfType<CanvasGestion> ().PushRockHelp ();
+			timeToPrintHelp = 0f;
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D coll)
@@ -32,6 +42,9 @@ public class ActivationRock : MonoBehaviour {
 			keyRock.transform.position = keyRockPlace.transform.position;
 			keyRock.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
 			keyRock.GetComponent<Rigidbody2D> ().isKinematic = true;
+			FindObjectOfType<CanvasGestion> ().PushRockHelpInactive ();
+			FindObjectOfType<CanvasGestion> ().InstructionsPilarInactive ();
+			FindObjectOfType<CanvasGestion> ().TalkAreaJumpActive ();
 		}
 	}
 
