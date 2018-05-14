@@ -5,6 +5,7 @@ using UnityEngine;
 public class GrapplinScript : MonoBehaviour {
 
 	public ModifyingZone modifyScript;
+	public BoxCollider2D gap;
 	public LaunchFlower flowerScript;
 	public Rigidbody2D playerBody;
 	public float grapplinSpeed = 0;
@@ -13,6 +14,8 @@ public class GrapplinScript : MonoBehaviour {
 	{
 		if(flowerScript.onGrapplinSpot && Input.GetMouseButtonDown(1))
 		{
+			FindObjectOfType<GrapplinInstructions> ().DisableDownArrow ();
+			gap.enabled = false;
 				StartCoroutine(Grapplin());
 		}
 	}
@@ -31,6 +34,7 @@ public class GrapplinScript : MonoBehaviour {
 		flowerScript.isBacking = true;
 		flowerScript.onGrapplinSpot = false;
 		FindObjectOfType<PlayerBehavior> ().EnableMovements ();
+		gap.enabled = true;
 		this.GetComponent<BoxCollider2D> ().enabled = false;
 		yield return new WaitForSeconds (0.25f);
 		this.GetComponent<BoxCollider2D> ().enabled = true;

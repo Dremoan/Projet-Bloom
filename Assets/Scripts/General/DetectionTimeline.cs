@@ -56,11 +56,11 @@ public class DetectionTimeline : MonoBehaviour {
 		FindObjectOfType<PlayerBehavior> ().canJump = false;
 		FindObjectOfType<PlayerBehavior> ().canMove = false;
 		FindObjectOfType<PlayerBehavior> ().canLaunchAction = false;
-		FindObjectOfType<LaunchFlower> ().canLaunch = false;
+//		FindObjectOfType<LaunchFlower> ().canLaunch = false;
 		yield return new WaitForSeconds (timelineDuration);
 		FindObjectOfType<PlayerBehavior> ().canLaunchAction = true;
 		FindObjectOfType<PlayerBehavior> ().canJump = true;
 		FindObjectOfType<PlayerBehavior> ().canMove = true;
-		FindObjectOfType<LaunchFlower> ().canLaunch = true;
+//		FindObjectOfType<LaunchFlower> ().canLaunch = true;
 	}
 }

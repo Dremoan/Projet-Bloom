@@ -6,6 +6,9 @@ public class BlockingRockScript : MonoBehaviour {
 
 	public LaunchFlower flowerScript;
 	public GameObject blockingRock;
+	public PolygonCollider2D waterSource1;
+	public PolygonCollider2D waterSource2;
+	public PolygonCollider2D waterSource3;
 	public Animator animWater;
 	public Animator blockingRockAnim;
 	private float backingCount = 0;
@@ -26,6 +29,9 @@ public class BlockingRockScript : MonoBehaviour {
 
 	private void BackingAndDeleteRock()
 	{
+		waterSource1.enabled = true;
+		waterSource2.enabled = true;
+		waterSource3.enabled = true;
 		FindObjectOfType<CanvasGestion> ().activeSecondImage = false;
 		flowerScript.isBacking = true;
 		flowerScript.isHooked = false;

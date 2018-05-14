@@ -5,6 +5,7 @@ using UnityEngine;
 public class HidingCave : MonoBehaviour {
 
 	public GameObject grotte;
+	public PolygonCollider2D colliderLevel;
 	public Animator anim;
 	public CameraBehavior cameraScript;
 
@@ -23,6 +24,13 @@ public class HidingCave : MonoBehaviour {
 			cameraScript.XMinValue = -1100f;
 			cameraScript.YMaxEnabled = false;
 			cameraScript.YMinEnabled = false;
+			StartCoroutine (ActiveColliderLevel ());
 		}
+	}
+
+	IEnumerator ActiveColliderLevel()
+	{
+		yield return new WaitForSeconds (1.5f);
+		colliderLevel.enabled = true;
 	}
 }

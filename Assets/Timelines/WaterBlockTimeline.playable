@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: 114013588542020006}
   m_FixedDuration: 0
   m_EditorSettings:
-    m_Framerate: 60
+    fps: 60
   m_DurationMode: 0
 --- !u!74 &74011758673703070
 AnimationClip:
@@ -420,7 +420,7 @@ AnimationClip:
         tangentMode: 0
       - serializedVersion: 2
         time: 5.0833335
-        value: {x: 1328, y: 12, z: 0}
+        value: {x: 1242.5, y: 5.6, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -605,7 +605,7 @@ AnimationClip:
       attribute: 4
       script: {fileID: 0}
       typeID: 4
-      customType: 4
+      customType: 14
       isPPtrCurve: 0
     pptrCurveMapping: []
   m_AnimationClipSettings:
@@ -860,7 +860,7 @@ AnimationClip:
         tangentMode: 136
       - serializedVersion: 2
         time: 5.0833335
-        value: 1328
+        value: 1242.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -924,7 +924,7 @@ AnimationClip:
         tangentMode: 136
       - serializedVersion: 2
         time: 5.0833335
-        value: 12
+        value: 5.6
         inSlope: 0
         outSlope: 0
         tangentMode: 136
