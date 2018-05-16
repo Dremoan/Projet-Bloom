@@ -10,9 +10,11 @@ public class GrapplinScript : MonoBehaviour {
 	public Rigidbody2D playerBody;
 	public float grapplinSpeed = 0;
 	private Vector3 dirToFlower;
+	private bool canUseGrapplin = true;
+	[HideInInspector] public bool canSetActiveCollider = true;
 	void Update () 
 	{
-		if(flowerScript.onGrapplinSpot && Input.GetMouseButtonDown(1))
+		if(flowerScript.onGrapplinSpot && Input.GetMouseButtonDown(1) && canUseGrapplin)
 		{
 			FindObjectOfType<GrapplinInstructions> ().DisableDownArrow ();
 			gap.SetActive (false);
@@ -22,6 +24,7 @@ public class GrapplinScript : MonoBehaviour {
 
 	IEnumerator Grapplin()
 	{
+		canUseGrapplin = false;
 		flowerScript.transform.position = this.transform.position;
 		dirToFlower = flowerScript.transform.position - playerBody.transform.position;
 		playerBody.velocity = Vector2.zero;
@@ -38,7 +41,10 @@ public class GrapplinScript : MonoBehaviour {
 		this.GetComponent<BoxCollider2D> ().enabled = false;
 		yield return new WaitForSeconds (0.25f);
 		this.GetComponent<BoxCollider2D> ().enabled = true;
-		gap.SetActive (true);
-
+		if(canSetActiveCollider)
+		{
+			gap.SetActive (true);
+		}
+		canUseGrapplin = true;
 	}
 }

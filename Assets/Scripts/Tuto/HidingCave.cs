@@ -8,10 +8,15 @@ public class HidingCave : MonoBehaviour {
 	public PolygonCollider2D colliderLevel;
 	public Animator anim;
 	public CameraBehavior cameraScript;
+	public Camera mainCamera;
+	private bool canDezoom;
 
 	void Update () 
 	{
-		
+		if(canDezoom)
+		{
+			mainCamera.orthographicSize = Mathf.Lerp (mainCamera.orthographicSize, 150.01f , Time.deltaTime * 3f);
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D coll)
@@ -20,6 +25,7 @@ public class HidingCave : MonoBehaviour {
 		{
 			grotte.SetActive (false);
 			anim.Play ("LightCave");
+			canDezoom = true;
 			cameraScript.XMaxValue = -709f;
 			cameraScript.XMinValue = -1100f;
 			cameraScript.YMaxEnabled = false;

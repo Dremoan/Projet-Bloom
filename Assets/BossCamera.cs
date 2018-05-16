@@ -1,26 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class BossCamera : MonoBehaviour {
 
 	public CameraBehavior cameraScript;
+	public Camera mainCamera;
+	public CinemachineVirtualCamera lookingPlayer;
+	public float DezoomSize = 200f;
 	private bool inZone;
 	private bool hasPlayedScript;
+	private bool canDezoom;
 
 	void Update () 
 	{
-		if(inZone && !hasPlayedScript)
+		if(inZone)
 		{
-			hasPlayedScript = true;
 			cameraScript.XMaxEnabled = true;
 			cameraScript.XMinEnabled = true;
 			cameraScript.YMaxEnabled = true;
 			cameraScript.YMinEnabled = true;
-			cameraScript.XMaxValue = 550f;
-			cameraScript.XMinValue = 400f;
-			cameraScript.YMaxValue = -700f;
+			cameraScript.XMaxValue = 650f;
+			cameraScript.YMaxValue = -900f;
 			cameraScript.YMinValue = -900f;
+		}
+		if(canDezoom)
+		{
+			cameraScript.XMinValue = Mathf.Lerp (cameraScript.XMinValue, 650f, Time.deltaTime * 1f);
+			mainCamera.orthographicSize = Mathf.Lerp (mainCamera.orthographicSize, DezoomSize, Time.deltaTime * 1f);
 		}
 	}
 
@@ -29,7 +37,10 @@ public class BossCamera : MonoBehaviour {
 	{
 		if(col.gameObject.tag =="Player")
 		{
+			Destroy (lookingPlayer);
 			inZone = true;
+			canDezoom = true;
 		}
 	}
+		
 }

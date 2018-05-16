@@ -11,12 +11,16 @@ public class StairButtonScript : MonoBehaviour {
 	public GameObject grapplinPlant;
 	public Animator animButtonStair;
 	public Animator animStairs;
+	public Animator animBigStairs;
+	public Animator animPilarDestroyed;
 	public bool isActive;
+	[HideInInspector] public bool activeTrails;
 	private bool buttonPressed;
 	private bool hasPlayedAnimations;
 	private bool timeCanRun;
 	private float timeToInactive = 0;
 	public float timeMaxToInactive = 3f;
+	public float animDestroyPilarTime;
 
 	void Update ()
 	{
@@ -57,6 +61,7 @@ public class StairButtonScript : MonoBehaviour {
 		hasPlayedAnimations = true;
 		yield return new WaitForSeconds (0.85f);
 		gap.SetActive (false);
+		grapplinPlant.GetComponent<GrapplinScript> ().canSetActiveCollider = false;
 		buttonStair1.GetComponent<SpriteRenderer> ().enabled = false;
 		buttonStair2.GetComponent<SpriteRenderer> ().enabled = false;
 		grapplinPlant.GetComponent<Rigidbody2D>().transform.Translate(0, -15f, 0);
@@ -64,5 +69,12 @@ public class StairButtonScript : MonoBehaviour {
 		player.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
 		grapplinPlant.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
 		FindObjectOfType<PlayerBehavior> ().EnableMovements ();
+		activeTrails = true;
+		yield return new WaitForSeconds (0.5f);
+		animBigStairs.SetBool ("IsActive", true);
+		yield return new WaitForSeconds (0.5f);
+		animPilarDestroyed.SetBool ("IsDestroying", true);
+		yield return new WaitForSeconds (animDestroyPilarTime);
+		FindObjectOfType<RockBoss> ().enabled = true;
 	}
 }
