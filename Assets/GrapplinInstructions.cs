@@ -4,16 +4,35 @@ using UnityEngine;
 
 public class GrapplinInstructions : MonoBehaviour {
 
-	public GameObject downArrow;
-
-
-	public void EnableDownArrow()
+	public GameObject downArrowGrapplin;
+	public GameObject downArrowWater;
+	public GameObject canvasLaunchWater;
+	public ModifyingZone modifyScript;
+	private bool holdWater;
+	void Update()
 	{
-		downArrow.SetActive (true);
+		holdWater = FindObjectOfType<LaunchFlower> ().holdsWater;
+		Enable ();
+	}
+	public void EnableDownArrowWater()
+	{
+		downArrowWater.SetActive (true);
 	}
 
-	public void DisableDownArrow()
+	void Enable()
 	{
-		downArrow.SetActive (false);
+		if(Input.GetKeyDown(KeyCode.H))
+		{
+			StartCoroutine(EnableDownArrowGrapplin ());
+		}
+	}
+	IEnumerator EnableDownArrowGrapplin()
+	{
+		downArrowWater.SetActive (false);
+		downArrowGrapplin.SetActive (true);
+		canvasLaunchWater.SetActive (true);
+		yield return new WaitForSeconds (3f);
+		downArrowGrapplin.SetActive (false);
+		canvasLaunchWater.SetActive (false);
 	}
 }

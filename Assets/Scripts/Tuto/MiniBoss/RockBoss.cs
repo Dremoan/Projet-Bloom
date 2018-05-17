@@ -9,19 +9,32 @@ public class RockBoss : MonoBehaviour {
 	public GameObject canon;
 	public GameObject explosionArea;
 	public GameObject targetSprite;
+	public GameObject instructionsDialogue;
 	public Animator bossAnim;
 	public float timeBeforeRelaunch = 1f;
 	private bool inZone = false;
 	private float timeElapsed = 0f;
+	private float timeDialogue;
+	public float timeMaxDialogue = 7.5f;
 
+	void Start()
+	{
+		bossAnim.SetBool("LaunchIdle", true);
+	}
 	void Update () 
 	{
 		timeElapsed += Time.deltaTime;
+		timeDialogue += Time.deltaTime;
 
 		if (inZone && timeElapsed > timeBeforeRelaunch)
 		{
 			StartCoroutine (LaunchRock ());
 			timeElapsed = 0f;
+		}
+
+		if(timeDialogue > timeMaxDialogue)
+		{
+			instructionsDialogue.SetActive (true);
 		}
 
 	}
@@ -30,8 +43,6 @@ public class RockBoss : MonoBehaviour {
 	{
 		if (col.gameObject.tag=="Player")
 			inZone = true;
-
-			
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
@@ -57,5 +68,4 @@ public class RockBoss : MonoBehaviour {
 		yield return new WaitForSeconds (0.9f);
 		bossAnim.SetBool ("LaunchingRock", false);
 	}
-
 }

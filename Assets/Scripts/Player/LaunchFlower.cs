@@ -210,6 +210,8 @@ public class LaunchFlower : MonoBehaviour {
 		}
 		if(coll.gameObject.tag == "RockToLaunch")
 		{
+			FindObjectOfType<FrondeScript> ().hookedRock = coll.gameObject;
+			FindObjectOfType<FrondeScript> ().colliderRock = coll.GetComponent<PolygonCollider2D> ();
 			isHooked = true;
 			hookedThing = coll.gameObject;
 			onLaunchingRock = true;

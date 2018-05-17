@@ -14,6 +14,16 @@ public class StairButtonScript : MonoBehaviour {
 	public Animator animBigStairs;
 	public Animator animPilarDestroyed;
 	public Animator animBoss;
+
+	// Particles Game Objects
+
+	public GameObject lightWayBas;
+	public GameObject lightWayHaut;
+	public GameObject lightWayMid;
+	public GameObject lightWayFinal;
+	public ParticleSystem EtincellesHaut;
+	public ParticleSystem EtincellesBas;
+
 	public bool isActive;
 	[HideInInspector] public bool activeTrails;
 	private bool buttonPressed;
@@ -22,10 +32,17 @@ public class StairButtonScript : MonoBehaviour {
 	private float timeToInactive = 0;
 	public float timeMaxToInactive = 3f;
 	public float animDestroyPilarTime;
+	public float timeParticlesPlaying = 2f;
 
 	void Update ()
 	{
-		
+		if(activeTrails)
+		{
+			EtincellesBas.Play ();
+			EtincellesHaut.Play ();
+			lightWayBas.SetActive (true);
+			lightWayHaut.SetActive (true);
+		}
 		if(timeCanRun)
 		{
 			timeToInactive += Time.deltaTime;
@@ -58,6 +75,8 @@ public class StairButtonScript : MonoBehaviour {
 
 	IEnumerator DelayActivation()
 	{
+		FindObjectOfType<BossCamera> ().canPrintHelpButtons = false;
+		FindObjectOfType<BossCamera> ().canvasBossButtons.SetActive (false);
 		float grapplinPlantY = grapplinPlant.transform.position.y;
 		hasPlayedAnimations = true;
 		yield return new WaitForSeconds (0.85f);
@@ -71,14 +90,18 @@ public class StairButtonScript : MonoBehaviour {
 		grapplinPlant.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
 		FindObjectOfType<PlayerBehavior> ().EnableMovements ();
 		activeTrails = true;
-		yield return new WaitForSeconds (0.5f);
+		yield return new WaitForSeconds (timeParticlesPlaying);
+		lightWayMid.SetActive (true);
+		yield return new WaitForSeconds (1f);
+		lightWayFinal.SetActive (true);
+		yield return new WaitForSeconds (1.75f);
 		animBigStairs.SetBool ("IsActive", true);
 		yield return new WaitForSeconds (0.5f);
 		animPilarDestroyed.SetBool ("IsDestroying", true);
 		yield return new WaitForSeconds (animDestroyPilarTime);
+		FindObjectOfType<RockBoss> ().enabled = true;
 		animBoss.SetBool("IsHit", true);
 		yield return new WaitForSeconds (0.8f);
 		animBoss.SetBool ("IsHit", false);
-		FindObjectOfType<RockBoss> ().enabled = true;
 	}
 }

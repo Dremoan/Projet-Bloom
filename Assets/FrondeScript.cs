@@ -8,12 +8,11 @@ public class FrondeScript : MonoBehaviour {
 	public PlayerBehavior playerScript;
 	public Animator animBoss;
 	public PolygonCollider2D colliderRock;
-	private GameObject hookedRock;
+	public GameObject hookedRock;
 	private Vector2 dirToPlayer;
 	public float launchSpeed = 200f;
-	public float timeToLaunch;
-	private float timeToIncrease;
 	private bool canLaunch = true;
+	[HideInInspector] public bool isDead;
 
 
 
@@ -28,24 +27,17 @@ public class FrondeScript : MonoBehaviour {
 			if(Input.GetMouseButtonUp(1))
 			{
 				playerScript.EnableMovements ();
-				dirToPlayer = playerScript.transform.position - this.transform.position;
-				this.GetComponent<Rigidbody2D> ().mass = 1;
+				dirToPlayer = playerScript.transform.position - hookedRock.transform.position;
+				hookedRock.GetComponent<Rigidbody2D> ().mass = 1;
 				StartCoroutine (LaunchRock ());
 			}
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D coll)
-	{
-		if (coll.gameObject.tag == "Flower")
-		{
-			Debug.Log ("yo");
-			hookedRock = coll.gameObject;
-		}
-	}
 
 	IEnumerator LaunchRock()
 	{
+		hookedRock.GetComponent<SpriteRenderer> ().sortingOrder += 8;
 		flowerScript.isHooked = false;
 		flowerScript.isBacking = true;
 		canLaunch = false;
@@ -57,10 +49,13 @@ public class FrondeScript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if(col.gameObject.tag == "Bigorpion")
+		if(col.gameObject.tag == "RockToLaunch")
 		{
-			this.gameObject.SetActive (false);
-			animBoss.Play ("MiniBossHit");
+			GetComponent<RockBoss> ().enabled = false;
+			animBoss.SetBool ("LaunchingRock", false);
+			animBoss.SetBool ("IsHit", true); 
+			col.gameObject.SetActive (false);
+			StartCoroutine (DelayAnimDeath ());
 		}
 	}
 
@@ -68,6 +63,10 @@ public class FrondeScript : MonoBehaviour {
 	{
 		yield return new WaitForSeconds (0.8f);
 		animBoss.Play ("MiniBossDeath");
+		yield return new WaitForSeconds (2f);
+		isDead = true;
+		FindObjectOfType<RockBoss> ().instructionsDialogue.SetActive (false);
+
 	}
 
 }

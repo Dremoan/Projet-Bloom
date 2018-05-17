@@ -7,6 +7,7 @@ public class EnableLaunch : MonoBehaviour {
 
 	public LaunchFlower flowerScript;
 	private bool canvasActive;
+	public float delayTime = 7.5f;
 
 	void Update()
 	{
@@ -31,7 +32,7 @@ public class EnableLaunch : MonoBehaviour {
 
 	IEnumerator EnableLaunchFlower()
 	{
-		yield return new WaitForSeconds (6f);
+		yield return new WaitForSeconds (delayTime);
 		flowerScript.canLaunch = true;
 	}
 

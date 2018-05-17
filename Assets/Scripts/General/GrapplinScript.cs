@@ -16,7 +16,6 @@ public class GrapplinScript : MonoBehaviour {
 	{
 		if(flowerScript.onGrapplinSpot && Input.GetMouseButtonDown(1) && canUseGrapplin)
 		{
-			FindObjectOfType<GrapplinInstructions> ().DisableDownArrow ();
 			gap.SetActive (false);
 				StartCoroutine(Grapplin());
 		}
