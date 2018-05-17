@@ -18,6 +18,7 @@ TagManager:
   - GrapplinSpot
   - RockToLaunch
   - FlowerTarget
+  - Bigorpion
   layers:
   - Default
   - TransparentFX

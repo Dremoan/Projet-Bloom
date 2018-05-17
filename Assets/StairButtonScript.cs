@@ -13,6 +13,7 @@ public class StairButtonScript : MonoBehaviour {
 	public Animator animStairs;
 	public Animator animBigStairs;
 	public Animator animPilarDestroyed;
+	public Animator animBoss;
 	public bool isActive;
 	[HideInInspector] public bool activeTrails;
 	private bool buttonPressed;
@@ -75,6 +76,9 @@ public class StairButtonScript : MonoBehaviour {
 		yield return new WaitForSeconds (0.5f);
 		animPilarDestroyed.SetBool ("IsDestroying", true);
 		yield return new WaitForSeconds (animDestroyPilarTime);
+		animBoss.SetBool("IsHit", true);
+		yield return new WaitForSeconds (0.8f);
+		animBoss.SetBool ("IsHit", false);
 		FindObjectOfType<RockBoss> ().enabled = true;
 	}
 }

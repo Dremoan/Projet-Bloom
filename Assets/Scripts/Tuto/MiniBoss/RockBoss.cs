@@ -10,7 +10,7 @@ public class RockBoss : MonoBehaviour {
 	public GameObject explosionArea;
 	public GameObject targetSprite;
 	public Animator bossAnim;
-	public float timeBeforeRelaunch = 0.5f;
+	public float timeBeforeRelaunch = 1f;
 	private bool inZone = false;
 	private float timeElapsed = 0f;
 
@@ -48,12 +48,14 @@ public class RockBoss : MonoBehaviour {
 
 	IEnumerator LaunchRock()
 	{
-		bossAnim.Play ("MiniBossLaunch");
+		bossAnim.SetBool ("LaunchingRock", true);
 		targetSprite.SetActive (true);
 		DropManagerComponent.SpawnDropRock (canon.transform.position, 0f, player.transform.position);
 		targetSprite.transform.position = player.transform.position;
 		yield return new WaitForSeconds (1f);
 		targetSprite.SetActive (false);
+		yield return new WaitForSeconds (0.9f);
+		bossAnim.SetBool ("LaunchingRock", false);
 	}
 
 }
