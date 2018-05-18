@@ -8,24 +8,31 @@ public class GrapplinInstructions : MonoBehaviour {
 	public GameObject downArrowWater;
 	public GameObject canvasLaunchWater;
 	public ModifyingZone modifyScript;
-	private bool holdWater;
+	private float timeRunning;
+	public float timeMax = 10f;
+	private bool timeCanRun;
+
 	void Update()
 	{
-		holdWater = FindObjectOfType<LaunchFlower> ().holdsWater;
-		Enable ();
+		Debug.Log (timeRunning);
+		if(timeCanRun)
+		{
+			timeRunning += Time.deltaTime;
+		}
+
+		if(timeRunning > timeMax)
+		{
+			timeRunning = 0;
+			StartCoroutine(EnableDownArrowGrapplin ());
+			timeCanRun = false;
+		}
 	}
 	public void EnableDownArrowWater()
 	{
 		downArrowWater.SetActive (true);
 	}
 
-	void Enable()
-	{
-		if(Input.GetKeyDown(KeyCode.H))
-		{
-			StartCoroutine(EnableDownArrowGrapplin ());
-		}
-	}
+
 	IEnumerator EnableDownArrowGrapplin()
 	{
 		downArrowWater.SetActive (false);
@@ -34,5 +41,10 @@ public class GrapplinInstructions : MonoBehaviour {
 		yield return new WaitForSeconds (3f);
 		downArrowGrapplin.SetActive (false);
 		canvasLaunchWater.SetActive (false);
+	}
+
+	void TimeCanRunTrue()
+	{
+		timeCanRun = true;
 	}
 }

@@ -6,10 +6,10 @@ Fleur : Étrange...
 Fleur : Enfin peu importe, j'ai besoin de ton aide ! 
 Fleur : Depuis quelques temps, une sécheresse dévaste la région et mon village ressent chaque jour un peu plus le changement de climat. 
 Fleur : Malheureusement personne n'en connaît la cause, l'aridité nous gagne sans qu'on ne puisse réagir...
-Fleur : Il y a quelque jours, j'ai voulu me rendre compte par moi-même des dégâts causés ici. Mais je n'arrive plus à avancer, cette chaleur est écrasante !
+Fleur : Il y a quelques jours, j'ai voulu me rendre compte par moi-même des dégâts causés ici. Mais je n'arrive plus à avancer, cette chaleur est écrasante !
 Cactus : C'est terrible ! Dis, comment pourrais-je t'aider?
 Fleur : Au vu des épines qui recouvrent ton corps, tu dois être un cactus, je me trompe?
-Cactus : Je...Je crois bien oui !
+Cactus : Je...Je crois que tu as raison !
 Fleur : Tu dois bien être le seul à ne pas craindre cette sécheresse, c'est un atout formidable !
 Cactus : Si tu le dis ! On fait quoi maintenant?
 Fleur : Laisse moi t'accompagner, je t'expliquerai tout ce que tu as besoin de savoir sur cet endroit !

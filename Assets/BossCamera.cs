@@ -45,7 +45,7 @@ public class BossCamera : MonoBehaviour {
 		}
 		if(canDezoom)
 		{
-			cameraScript.XMinValue = Mathf.Lerp (cameraScript.XMinValue, 585f, Time.deltaTime * 1f);
+			cameraScript.XMinValue = Mathf.Lerp (cameraScript.XMinValue, 600f, Time.deltaTime * 1f);
 			mainCamera.orthographicSize = Mathf.Lerp (mainCamera.orthographicSize, dezoomSize, Time.deltaTime * 1f);
 		}
 	}
@@ -67,7 +67,7 @@ public class BossCamera : MonoBehaviour {
 		cameraScript.XMinEnabled = true;
 		cameraScript.YMaxEnabled = true;
 		cameraScript.YMinEnabled = true;
-		cameraScript.XMaxValue = 625f;
+		cameraScript.XMaxValue = 650f;
 		cameraScript.YMaxValue = -900f;
 		cameraScript.YMinValue = -900f;
 	}
