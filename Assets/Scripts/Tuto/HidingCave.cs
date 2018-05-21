@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PostProcessing;
 
 public class HidingCave : MonoBehaviour {
 
@@ -8,6 +9,10 @@ public class HidingCave : MonoBehaviour {
 	public GameObject skyBox;
 	public PolygonCollider2D colliderLevel;
 	public Animator anim;
+	public Animator animFalaise;
+	public PostProcessingBehaviour tutoPostProcess;
+	public PostProcessingProfile canyonProcess;
+
 	public CameraBehavior cameraScript;
 	public Camera mainCamera;
 	private bool canDezoom;
@@ -37,9 +42,11 @@ public class HidingCave : MonoBehaviour {
 
 	IEnumerator ActiveColliderLevel()
 	{
+		tutoPostProcess.profile = canyonProcess;
 		yield return new WaitForSeconds (0.75f);
 		skyBox.SetActive (true);
 		yield return new WaitForSeconds (0.75f);
+		animFalaise.Play ("Falaise qui tombe");
 		colliderLevel.enabled = true;
 	}
 }

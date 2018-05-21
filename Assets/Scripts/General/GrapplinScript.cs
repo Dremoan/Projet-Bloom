@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class GrapplinScript : MonoBehaviour {
 
-	public ModifyingZone modifyScript;
+	public GameObject grapplinAnchor;
 	public GameObject gap;
 	public LaunchFlower flowerScript;
 	public Rigidbody2D playerBody;
 	public float grapplinSpeed = 0;
-	public float travelTime;
 	private Vector3 dirToFlower;
 	private bool canUseGrapplin = true;
 	[HideInInspector] public bool canSetActiveCollider = true;
@@ -19,6 +18,10 @@ public class GrapplinScript : MonoBehaviour {
 		{
 			gap.SetActive (false);
 				StartCoroutine(Grapplin());
+		}
+		if(GetComponent<ModifyingZone>().modify == true)
+		{
+			grapplinAnchor.SetActive (true);
 		}
 	}
 
@@ -30,7 +33,7 @@ public class GrapplinScript : MonoBehaviour {
 		playerBody.velocity = Vector2.zero;
 		FindObjectOfType<PlayerBehavior> ().CancelMovements ();
 		playerBody.velocity = dirToFlower.normalized * grapplinSpeed * Time.fixedDeltaTime;
-		yield return new WaitForSeconds (travelTime);
+		yield return new WaitForSeconds (1f);
 		playerBody.velocity = Vector2.zero;
 		yield return new WaitForSeconds (0.25f);
 		flowerScript.isHooked = false;

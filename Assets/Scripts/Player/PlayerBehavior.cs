@@ -18,12 +18,11 @@ public class PlayerBehavior : MonoBehaviour {
 	[HideInInspector] public bool isAiming = false;
 	[HideInInspector] public bool hasKey = false;
 	[HideInInspector] public bool isMoving;
-	[HideInInspector] public bool canLaunchAction = true;
+	public bool canLaunchAction = true;
 
 	private bool holdsWater;
 
 	public Transform player;
-	public Transform holdingPlayer;
 	public GameObject eau;
 	public LaunchFlower Fleur;
 	public Rigidbody2D body;

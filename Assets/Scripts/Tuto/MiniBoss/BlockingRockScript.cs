@@ -21,7 +21,7 @@ public class BlockingRockScript : MonoBehaviour {
 		{
 				backingCount += Time.deltaTime;
 		}		
-		if (backingCount > 2) 
+		if (backingCount > 1f) 
 		{
 			BackingAndDeleteRock ();
 		}

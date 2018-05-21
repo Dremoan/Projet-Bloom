@@ -37,7 +37,6 @@ public class BossCamera : MonoBehaviour {
 
 		if(countToPrintHelpButtons > TimeMaxToPrintHelpButtons && canPrintHelpButtons)
 		{
-			Debug.Log ("coucou");
 			countToPrintHelpButtons = 0;
 			canPrintHelpButtons = false;
 			canvasBossButtons.SetActive (true);

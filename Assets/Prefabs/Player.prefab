@@ -238,7 +238,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1517652991125184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 927.8, y: 31, z: 0}
+  m_LocalPosition: {x: 258, y: 251, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 4586352544561714}
@@ -465,7 +465,7 @@ MonoBehaviour:
   ObjectToHide2: {fileID: 0}
   ObjectToHide3: {fileID: 212552776645925070}
   marcheSpit: {fileID: 199790801071574982}
-  layerNumber: 2
+  layerNumber: 3
 --- !u!114 &114430866608551110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -493,7 +493,6 @@ MonoBehaviour:
   isMoving: 0
   canLaunchAction: 1
   player: {fileID: 4341082943556464}
-  holdingPlayer: {fileID: 0}
   eau: {fileID: 1902301653413336}
   Fleur: {fileID: 0}
   body: {fileID: 50670324831390516}
@@ -1013,11 +1012,11 @@ ParticleSystem:
     m_Rotation: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
-    m_MeshMaterialIndex: 0
-    m_MeshNormalOffset: 0
     m_Mesh: {fileID: 0}
     m_MeshRenderer: {fileID: 0}
     m_SkinnedMeshRenderer: {fileID: 0}
+    m_MeshMaterialIndex: 0
+    m_MeshNormalOffset: 0
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
     alignToDirection: 0
@@ -1778,47 +1777,6 @@ ParticleSystem:
         - serializedVersion: 2
           time: 1
           value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    speedModifier:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 1
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -2951,7 +2909,7 @@ ParticleSystem:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-    range: {x: 0, y: 0}
+    range: {x: -0.001, y: 0}
   CollisionModule:
     enabled: 0
     serializedVersion: 3
@@ -3216,7 +3174,6 @@ ParticleSystem:
     maxLights: 20
   TrailModule:
     enabled: 0
-    mode: 0
     ratio: 1
     lifetime:
       serializedVersion: 2
@@ -3261,14 +3218,12 @@ ParticleSystem:
         m_RotationOrder: 4
     minVertexDistance: 0.2
     textureMode: 0
-    ribbonCount: 1
     worldSpace: 0
     dieWithParticles: 1
     sizeAffectsWidth: 1
     sizeAffectsLifetime: 0
     inheritParticleColor: 1
     generateLightingData: 0
-    splitSubEmitterRibbons: 0
     colorOverLifetime:
       serializedVersion: 2
       minMaxState: 0

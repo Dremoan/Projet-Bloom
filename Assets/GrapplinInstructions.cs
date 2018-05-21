@@ -14,7 +14,6 @@ public class GrapplinInstructions : MonoBehaviour {
 
 	void Update()
 	{
-		Debug.Log (timeRunning);
 		if(timeCanRun)
 		{
 			timeRunning += Time.deltaTime;
@@ -29,6 +28,7 @@ public class GrapplinInstructions : MonoBehaviour {
 	}
 	public void EnableDownArrowWater()
 	{
+		FindObjectOfType<PlayerBehavior> ().EnableMovements ();
 		downArrowWater.SetActive (true);
 	}
 
@@ -45,6 +45,7 @@ public class GrapplinInstructions : MonoBehaviour {
 
 	void TimeCanRunTrue()
 	{
+		FindObjectOfType<PlayerBehavior> ().CancelMovements ();
 		timeCanRun = true;
 	}
 }
