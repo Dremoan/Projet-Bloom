@@ -8,6 +8,7 @@ public class HidingCave : MonoBehaviour {
 	public GameObject skyBox;
 	public PolygonCollider2D colliderLevel;
 	public Animator anim;
+	public Animator animFalaise;
 	public CameraBehavior cameraScript;
 	public Camera mainCamera;
 	private bool canDezoom;
@@ -40,6 +41,7 @@ public class HidingCave : MonoBehaviour {
 		yield return new WaitForSeconds (0.75f);
 		skyBox.SetActive (true);
 		yield return new WaitForSeconds (0.75f);
+		animFalaise.Play ("Falaise qui tombe");
 		colliderLevel.enabled = true;
 	}
 }

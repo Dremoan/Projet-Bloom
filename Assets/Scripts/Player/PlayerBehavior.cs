@@ -18,7 +18,7 @@ public class PlayerBehavior : MonoBehaviour {
 	[HideInInspector] public bool isAiming = false;
 	[HideInInspector] public bool hasKey = false;
 	[HideInInspector] public bool isMoving;
-	[HideInInspector] public bool canLaunchAction = true;
+	public bool canLaunchAction = false;
 
 	private bool holdsWater;
 
