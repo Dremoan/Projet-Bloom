@@ -10,14 +10,16 @@ public class WoodScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if(coll.gameObject.tag == "Player")
-		{
-			fraxinelleScript.OnFire ();
-		}
 		if(coll.gameObject.tag == "Player" && fraxinelleScript.onFire == true)
 		{
-			animWood.SetBool ("Burnt", true);
-
+			StartCoroutine (DestroyWood ());
 		}
+	}
+
+	IEnumerator DestroyWood()
+	{
+		animWood.SetBool ("Burnt", true);
+		yield return new WaitForSeconds (2.5f);
+		this.gameObject.SetActive (false);
 	}
 }
