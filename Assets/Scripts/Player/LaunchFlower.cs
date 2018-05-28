@@ -29,7 +29,9 @@ public class LaunchFlower : MonoBehaviour {
 	[HideInInspector] public bool onLaunchingRock = false;
 
 
-	private Vector2 mousePos;
+	private Vector3 launchDir;
+	private float angleLaunch;
+	private Vector3 mousePos;
 	private GameObject hookedThing;
 	private bool lianeActive = false;
 	private bool onWater = false;
@@ -38,13 +40,14 @@ public class LaunchFlower : MonoBehaviour {
 	void Update () 
 	{
 		mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition) - transform.position;
-		 
+		launchDir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - player.transform.position;
+		angleLaunch = Mathf.Atan2 (launchDir.x, launchDir.y) * Mathf.Rad2Deg +180;
+		Debug.Log (angleLaunch);
 		OnWater ();
 		FlowerLaunch ();
 		Launch ();
 		Animations ();
 	}
-
 
 
 
@@ -58,6 +61,7 @@ public class LaunchFlower : MonoBehaviour {
 			
 		if(Input.GetMouseButtonDown(0) && !isLaunched && !isBacking && !isHooked && canLaunch)
 		{
+			animFlower.SetBool ("Launched", true);
 			player.GetComponent<PlayerBehavior> ().canLaunchAction = false;
 			canLaunch = false;
 			this.GetComponent<CircleCollider2D> ().enabled = true;
@@ -115,6 +119,7 @@ public class LaunchFlower : MonoBehaviour {
 	{
 		if(onWater && Input.GetMouseButtonDown(1))
 		{
+			FindObjectOfType<PlayerBehavior> ().canLaunchAction = true;
 			onWater = false;
 			holdsWater = true;
 			isHooked = false;
@@ -144,6 +149,7 @@ public class LaunchFlower : MonoBehaviour {
 
 	public void Back()
 	{
+		animFlower.SetBool ("Launched", false);
 		Vector2 dirToPlace = flowerPlace.transform.position - transform.position;
 		bodyFlower.velocity = dirToPlace.normalized * flowerSpeedBack * Time.fixedDeltaTime;
 		if(Vector2.Distance(player.transform.position, transform.position)< 20f)
@@ -170,6 +176,7 @@ public class LaunchFlower : MonoBehaviour {
 	{
 		animFlower.SetFloat ("Horizontal", Input.GetAxisRaw ("Horizontal"));
 		animFlower.SetFloat ("Vertical", Input.GetAxisRaw ("Vertical"));
+		animFlower.SetFloat ("AngleLaunchX", angleLaunch);
 		animFlower.SetFloat ("LastMoveX", player.GetComponent<PlayerBehavior> ().lastMove.x);
 		animFlower.SetFloat ("LastMoveY", player.GetComponent<PlayerBehavior> ().lastMove.y);
 		animFlower.SetBool ("IsMoving", player.GetComponent<PlayerBehavior>().isMoving);
@@ -184,6 +191,7 @@ public class LaunchFlower : MonoBehaviour {
 			isHooked = true;
 			hookedThing = coll.gameObject;
 			onWater = true;
+			FindObjectOfType<PlayerBehavior> ().canLaunchAction = false;
 		}
 		if(coll.gameObject.tag == "FlowerTarget")
 		{

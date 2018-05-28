@@ -31,6 +31,10 @@ public class JumpingThru : MonoBehaviour {
 	{
 		touchedPlayer = true;
 	}
+	void OnCollisionStay2D(Collision2D coll)
+	{
+		touchedPlayer = true;
+	}
 	void OnCollisionExit2D(Collision2D coll)
 	{
 		touchedPlayer = false;

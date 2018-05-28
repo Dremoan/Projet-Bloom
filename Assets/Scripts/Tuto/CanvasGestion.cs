@@ -60,7 +60,7 @@ public class CanvasGestion : MonoBehaviour {
 
 	void InstructionsPilarActive() // Instruction pour appuyer sur les boutons.
 	{
-		FindObjectOfType<PlayerBehavior> ().EnableMovements ();
+		FindObjectOfType<PlayerBehavior> ().EnableMovementsCave ();
 		StartCoroutine (DelayAppear ());
 	}
 
@@ -79,7 +79,7 @@ public class CanvasGestion : MonoBehaviour {
 
 	public void InstructionJumpActive()
 	{
-		FindObjectOfType<PlayerBehavior> ().EnableMovements ();
+		FindObjectOfType<PlayerBehavior> ().EnableMovementsCave ();
 		StartCoroutine (DelayRemove ());
 	}
 

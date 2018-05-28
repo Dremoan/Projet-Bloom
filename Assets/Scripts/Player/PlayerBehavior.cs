@@ -159,6 +159,12 @@ public class PlayerBehavior : MonoBehaviour {
 		canJump = true;
 		canMove = true;
 	}
+	public void EnableMovementsCave()
+	{
+		//		FindObjectOfType<LaunchFlower> ().canLaunch = true;
+		canJump = true;
+		canMove = true;
+	}
 
 	void LaunchActionIdle()
 	{
@@ -176,4 +182,7 @@ public class PlayerBehavior : MonoBehaviour {
 			Fleur.GetComponent<Animator> ().Play ("FlowerActionIdle");
 		}
 	}
+
+
+
 }
