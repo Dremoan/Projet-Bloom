@@ -7,6 +7,7 @@ public class JumpingThru : MonoBehaviour {
 
 	public GameObject player;
 	private bool touchedPlayer;
+	public float ignoreTime = 0.5f;
 
 	void Update () 
 	{
@@ -23,7 +24,7 @@ public class JumpingThru : MonoBehaviour {
 	IEnumerator InactiveCollider()
 	{
 		Physics2D.IgnoreCollision (player.GetComponent<Collider2D> (), this.GetComponent<Collider2D> (), ignore:true);
-		yield return new WaitForSeconds (0.5f);
+		yield return new WaitForSeconds (ignoreTime);
 		Physics2D.IgnoreCollision (player.GetComponent<Collider2D> (), this.GetComponent<Collider2D> (), ignore:false);
 	}
 

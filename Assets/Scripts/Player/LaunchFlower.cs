@@ -42,7 +42,6 @@ public class LaunchFlower : MonoBehaviour {
 		mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition) - transform.position;
 		launchDir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - player.transform.position;
 		angleLaunch = Mathf.Atan2 (launchDir.x, launchDir.y) * Mathf.Rad2Deg +180;
-		Debug.Log (angleLaunch);
 		OnWater ();
 		FlowerLaunch ();
 		Launch ();
