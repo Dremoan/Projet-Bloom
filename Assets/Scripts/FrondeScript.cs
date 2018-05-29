@@ -11,7 +11,7 @@ public class FrondeScript : MonoBehaviour {
 	public GameObject hookedRock;
 	private Vector2 dirToPlayer;
 	public float launchSpeed = 200f;
-	private bool canLaunch = true;
+//	private bool canLaunch = true;
 	[HideInInspector] public bool isDead;
 
 
@@ -40,7 +40,7 @@ public class FrondeScript : MonoBehaviour {
 		hookedRock.GetComponent<SpriteRenderer> ().sortingOrder += 8;
 		flowerScript.isHooked = false;
 		flowerScript.isBacking = true;
-		canLaunch = false;
+//		canLaunch = false;
 		hookedRock.GetComponent<Rigidbody2D> ().AddForce (dirToPlayer.normalized * launchSpeed, ForceMode2D.Impulse);
 		colliderRock.enabled = false;
 		yield return new WaitForSeconds (0.5f);

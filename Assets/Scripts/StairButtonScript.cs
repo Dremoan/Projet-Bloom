@@ -77,7 +77,6 @@ public class StairButtonScript : MonoBehaviour {
 	{
 		FindObjectOfType<BossCamera> ().canPrintHelpButtons = false;
 		FindObjectOfType<BossCamera> ().canvasBossButtons.SetActive (false);
-		float grapplinPlantY = grapplinPlant.transform.position.y;
 		hasPlayedAnimations = true;
 		yield return new WaitForSeconds (0.85f);
 		gap.SetActive (false);

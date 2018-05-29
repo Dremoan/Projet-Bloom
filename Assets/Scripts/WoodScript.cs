@@ -7,15 +7,37 @@ public class WoodScript : MonoBehaviour {
 	private FraxScript fraxinelleScript;
 	private GameObject fraxinelle;
 	public Animator animWood;
+	private bool canDie;
 
+	void Update()
+	{
+		if(fraxinelleScript.onFire == true && canDie)
+		{
+			StartCoroutine (DestroyWood ());
+		}
+	}
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if(coll.gameObject.tag == "Fraxinelle" && fraxinelleScript.onFire == true)
+		if(coll.gameObject.tag == "Fraxinelle")
 		{
 			fraxinelleScript = coll.gameObject.GetComponent<FraxScript> ();
 			fraxinelle = coll.gameObject;
-			StartCoroutine (DestroyWood ());
+			canDie = true;
+		}
+	}
+	void OnTriggerStay2D(Collider2D coll)
+	{
+		if(coll.gameObject.tag == "Fraxinelle")
+		{
+			canDie = true;
+		}
+	}
+	void OnTriggerExit2D(Collider2D coll)
+	{
+		if(coll.gameObject.tag == "Fraxinelle")
+		{
+			canDie = false;
 		}
 	}
 

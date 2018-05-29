@@ -9,10 +9,11 @@ public class FaisceauScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if(coll.gameObject.tag == "Fraxinelle")
+		if(coll.gameObject.tag == "Fraxinelle" && canLaunchFunction)
 		{
 			StartCoroutine (coll.gameObject.GetComponent<FraxScript> ().OnFire ());
 			coll.gameObject.GetComponent<FraxScript> ().canSetFire = false;
+			canLaunchFunction = false;
 		}
 	}
 }
