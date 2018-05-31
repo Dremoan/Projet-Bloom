@@ -16,6 +16,7 @@ public class AfricanusScript : MonoBehaviour {
 	private bool touchedPlayer;
 	private bool canSpam;
 	private bool hasGrab;
+	private bool swallowing;
 	private bool canDecrease;
 	private float numberForSpam = 3;
 	private float countTillDecrease;
@@ -26,6 +27,7 @@ public class AfricanusScript : MonoBehaviour {
 	{
 		barFilling.fillAmount = numberForSpam * 0.1f;
 		animAfricanus.SetBool ("HasGrab", hasGrab);
+		animAfricanus.SetBool ("Swallowing", swallowing);
 		if(touchedPlayer)
 		{
 			GrabPlayer ();
