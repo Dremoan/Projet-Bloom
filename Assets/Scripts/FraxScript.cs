@@ -17,6 +17,7 @@ public class FraxScript : MonoBehaviour
 	[HideInInspector] public bool onFire;
 	[HideInInspector] public bool canMove = true;
 	[HideInInspector] public bool canSetFire = true;
+	[HideInInspector] public bool canLaunchFunction = true;
 	private Vector3 moveDirection;
 
 	void Update ()

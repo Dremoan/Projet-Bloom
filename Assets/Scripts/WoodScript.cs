@@ -9,14 +9,6 @@ public class WoodScript : MonoBehaviour {
 	public Animator animWood;
 	private bool canDie;
 
-	void Update()
-	{
-		if(fraxinelleScript.onFire == true && canDie)
-		{
-			StartCoroutine (DestroyWood ());
-		}
-	}
-
 	void OnTriggerEnter2D(Collider2D coll)
 	{
 		if(coll.gameObject.tag == "Fraxinelle")
@@ -26,6 +18,15 @@ public class WoodScript : MonoBehaviour {
 			canDie = true;
 		}
 	}
+
+	void Update()
+	{
+		if(fraxinelleScript.onFire == true && canDie)
+		{
+			StartCoroutine (DestroyWood ());
+		}
+	}
+
 	void OnTriggerStay2D(Collider2D coll)
 	{
 		if(coll.gameObject.tag == "Fraxinelle")

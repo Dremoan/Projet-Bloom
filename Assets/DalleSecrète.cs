@@ -4,10 +4,42 @@ using UnityEngine;
 
 public class DalleSecrète : MonoBehaviour {
 
+	public GameObject blockingDoorOther;
+	public Animator animInterrupteur;
+	public DetectionTimeline timelineScriptIncomplet;
+	public DetectionTimeline timelineScriptComplet;
+	public DalleSecrète otherInterrupteur;
+	private bool canPlayTimeline = true;
+	public bool active;
+	private bool canInactiveDoor = true;
 
 
-	void Update ()
+	void Update()
 	{
-		
+		if(active)
+		{
+			animInterrupteur.SetBool ("Active", true);
+			if(canInactiveDoor)
+			{
+				blockingDoorOther.SetActive (false);
+				canInactiveDoor = false;
+			}
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D coll)
+	{
+		if(coll.gameObject.tag == "Player" && canPlayTimeline && otherInterrupteur.active == false)
+		{
+			active = true;
+			canPlayTimeline = false;
+			timelineScriptIncomplet.DalleActive ();
+		}
+		if(coll.gameObject.tag == "Player" && canPlayTimeline && otherInterrupteur.active == true)
+		{
+			active = true;
+			canPlayTimeline = false;
+			timelineScriptComplet.DalleActive ();
+		}
 	}
 }
