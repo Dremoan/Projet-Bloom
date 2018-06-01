@@ -19,6 +19,9 @@ public class ProjectileRock : Projectile
 		GetComponent<PolygonCollider2D> ().enabled = true;
 		explosionArea.enabled = false;
 		yield return new WaitForSeconds (5f);
+//		FindObjectOfType<LaunchFlower> ().isHooked = false;
+//		FindObjectOfType<LaunchFlower> ().isLaunched = false;
+//		FindObjectOfType<LaunchFlower> ().isBacking = true;
 		GetComponent<PolygonCollider2D> ().enabled = false;
 		canExplode = true;
 		projectileBody.mass = 1;

@@ -13023,11 +13023,11 @@ Prefab:
       objectReference: {fileID: 1687808581}
     - target: {fileID: 4916318881920620, guid: 00090c67565ff41479cf2aa673fe914f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: -949
       objectReference: {fileID: 0}
     - target: {fileID: 4916318881920620, guid: 00090c67565ff41479cf2aa673fe914f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 930
+      value: 1477
       objectReference: {fileID: 0}
     - target: {fileID: 114316968853620100, guid: 00090c67565ff41479cf2aa673fe914f,
         type: 2}
@@ -17605,22 +17605,22 @@ Prefab:
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
       propertyPath: YMaxEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
       propertyPath: YMinEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
       propertyPath: XMaxEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
       propertyPath: XMinEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
@@ -20208,7 +20208,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1860967596437374, guid: b7f4c8ecab02a04439819a6f9ecd3576, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
         type: 2}
@@ -20263,7 +20263,7 @@ Prefab:
     - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
         type: 2}
       propertyPath: canLaunch
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
         type: 2}
@@ -22397,7 +22397,7 @@ GameObject:
   - component: {fileID: 1403491692}
   m_Layer: 0
   m_Name: GrapplinPlantStairs
-  m_TagString: ModifyingZone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23312,7 +23312,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1475630967}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b51d2762ec8a7f46b59546836dd8a4c, type: 3}
   m_Name: 
@@ -24818,6 +24818,7 @@ MonoBehaviour:
   buttonStair2: {fileID: 2020571499}
   gap: {fileID: 1729897083}
   grapplinPlant: {fileID: 1403491689}
+  grapplinAnchor: {fileID: 0}
   animButtonStair: {fileID: 1728747443}
   animStairs: {fileID: 790466960}
   animBigStairs: {fileID: 92452251}
@@ -27081,6 +27082,7 @@ MonoBehaviour:
   buttonStair2: {fileID: 2020571499}
   gap: {fileID: 1729897083}
   grapplinPlant: {fileID: 1403491689}
+  grapplinAnchor: {fileID: 0}
   animButtonStair: {fileID: 2020571502}
   animStairs: {fileID: 1969879238}
   animBigStairs: {fileID: 92452251}

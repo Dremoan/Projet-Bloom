@@ -9,6 +9,7 @@ public class StairButtonScript : MonoBehaviour {
 	public GameObject buttonStair2;
 	public GameObject gap;
 	public GameObject grapplinPlant;
+	public GameObject grapplinAnchor;
 	public Animator animButtonStair;
 	public Animator animStairs;
 	public Animator animBigStairs;
@@ -87,6 +88,7 @@ public class StairButtonScript : MonoBehaviour {
 		player.GetComponent<Rigidbody2D> ().transform.Translate (0, -15f, 0);
 		player.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
 		grapplinPlant.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+		grapplinAnchor.SetActive (false);
 		FindObjectOfType<PlayerBehavior> ().EnableMovements ();
 		activeTrails = true;
 		yield return new WaitForSeconds (timeParticlesPlaying);

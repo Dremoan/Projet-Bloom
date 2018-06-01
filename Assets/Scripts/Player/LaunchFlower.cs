@@ -223,6 +223,12 @@ public class LaunchFlower : MonoBehaviour {
 			hookedThing = coll.gameObject;
 			onLaunchingRock = true;
 		}
+		if(coll.gameObject.tag == "Africanus")
+		{
+			isHooked = true;
+			hookedThing = FindObjectOfType<AfricanusScript> ().mouthPlace.gameObject;
+			FindObjectOfType<AfricanusScript> ().touchedFlower = true;
+		}
 	}
 		
 

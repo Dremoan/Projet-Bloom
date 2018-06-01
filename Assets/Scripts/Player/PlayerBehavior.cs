@@ -61,10 +61,9 @@ public class PlayerBehavior : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.Space) && canJump == true && !isJumping && !canCharge) 
 		{
-            FMODUnity.RuntimeManager.PlayOneShot("event:/CACTUS_DASH");
 			isJumping = true;
 			canCharge = true;
-			StartCoroutine (dashingDelay ());
+			StartCoroutine (DashingDelay ());
 		}
 		if(FindObjectOfType<LaunchFlower>().gameObject.activeInHierarchy && canLaunchAction)
 		{
@@ -82,8 +81,9 @@ public class PlayerBehavior : MonoBehaviour {
 		anim.SetFloat ("LastMoveY", lastMove.y);
 	}
 		
-	IEnumerator dashingDelay()
+	IEnumerator DashingDelay()
 	{
+		FMODUnity.RuntimeManager.PlayOneShot("event:/CACTUS_DASH");
 		canJump = false;
 		body.velocity = Vector2.zero;
 		body.velocity = lastMove.normalized * jumpSpeed * Time.fixedDeltaTime;
@@ -149,13 +149,24 @@ public class PlayerBehavior : MonoBehaviour {
 		isMoving = false;
 		canJump = false;
 		canMove = false;
-		FindObjectOfType<LaunchFlower> ().canLaunch = false;
+		canCharge = true;
+	}
+
+	public void CancelMovementsAfricanus()
+	{
+//		Fleur.GetComponent<LaunchFlower>().enabled = false;
+		canLaunchAction = false;
+		isMoving = false;
+		canJump = false;
+		canMove = false;
+		canCharge = true;
 	}
 
 	public void EnableMovements()
 	{
-		FindObjectOfType<LaunchFlower> ().canLaunch = true;
+		Fleur.GetComponent<LaunchFlower>().enabled = true;
 		canLaunchAction = true;
+		canCharge = false;
 		canJump = true;
 		canMove = true;
 	}
@@ -164,6 +175,7 @@ public class PlayerBehavior : MonoBehaviour {
 		//		FindObjectOfType<LaunchFlower> ().canLaunch = true;
 		canJump = true;
 		canMove = true;
+		canCharge = false;
 	}
 
 	void LaunchActionIdle()

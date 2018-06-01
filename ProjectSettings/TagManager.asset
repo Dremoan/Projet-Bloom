@@ -20,6 +20,7 @@ TagManager:
   - FlowerTarget
   - Bigorpion
   - Fraxinelle
+  - Africanus
   layers:
   - Default
   - TransparentFX
