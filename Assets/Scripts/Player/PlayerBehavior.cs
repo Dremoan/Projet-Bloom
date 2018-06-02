@@ -196,6 +196,7 @@ public class PlayerBehavior : MonoBehaviour {
 		{
 			anim.Play ("PlayerActionIdle");
 			Fleur.GetComponent<Animator> ().Play ("FlowerActionIdle");
+			idleCount = -2f;
 		}
 	}
 

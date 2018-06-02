@@ -12,33 +12,23 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114654365088930298}
-<<<<<<< HEAD
-  - {fileID: 114555337178319014}
-=======
-  - {fileID: 114269547679453138}
->>>>>>> Bonjour
+  - {fileID: 114904742564432158}
+  - {fileID: 114511998705075914}
   EditorEvents:
-  - {fileID: 114624187333773302}
-  - {fileID: 114667917777434810}
-  - {fileID: 114172516375496404}
-  - {fileID: 114807680326473066}
-  - {fileID: 114018560770964290}
-  - {fileID: 114965160055793230}
-  - {fileID: 114472670666369004}
-  - {fileID: 114540454167296646}
-  - {fileID: 114336262522813134}
-<<<<<<< HEAD
-  MasterBankRef: {fileID: 114555337178319014}
-  StringsBankRef: {fileID: 114654365088930298}
-  stringsBankWriteTime: 636632319078762695
-=======
-  MasterBankRef: {fileID: 114269547679453138}
-  StringsBankRef: {fileID: 114654365088930298}
-  stringsBankWriteTime: 636631864999698851
->>>>>>> Bonjour
+  - {fileID: 114202800873457200}
+  - {fileID: 114736342595972802}
+  - {fileID: 114109597261291548}
+  - {fileID: 114126785523385500}
+  - {fileID: 114492086804176326}
+  - {fileID: 114603589053698586}
+  - {fileID: 114952423353975692}
+  - {fileID: 114163851973994928}
+  - {fileID: 114512812225322826}
+  MasterBankRef: {fileID: 114511998705075914}
+  StringsBankRef: {fileID: 114904742564432158}
+  stringsBankWriteTime: 636635570905747880
   cacheVersion: 2
---- !u!114 &114018560770964290
+--- !u!114 &114109597261291548
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -49,99 +39,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/ROCK_FALLING_GROUND_W-IMPACT_LOWEREQ
-  guid: c89808d619821643b9897d6df5d9db3e
+  Path: event:/IMPACT_DOOR
+  guid: 5d3514e79788e242a1f75008ef3ab6e8
   Banks:
-<<<<<<< HEAD
-  - {fileID: 114555337178319014}
-=======
-  - {fileID: 114269547679453138}
->>>>>>> Bonjour
+  - {fileID: 114511998705075914}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 4649
---- !u!114 &114035416456459606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/ROCK_FALLING_GROUND_W-IMPACT_LOWEREQ
-  guid: c89808d619821643b9897d6df5d9db3e
-  Banks:
-  - {fileID: 114848777521283486}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 4649
---- !u!114 &114083540151954962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: D:\Desktop\Projet Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master Bank.bank
-  lastModified: 636625394439475269
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 1
---- !u!114 &114096048211154864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: D:\Desktop\Projet Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master Bank.bank
-  lastModified: 636613914992078686
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 1
---- !u!114 &114111385128859524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\Users\R.seignolles\Desktop\Projet-Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master
-    Bank.bank
-  lastModified: 636631873697045481
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 1
---- !u!114 &114172516375496404
+  Length: 3711
+--- !u!114 &114126785523385500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -155,11 +64,7 @@ MonoBehaviour:
   Path: event:/switches
   guid: 6b3a28d63205d84784a179e296070e33
   Banks:
-<<<<<<< HEAD
-  - {fileID: 114555337178319014}
-=======
-  - {fileID: 114269547679453138}
->>>>>>> Bonjour
+  - {fileID: 114511998705075914}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -167,82 +72,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2797
---- !u!114 &114180454924861704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\Users\R.seignolles\Desktop\Projet-Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master
-    Bank.bank
-  lastModified: 636633802660705570
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 0
---- !u!114 &114212420316493398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\Users\Unaco\Documents\Zelda Like\Projet-Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master
-    Bank.bank
-  lastModified: 636613887502583336
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 1
---- !u!114 &114221424167926876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: D:\Desktop\Projet Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master Bank.bank
-  lastModified: 636613914992078686
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 1
---- !u!114 &114269547679453138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\Users\m.congy\Desktop\Projet-Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master
-    Bank.bank
-  lastModified: 636631864999728862
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 1
---- !u!114 &114278138987454270
+--- !u!114 &114163851973994928
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -253,74 +83,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/switches
-  guid: 6b3a28d63205d84784a179e296070e33
+  Path: event:/ROCK_FALLING_GROUND_W-IMPACT_LOWEREQ
+  guid: c89808d619821643b9897d6df5d9db3e
   Banks:
-  - {fileID: 114848777521283486}
+  - {fileID: 114511998705075914}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 2797
---- !u!114 &114294082599523964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: D:\oem\Documents\_Rubika\Projet-Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master
-    Bank.bank
-  lastModified: 636614063567523754
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 1
---- !u!114 &114308214413283516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: Assets\FMOD\BLOOM\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636613861864012761
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 980
-  Exists: 1
---- !u!114 &114331067344382460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\Users\R.seignolles\Desktop\Projet-Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master
-    Bank.bank
-  lastModified: 636622477413210436
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 1
---- !u!114 &114336262522813134
+  Length: 4649
+--- !u!114 &114202800873457200
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -334,11 +108,7 @@ MonoBehaviour:
   Path: event:/FLEUR_TOMBE_EAU
   guid: 05aaad46a5b98c4c8affee9ca2a1a3ea
   Banks:
-<<<<<<< HEAD
-  - {fileID: 114555337178319014}
-=======
-  - {fileID: 114269547679453138}
->>>>>>> Bonjour
+  - {fileID: 114511998705075914}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -346,26 +116,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 177
---- !u!114 &114355648768396484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: D:\oem\Documents\_Rubika\Projet-Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master
-    Bank.bank
-  lastModified: 636614063567523754
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 1
---- !u!114 &114472670666369004
+--- !u!114 &114492086804176326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -376,22 +127,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Arbrefleuri
-  guid: b46d7c59456df44d85037b8e46847962
+  Path: event:/PUSH_ROCK
+  guid: 93c1de72a9d1ca4aba2521f44afc71ba
   Banks:
-<<<<<<< HEAD
-  - {fileID: 114555337178319014}
-=======
-  - {fileID: 114269547679453138}
->>>>>>> Bonjour
+  - {fileID: 114511998705075914}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1000
---- !u!114 &114482683393716870
+  Length: 3701
+--- !u!114 &114511998705075914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -402,15 +149,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: C:\Users\R.seignolles\Desktop\Projet-Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master
+  Path: C:\Users\m.congy\Desktop\Projet-Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master
     Bank.bank
-  lastModified: 636616293394286393
+  lastModified: 636635570905707851
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 206592
   Exists: 1
---- !u!114 &114540454167296646
+--- !u!114 &114512812225322826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/CACTUS_DASH
+  guid: e486fdeb6ccfd24d85479e740e80e16e
+  Banks:
+  - {fileID: 114511998705075914}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 211
+--- !u!114 &114603589053698586
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -424,11 +193,7 @@ MonoBehaviour:
   Path: event:/JET_BULLE
   guid: ab9f8fd30aa0744bb68bceea4f25436a
   Banks:
-<<<<<<< HEAD
-  - {fileID: 114555337178319014}
-=======
-  - {fileID: 114269547679453138}
->>>>>>> Bonjour
+  - {fileID: 114511998705075914}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -436,107 +201,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 307
---- !u!114 &114555337178319014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: D:\Desktop\Projet Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master Bank.bank
-  lastModified: 636632319078752721
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 1
---- !u!114 &114593124793150596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/IMPACT_DOOR
-  guid: 5d3514e79788e242a1f75008ef3ab6e8
-  Banks:
-  - {fileID: 114848777521283486}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 3711
---- !u!114 &114595225640367364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\Users\R.seignolles\Desktop\Projet-Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master
-    Bank.bank
-  lastModified: 636620615605671209
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 1
---- !u!114 &114614160006498346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/CACTUS_DASH
-  guid: e486fdeb6ccfd24d85479e740e80e16e
-  Banks:
-  - {fileID: 114848777521283486}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 211
---- !u!114 &114615707528474232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\Users\ELmat\Desktop\CactusProject\Projet-Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master
-    Bank.bank
-  lastModified: 636614684826313323
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 1
---- !u!114 &114624187333773302
+--- !u!114 &114736342595972802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -550,11 +215,7 @@ MonoBehaviour:
   Path: event:/PARCOURS LUMIERE
   guid: 10204b0277e4ed499baf215456e00d0d
   Banks:
-<<<<<<< HEAD
-  - {fileID: 114555337178319014}
-=======
-  - {fileID: 114269547679453138}
->>>>>>> Bonjour
+  - {fileID: 114511998705075914}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -562,25 +223,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2677
---- !u!114 &114650955464366014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: D:\Desktop\Projet Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master Bank.bank
-  lastModified: 636632319078752721
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 0
---- !u!114 &114654365088930298
+--- !u!114 &114904742564432158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -592,17 +235,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD\BLOOM\Build\Desktop\Master Bank.strings.bank
-<<<<<<< HEAD
-  lastModified: 636632319078762695
-=======
-  lastModified: 636631864999698851
->>>>>>> Bonjour
+  lastModified: 636635570905747880
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1108
   Exists: 1
---- !u!114 &114667917777434810
+--- !u!114 &114952423353975692
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -613,169 +252,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/IMPACT_DOOR
-  guid: 5d3514e79788e242a1f75008ef3ab6e8
+  Path: event:/Arbrefleuri
+  guid: b46d7c59456df44d85037b8e46847962
   Banks:
-<<<<<<< HEAD
-  - {fileID: 114555337178319014}
-=======
-  - {fileID: 114269547679453138}
->>>>>>> Bonjour
+  - {fileID: 114511998705075914}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 3711
---- !u!114 &114748020979395584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/PARCOURS LUMIERE
-  guid: 10204b0277e4ed499baf215456e00d0d
-  Banks:
-  - {fileID: 114848777521283486}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2677
---- !u!114 &114807680326473066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/PUSH_ROCK
-  guid: 93c1de72a9d1ca4aba2521f44afc71ba
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 114555337178319014}
-=======
-  - {fileID: 114269547679453138}
->>>>>>> Bonjour
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 3701
---- !u!114 &114848777521283486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\Users\Unaco\Documents\Zelda Like\Projet-Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master
-    Bank.bank
-  lastModified: 636613861863877748
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 172256
-  Exists: 1
---- !u!114 &114865275782574392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/PUSH_ROCK
-  guid: 93c1de72a9d1ca4aba2521f44afc71ba
-  Banks:
-  - {fileID: 114848777521283486}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 3701
---- !u!114 &114912424631050408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: D:\Desktop\Projet Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master Bank.bank
-  lastModified: 636613914992078686
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 0
---- !u!114 &114965160055793230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/CACTUS_DASH
-  guid: e486fdeb6ccfd24d85479e740e80e16e
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 114555337178319014}
-=======
-  - {fileID: 114269547679453138}
->>>>>>> Bonjour
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 211
---- !u!114 &114980977603727546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: D:\Desktop\Projet Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master Bank.bank
-  lastModified: 636613914992078686
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 206592
-  Exists: 1
+  Length: 1000
