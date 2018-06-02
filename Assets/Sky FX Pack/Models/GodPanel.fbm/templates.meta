@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 004460efad23ca54c96c3f3f8097e455
 folderAsset: yes
 timeCreated: 1527777350
+=======
+guid: 3a2ac425f443d6242bc5851265fb9117
+folderAsset: yes
+timeCreated: 1527582889
+>>>>>>> Bonjour
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
