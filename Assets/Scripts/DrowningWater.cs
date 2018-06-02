@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DrowningWater : MonoBehaviour {
 
-	public EdgeCollider2D Plateforme1;
+	public EdgeCollider2D Plateforme;
 	public EdgeCollider2D rive;
 	public PolygonCollider2D eauCollider;
 	public PlayerBehavior playerScript;
@@ -15,13 +15,13 @@ public class DrowningWater : MonoBehaviour {
 		if(playerScript.isJumping == true)
 		{
 			eauCollider.enabled = false;
-			Plateforme1.enabled = false;
+			Plateforme.enabled = false;
 			rive.enabled = false;
 		}
 		if(playerScript.isJumping == false)
 		{
 			eauCollider.enabled = true;
-			Plateforme1.enabled = true;
+			Plateforme.enabled = true;
 			rive.enabled = true;
 		}
 	}

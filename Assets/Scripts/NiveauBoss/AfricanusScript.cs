@@ -23,7 +23,7 @@ public class AfricanusScript : MonoBehaviour {
 	public Animator animAfricanus;
 	public Animator animBlackScreen;
 
-	private Vector2 dirToFlower;
+	private Vector2 dirToMouthPlace;
 
 	private bool touchedPlayer;
 	private bool hasGrab;
@@ -40,12 +40,12 @@ public class AfricanusScript : MonoBehaviour {
 
 	public float maxCountDecrease = 2f;
 	public float speedAttraction = 50f;
+	public float spitOffset = 50f;
 
 
 	void Update () 
 	{
-		Debug.Log (touchedFlower);
-		dirToFlower = flower.transform.position - player.transform.position;
+		dirToMouthPlace = mouthPlace.position - player.transform.position;
 		barFilling.fillAmount = numberForSpam * 0.1f;
 		animAfricanus.SetBool ("HasGrab", hasGrab);
 		animAfricanus.SetBool ("Swallowing", swallowing);
@@ -82,7 +82,7 @@ public class AfricanusScript : MonoBehaviour {
 
 		if(touchedFlower)
 		{
-			AttractFlowerTrue ();
+			attractFlower = true;
 		}
 		if(attractFlower)
 		{
@@ -112,7 +112,7 @@ public class AfricanusScript : MonoBehaviour {
 		shadow.enabled = false;
 		flower.enabled = false;
 		touchedPlayer = false;
-		playerScript.CancelMovements ();
+		playerScript.cancelMoves = true;
 		player.GetComponent<Rigidbody2D> ().velocity = Vector3.zero;
 		player.transform.position = mouthPlace.position;
 		canSpam = true;
@@ -144,13 +144,15 @@ public class AfricanusScript : MonoBehaviour {
 	{
 		canSpit = false;
 		swallowing = false;
-		player.transform.position = transform.position;
 		hasGrab = false;
+		player.transform.position = transform.position;
 		countTillDecrease = 0f;
-		player.GetComponent<Rigidbody2D> ().transform.Translate (50f, 0, 0);
+		player.GetComponent<Rigidbody2D> ().transform.Translate (spitOffset, 0, 0);
+		flower.GetComponent<Rigidbody2D>().transform.Translate (spitOffset, 0, 0);
 		player.GetComponent<SpriteRenderer> ().enabled = true;
 		shadow.enabled = true;
 		flower.enabled = true;
+		playerScript.cancelMoves = false;
 		playerScript.EnableMovements ();
 		ChangeAnim ();
 	}
@@ -169,33 +171,26 @@ public class AfricanusScript : MonoBehaviour {
 			africanusAltPos.SetActive (true);
 			playerScript.CancelMovementsAfricanus ();
 			africanusAltPos.GetComponent<Animator> ().Play ("AfricanusSpit");
-			canSpit = false;
 			FindObjectOfType<LaunchFlower> ().isHooked = false;
 			FindObjectOfType<LaunchFlower> ().isBacking = true;
 			touchedFlower = false;
 		}
 	}
 
-
-	void AttractFlowerTrue()
-	{
-		attractFlower = true;
-	}
-
 	void AttractFlower()
 	{
-		playerScript.CancelMovementsAfricanus ();
-		player.GetComponent<Rigidbody2D> ().velocity = dirToFlower.normalized * speedAttraction * Time.fixedDeltaTime;
+		playerScript.cancelMoves = true;
+		player.GetComponent<Rigidbody2D> ().velocity = dirToMouthPlace.normalized * speedAttraction * Time.fixedDeltaTime;
 		playerScript.isJumping = true;
-			if(dirToFlower.magnitude < 5f)
-				{
-					player.GetComponent<Rigidbody2D> ().velocity = Vector3.zero;
-					player.GetComponent<SpriteRenderer> ().enabled = false;
-					shadow.enabled = false;
-					playerScript.isJumping = false;
-					canSpit = false;
-					animBlackScreen.Play ("FillingBlackScreen");
-				}
+		if(dirToMouthPlace.magnitude < 5f)
+		{
+				player.GetComponent<Rigidbody2D> ().velocity = Vector3.zero;
+				player.GetComponent<SpriteRenderer> ().enabled = false;
+				shadow.enabled = false;
+				playerScript.isJumping = false;
+				canSpit = false;
+				animBlackScreen.Play ("FillingBlackScreen");
+		}
 	}
 	void SpawnOtherAfricanus()
 	{
@@ -242,6 +237,7 @@ public class AfricanusScript : MonoBehaviour {
 		numberForSpam = 3f;
 		canSpit = true;
 		canDecrease = false;
+		canSpam = false;
 	}
 
 	void NotSpammedEnough()
@@ -250,5 +246,6 @@ public class AfricanusScript : MonoBehaviour {
 		swallowing = true;
 		numberForSpam = 3f;
 		canDecrease = false;
+		canSpam = false;
 	}
 }

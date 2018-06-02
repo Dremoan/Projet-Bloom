@@ -21,6 +21,8 @@ TagManager:
   - Bigorpion
   - Fraxinelle
   - Africanus
+  - Africanus2
+  - AfricanusSecret
   layers:
   - Default
   - TransparentFX

@@ -386,7 +386,7 @@ MonoBehaviour:
   gap: {fileID: 234532014}
   flowerScript: {fileID: 1687808581}
   playerBody: {fileID: 1714321269}
-  grapplinSpeed: 50000
+  grapplinSpeed: 25000
   canSetActiveCollider: 1
 --- !u!1 &17868052
 GameObject:
@@ -12299,10 +12299,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 299526676}
-  - component: {fileID: 299526675}
   - component: {fileID: 299526674}
   - component: {fileID: 299526677}
   - component: {fileID: 299526678}
+  - component: {fileID: 299526679}
   m_Layer: 0
   m_Name: FlowerCinematic
   m_TagString: Untagged
@@ -12335,20 +12335,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.26712, y: 61.239655}
   m_EdgeRadius: 0
---- !u!114 &299526675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 299526673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45a3528a75df7e14a92229d1bdff2559, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeline: {fileID: 299526677}
-  activationItem: {fileID: 0}
-  timelineDuration: 23
 --- !u!4 &299526676
 Transform:
   m_ObjectHideFlags: 0
@@ -12459,6 +12445,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &299526679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 299526673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242402524b6c57443b6818db8321b264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeline: {fileID: 299526677}
+  playerScript: {fileID: 1714321267}
+  activationItem: {fileID: 0}
+  hasPlayedCinematic: 0
+  timelineDuration: 27
 --- !u!1 &309018341
 GameObject:
   m_ObjectHideFlags: 0
@@ -13023,11 +13025,11 @@ Prefab:
       objectReference: {fileID: 1687808581}
     - target: {fileID: 4916318881920620, guid: 00090c67565ff41479cf2aa673fe914f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -949
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4916318881920620, guid: 00090c67565ff41479cf2aa673fe914f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1477
+      value: 922
       objectReference: {fileID: 0}
     - target: {fileID: 114316968853620100, guid: 00090c67565ff41479cf2aa673fe914f,
         type: 2}
@@ -17605,22 +17607,22 @@ Prefab:
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
       propertyPath: YMaxEnabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
       propertyPath: YMinEnabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
       propertyPath: XMaxEnabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
       propertyPath: XMinEnabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
@@ -19882,7 +19884,7 @@ MonoBehaviour:
   downArrowWater: {fileID: 1902091155}
   canvasLaunchWater: {fileID: 2142412271}
   modifyScript: {fileID: 11780343}
-  timeMax: 10
+  timeMax: 5
 --- !u!1 &1177225909
 GameObject:
   m_ObjectHideFlags: 0
@@ -20208,7 +20210,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1860967596437374, guid: b7f4c8ecab02a04439819a6f9ecd3576, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
         type: 2}
@@ -20263,7 +20265,7 @@ Prefab:
     - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
         type: 2}
       propertyPath: canLaunch
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
         type: 2}
@@ -20457,11 +20459,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1235456251}
-  - component: {fileID: 1235456249}
   - component: {fileID: 1235456248}
   - component: {fileID: 1235456252}
   - component: {fileID: 1235456253}
   - component: {fileID: 1235456250}
+  - component: {fileID: 1235456249}
   m_Layer: 0
   m_Name: WaterBlockCinematic
   m_TagString: Untagged
@@ -20494,11 +20496,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1235456247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45a3528a75df7e14a92229d1bdff2559, type: 3}
+  m_Script: {fileID: 11500000, guid: 242402524b6c57443b6818db8321b264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeline: {fileID: 1235456250}
+  playerScript: {fileID: 1714321267}
   activationItem: {fileID: 0}
+  hasPlayedCinematic: 0
   timelineDuration: 6.5
 --- !u!320 &1235456250
 PlayableDirector:
@@ -22397,7 +22401,7 @@ GameObject:
   - component: {fileID: 1403491692}
   m_Layer: 0
   m_Name: GrapplinPlantStairs
-  m_TagString: Untagged
+  m_TagString: ModifyingZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23312,7 +23316,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1475630967}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b51d2762ec8a7f46b59546836dd8a4c, type: 3}
   m_Name: 
@@ -24818,7 +24822,7 @@ MonoBehaviour:
   buttonStair2: {fileID: 2020571499}
   gap: {fileID: 1729897083}
   grapplinPlant: {fileID: 1403491689}
-  grapplinAnchor: {fileID: 0}
+  grapplinAnchor: {fileID: 1429109325}
   animButtonStair: {fileID: 1728747443}
   animStairs: {fileID: 790466960}
   animBigStairs: {fileID: 92452251}
@@ -27082,7 +27086,7 @@ MonoBehaviour:
   buttonStair2: {fileID: 2020571499}
   gap: {fileID: 1729897083}
   grapplinPlant: {fileID: 1403491689}
-  grapplinAnchor: {fileID: 0}
+  grapplinAnchor: {fileID: 1429109325}
   animButtonStair: {fileID: 2020571502}
   animStairs: {fileID: 1969879238}
   animBigStairs: {fileID: 92452251}

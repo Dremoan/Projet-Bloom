@@ -8,49 +8,58 @@ public class DetectionTimeline : MonoBehaviour {
 
 
 	public PlayableDirector timeline;
+	public PlayerBehavior playerScript;
 	public GameObject activationItem;
 	private bool canPlayWaterSourceTimeline = true;
 	private bool canPlayFlowerCinematic = true;
 	private bool canPlayBlockingRockCinematic = true;
+	public bool hasPlayedCinematic = false;
 	public float timelineDuration;
+	private float timeIncreasing = 0f;
 
 
 	void Update () 
 	{
-		RockSlotActive ();
+
+		if(timeline.time > timelineDuration -0.05f && !hasPlayedCinematic)
+		{
+			hasPlayedCinematic = true;
+			playerScript.cancelMoves = false;
+			playerScript.EnableMovements ();
+		}
+
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if(col.gameObject.tag == "Player" && canPlayFlowerCinematic)
+		if(col.gameObject.tag == "Player")
 		{
-			StartCoroutine (CancelMovementsTuto ());
+			playerScript.cancelMoves = true;
 			timeline.Play ();
-			canPlayFlowerCinematic = false;
 		}
 
 		if(col.gameObject.tag == "Player" && canPlayBlockingRockCinematic)
 		{
-			StartCoroutine (CancelMovementsTuto ());
+			playerScript.cancelMoves = true;
 			timeline.Play ();
-			canPlayBlockingRockCinematic = false;
 		}
 	}
 
 
-	public void RockSlotActive()
-	{
-		if(activationItem.GetComponent<ActivationRock>().isActive && canPlayWaterSourceTimeline)
-		{
-			StartCoroutine (CancelMovements ());
-			timeline.Play ();
-			canPlayWaterSourceTimeline = false;
-		}
-	}
+//	public void RockSlotActive()
+//	{
+//		if(activationItem.GetComponent<ActivationRock>().isActive && canPlayWaterSourceTimeline)
+//		{
+//			canIncrease = true;
+//			playerScript.cancelMoves = true;
+//			timeline.Play ();
+//			canPlayWaterSourceTimeline = false;
+//		}
+//	}
 
 	public void DalleActive()
 	{
-		StartCoroutine (CancelMovements ());
+		playerScript.cancelMoves = true;
 		timeline.Play ();
 	}
 
@@ -74,6 +83,7 @@ public class DetectionTimeline : MonoBehaviour {
 	}
 	public IEnumerator CancelMovementsTuto()
 	{
+		Debug.Log ("coucou");
 		FindObjectOfType<PlayerBehavior> ().body.velocity = Vector2.zero;
 		FindObjectOfType<PlayerBehavior> ().isMoving = false;
 		FindObjectOfType<PlayerBehavior> ().canJump = false;

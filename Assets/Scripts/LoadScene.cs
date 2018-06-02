@@ -9,6 +9,8 @@ public class LoadScene : MonoBehaviour {
 
 	void Update()
 	{
+
+
 		if(Input.GetKeyDown(KeyCode.Escape))
 		{
 			SceneManager.LoadScene ("Menu");

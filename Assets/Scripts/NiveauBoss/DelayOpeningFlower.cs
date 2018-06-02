@@ -5,6 +5,8 @@ using UnityEngine;
 public class DelayOpeningFlower : MonoBehaviour {
 
 	public GameObject waterDrop;
+	public EdgeCollider2D edgeOpen;
+	public EdgeCollider2D edgeClose;
 	public Animator animPlatform;
 	private float increaseFloat;
 	public float maxTimeClose = 2f;
@@ -16,6 +18,9 @@ public class DelayOpeningFlower : MonoBehaviour {
 		{
 			animPlatform.Play ("Opening");
 			canLaunchCount = true;
+			FindObjectOfType<DrowningWater> ().Plateforme = edgeOpen;
+			edgeClose.enabled = false;
+
 		}
 	}
 
@@ -29,6 +34,8 @@ public class DelayOpeningFlower : MonoBehaviour {
 		{
 			canLaunchCount = false;
 			increaseFloat = 0f;
+			FindObjectOfType<DrowningWater> ().Plateforme = edgeClose;
+			edgeOpen.enabled = false;
 			animPlatform.Play ("Closing");
 		}
 	}

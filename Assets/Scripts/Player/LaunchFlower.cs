@@ -151,7 +151,7 @@ public class LaunchFlower : MonoBehaviour {
 		animFlower.SetBool ("Launched", false);
 		Vector2 dirToPlace = flowerPlace.transform.position - transform.position;
 		bodyFlower.velocity = dirToPlace.normalized * flowerSpeedBack * Time.fixedDeltaTime;
-		if(Vector2.Distance(player.transform.position, transform.position)< 20f)
+		if(Vector2.Distance(player.transform.position, transform.position) < 20f)
 		{
 			canLaunch = true;
 			this.GetComponent<CircleCollider2D> ().enabled = false;
@@ -226,8 +226,20 @@ public class LaunchFlower : MonoBehaviour {
 		if(coll.gameObject.tag == "Africanus")
 		{
 			isHooked = true;
-			hookedThing = FindObjectOfType<AfricanusScript> ().mouthPlace.gameObject;
+			hookedThing = coll.gameObject.GetComponent<AfricanusScript> ().mouthPlace.gameObject;
 			FindObjectOfType<AfricanusScript> ().touchedFlower = true;
+		}
+		if(coll.gameObject.tag == "Africanus2")
+		{
+			isHooked = true;
+			hookedThing = coll.gameObject.GetComponent<AfricanusScript2> ().mouthPlace.gameObject;
+			FindObjectOfType<AfricanusScript2> ().touchedFlower = true;
+		}
+		if(coll.gameObject.tag == "AfricanusSecret")
+		{
+			isHooked = true;
+			hookedThing = coll.gameObject.GetComponent<AfricanusScriptSecret> ().mouthPlace.gameObject;
+			FindObjectOfType<AfricanusScriptSecret> ().touchedFlower = true;
 		}
 	}
 		

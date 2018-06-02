@@ -11,13 +11,14 @@ public class PlayerBehavior : MonoBehaviour {
 	public float actualSpeed;
 	public float maxCibleDist = 20f;
 	[HideInInspector] public bool canMove = true;
-	[HideInInspector] public bool canJump = true;
+	 public bool canJump = true;
 	[HideInInspector] public bool isJumping = false;
 	[HideInInspector] public bool pressingA = false;
 	[HideInInspector] public bool canCharge = false;
 	[HideInInspector] public bool isAiming = false;
 	[HideInInspector] public bool hasKey = false;
 	[HideInInspector] public bool isMoving;
+	[HideInInspector] public bool cancelMoves = false;
 	public bool canLaunchAction = true;
 
 	private bool holdsWater;
@@ -41,7 +42,11 @@ public class PlayerBehavior : MonoBehaviour {
 
 	void Update () 
 	{
-		
+		if(cancelMoves)
+		{
+			CancelMovements ();
+		}
+
 		mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition) - transform.position;
 
 		if (canJump && canMove) 
@@ -144,6 +149,7 @@ public class PlayerBehavior : MonoBehaviour {
 
 	public void CancelMovements()
 	{
+		Fleur.GetComponent<LaunchFlower> ().canLaunch = false;
 		canLaunchAction = false;
 		body.velocity = Vector2.zero;
 		isMoving = false;
@@ -154,7 +160,6 @@ public class PlayerBehavior : MonoBehaviour {
 
 	public void CancelMovementsAfricanus()
 	{
-//		Fleur.GetComponent<LaunchFlower>().enabled = false;
 		canLaunchAction = false;
 		isMoving = false;
 		canJump = false;
@@ -164,7 +169,7 @@ public class PlayerBehavior : MonoBehaviour {
 
 	public void EnableMovements()
 	{
-		Fleur.GetComponent<LaunchFlower>().enabled = true;
+		Fleur.GetComponent<LaunchFlower> ().canLaunch = true;
 		canLaunchAction = true;
 		canCharge = false;
 		canJump = true;
@@ -172,7 +177,6 @@ public class PlayerBehavior : MonoBehaviour {
 	}
 	public void EnableMovementsCave()
 	{
-		//		FindObjectOfType<LaunchFlower> ().canLaunch = true;
 		canJump = true;
 		canMove = true;
 		canCharge = false;

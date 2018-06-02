@@ -39,6 +39,7 @@ public class GrapplinScript : MonoBehaviour {
 		flowerScript.isHooked = false;
 		flowerScript.isBacking = true;
 		flowerScript.onGrapplinSpot = false;
+		flowerScript.isLaunched = false;
 		FindObjectOfType<PlayerBehavior> ().EnableMovements ();
 		gap.SetActive (false);
 		this.GetComponent<BoxCollider2D> ().enabled = false;
