@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Village
+  animBlackScreen: {fileID: 0}
 --- !u!114 &109909948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +202,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 109909947}
-        m_MethodName: LoadSceneMenu
+        m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -295,6 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Sous-Sol
+  animBlackScreen: {fileID: 0}
 --- !u!114 &255698043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,7 +337,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 255698042}
-        m_MethodName: LoadSceneMenu
+        m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -717,6 +719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Tutoriel
+  animBlackScreen: {fileID: 0}
 --- !u!114 &1524220327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,7 +760,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1524220326}
-        m_MethodName: LoadSceneMenu
+        m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

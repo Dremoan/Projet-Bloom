@@ -200,6 +200,7 @@ public class LaunchFlower : MonoBehaviour {
 			isBacking = false;
 			isHooked = false;
 			isLaunched = false;
+			animFlower.SetBool ("Launched", false);
 		}
 		if(coll.gameObject.tag == "BlockingRock")
 		{

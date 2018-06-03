@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114904742564432158}
-  - {fileID: 114511998705075914}
+  - {fileID: 114644149844353966}
   EditorEvents:
   - {fileID: 114202800873457200}
   - {fileID: 114736342595972802}
@@ -24,9 +24,9 @@ MonoBehaviour:
   - {fileID: 114952423353975692}
   - {fileID: 114163851973994928}
   - {fileID: 114512812225322826}
-  MasterBankRef: {fileID: 114511998705075914}
+  MasterBankRef: {fileID: 114644149844353966}
   StringsBankRef: {fileID: 114904742564432158}
-  stringsBankWriteTime: 636635570905747880
+  stringsBankWriteTime: 636632319078762695
   cacheVersion: 2
 --- !u!114 &114109597261291548
 MonoBehaviour:
@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: event:/IMPACT_DOOR
   guid: 5d3514e79788e242a1f75008ef3ab6e8
   Banks:
-  - {fileID: 114511998705075914}
+  - {fileID: 114644149844353966}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -64,7 +64,7 @@ MonoBehaviour:
   Path: event:/switches
   guid: 6b3a28d63205d84784a179e296070e33
   Banks:
-  - {fileID: 114511998705075914}
+  - {fileID: 114644149844353966}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -86,7 +86,7 @@ MonoBehaviour:
   Path: event:/ROCK_FALLING_GROUND_W-IMPACT_LOWEREQ
   guid: c89808d619821643b9897d6df5d9db3e
   Banks:
-  - {fileID: 114511998705075914}
+  - {fileID: 114644149844353966}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -108,7 +108,7 @@ MonoBehaviour:
   Path: event:/FLEUR_TOMBE_EAU
   guid: 05aaad46a5b98c4c8affee9ca2a1a3ea
   Banks:
-  - {fileID: 114511998705075914}
+  - {fileID: 114644149844353966}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -130,7 +130,7 @@ MonoBehaviour:
   Path: event:/PUSH_ROCK
   guid: 93c1de72a9d1ca4aba2521f44afc71ba
   Banks:
-  - {fileID: 114511998705075914}
+  - {fileID: 114644149844353966}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -171,7 +171,7 @@ MonoBehaviour:
   Path: event:/CACTUS_DASH
   guid: e486fdeb6ccfd24d85479e740e80e16e
   Banks:
-  - {fileID: 114511998705075914}
+  - {fileID: 114644149844353966}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -193,7 +193,7 @@ MonoBehaviour:
   Path: event:/JET_BULLE
   guid: ab9f8fd30aa0744bb68bceea4f25436a
   Banks:
-  - {fileID: 114511998705075914}
+  - {fileID: 114644149844353966}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -201,6 +201,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 307
+--- !u!114 &114644149844353966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Desktop\Projet Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master Bank.bank
+  lastModified: 636632319078752721
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 206592
+  Exists: 1
 --- !u!114 &114736342595972802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,7 +233,7 @@ MonoBehaviour:
   Path: event:/PARCOURS LUMIERE
   guid: 10204b0277e4ed499baf215456e00d0d
   Banks:
-  - {fileID: 114511998705075914}
+  - {fileID: 114644149844353966}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -235,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD\BLOOM\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636635570905747880
+  lastModified: 636632319078762695
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -255,7 +273,7 @@ MonoBehaviour:
   Path: event:/Arbrefleuri
   guid: b46d7c59456df44d85037b8e46847962
   Banks:
-  - {fileID: 114511998705075914}
+  - {fileID: 114644149844353966}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

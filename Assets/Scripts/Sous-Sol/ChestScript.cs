@@ -8,19 +8,25 @@ public class ChestScript : MonoBehaviour {
 	public GameObject player;
 	public GameObject interactingZone;
 	public GameObject key;
-	public Collider2D blockingWay;
+	public PolygonCollider2D blockingWay;
+	public Animator animPilar;
+	public PlayerBehavior playerScript;
 
 	private bool isNearChest = false;
 	private bool isOpened = false;
 
-	void Start () 
-	{
-		
-	}
 
 	void Update () 
 	{
+		if (playerScript.isJumping == true && isOpened)
+		{
+			blockingWay.enabled = false;
+		}
 
+		if (playerScript.isJumping == false && isOpened)
+		{
+			blockingWay.enabled = true;
+		}
 		if(interactingZone.GetComponent<InteractingScript>().canInteract)
 		{
 			isNearChest = true;
@@ -39,7 +45,7 @@ public class ChestScript : MonoBehaviour {
 		if(isOpened)
 		{
 			key.SetActive (false);
-			blockingWay.enabled = false;
+			animPilar.Play ("Activation");
 		}
 	}
 }

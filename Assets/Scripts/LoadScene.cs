@@ -6,23 +6,24 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour {
 
 	public string sceneName;
+	public Animator animBlackScreen;
 
 	void Update()
 	{
-
-
+		
 		if(Input.GetKeyDown(KeyCode.Escape))
 		{
 			SceneManager.LoadScene ("Menu");
 		}
-		if(Input.GetKeyDown(KeyCode.P))
-		{
-			LoadSceneMenu ();
-		}
 	}
 
-	public void LoadSceneMenu()
+	public void LoadNextScene()
 	{
 		SceneManager.LoadScene(sceneName);
+	}
+
+	void OnTriggerEnter2D(Collider2D coll)
+	{
+		animBlackScreen.Play ("Transition");
 	}
 }

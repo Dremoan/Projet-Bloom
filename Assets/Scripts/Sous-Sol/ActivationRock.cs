@@ -47,8 +47,6 @@ public class ActivationRock : MonoBehaviour {
 			FindObjectOfType<CanvasGestion> ().TalkAreaJumpActive ();
 		}
 	}
-
-
 	void ShakeCamera()
 	{
 		CameraShaker.Instance.ShakeOnce (1f, 10f, 0.5f, 0.5f);

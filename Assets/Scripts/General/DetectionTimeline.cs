@@ -63,39 +63,11 @@ public class DetectionTimeline : MonoBehaviour {
 		timeline.Play ();
 	}
 
+	public void RockSlotActive()
+	{
+		playerScript.cancelMoves = true;
+		timeline.Play ();
+	}
 
 
-	public IEnumerator CancelMovements()
-	{
-		FindObjectOfType<PlayerBehavior> ().body.velocity = Vector2.zero;
-		FindObjectOfType<PlayerBehavior> ().isMoving = false;
-		FindObjectOfType<PlayerBehavior> ().canJump = false;
-		FindObjectOfType<PlayerBehavior> ().canCharge = true;
-		FindObjectOfType<PlayerBehavior> ().canMove = false;
-		FindObjectOfType<PlayerBehavior> ().canLaunchAction = false;
-		FindObjectOfType<LaunchFlower> ().canLaunch = false;
-		yield return new WaitForSeconds (timelineDuration);
-		FindObjectOfType<PlayerBehavior> ().canLaunchAction = true;
-		FindObjectOfType<PlayerBehavior> ().canJump = true;
-		FindObjectOfType<PlayerBehavior> ().canCharge = false;
-		FindObjectOfType<PlayerBehavior> ().canMove = true;
-		FindObjectOfType<LaunchFlower> ().canLaunch = true;
-	}
-	public IEnumerator CancelMovementsTuto()
-	{
-		Debug.Log ("coucou");
-		FindObjectOfType<PlayerBehavior> ().body.velocity = Vector2.zero;
-		FindObjectOfType<PlayerBehavior> ().isMoving = false;
-		FindObjectOfType<PlayerBehavior> ().canJump = false;
-		FindObjectOfType<PlayerBehavior> ().canCharge = true;
-		FindObjectOfType<PlayerBehavior> ().canMove = false;
-		FindObjectOfType<PlayerBehavior> ().canLaunchAction = false;
-		//		FindObjectOfType<LaunchFlower> ().canLaunch = false;
-		yield return new WaitForSeconds (timelineDuration);
-		FindObjectOfType<PlayerBehavior> ().canLaunchAction = true;
-		FindObjectOfType<PlayerBehavior> ().canJump = true;
-		FindObjectOfType<PlayerBehavior> ().canCharge = false;
-		FindObjectOfType<PlayerBehavior> ().canMove = true;
-		//		FindObjectOfType<LaunchFlower> ().canLaunch = true;
-	}
 }

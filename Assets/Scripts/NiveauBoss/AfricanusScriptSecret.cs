@@ -18,6 +18,7 @@ public class AfricanusScriptSecret
 
 	public SpriteRenderer flower;
 	public SpriteRenderer shadow;
+	public SpriteRenderer liane;
 
 	public Image barFilling;
 
@@ -150,6 +151,7 @@ public class AfricanusScriptSecret
 		countTillDecrease = 0f;
 		player.GetComponent<Rigidbody2D> ().transform.Translate (spitOffset, 0, 0);
 		flower.GetComponent<Rigidbody2D>().transform.Translate (spitOffset, 0, 0);
+		liane.enabled = true;
 		player.GetComponent<SpriteRenderer> ().enabled = true;
 		shadow.enabled = true;
 		flower.enabled = true;
@@ -183,14 +185,15 @@ public class AfricanusScriptSecret
 		playerScript.cancelMoves = true;
 		player.GetComponent<Rigidbody2D> ().velocity = dirToMouthPlace.normalized * speedAttraction * Time.fixedDeltaTime;
 		playerScript.isJumping = true;
-		if(dirToMouthPlace.magnitude < 5f)
+		if(dirToMouthPlace.magnitude < 10f)
 		{
-				player.GetComponent<Rigidbody2D> ().velocity = Vector3.zero;
-				player.GetComponent<SpriteRenderer> ().enabled = false;
-				shadow.enabled = false;
-				playerScript.isJumping = false;
-				canSpit = false;
-				animBlackScreen.Play ("FillingBlackScreen");
+			player.GetComponent<Rigidbody2D> ().velocity = Vector3.zero;
+			liane.enabled = false;
+			player.GetComponent<SpriteRenderer> ().enabled = false;
+			shadow.enabled = false;
+			playerScript.isJumping = false;
+			canSpit = false;
+			animBlackScreen.Play ("FillingBlackScreen");
 		}
 	}
 	void SpawnOtherAfricanus()

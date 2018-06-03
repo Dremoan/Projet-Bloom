@@ -5,11 +5,18 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour {
 
 	public GameObject interactingZone;
-	public GameObject player;
+	public PlayerBehavior playerScript;
+	public GameObject particles;
+	public ParticleSystem particleLightWay;
+	public ParticleSystem particleLight;
 	public GameObject key;
+	public GameObject passingBehind;
+	public GameObject keyMecanism;
+	public Animator animMecanism;
+	public Animator animDoor;
 
 	private bool isNearDoor;
-
+	public float openingTime =2.5f;
 
 		void Start () 
 	{
@@ -29,7 +36,7 @@ public class DoorScript : MonoBehaviour {
 			isNearDoor = false;
 		}
 
-		if(isNearDoor && player.GetComponent<PlayerBehavior>().pressingA && player.GetComponent<PlayerBehavior> ().hasKey)
+		if(isNearDoor && playerScript.pressingA && playerScript.hasKey)
 		{
 			StartCoroutine (ActiveDoor ());
 		}
@@ -37,13 +44,24 @@ public class DoorScript : MonoBehaviour {
 
 	IEnumerator ActiveDoor()
 	{
-		player.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
-		player.GetComponent<PlayerBehavior> ().canJump = false;
-		player.GetComponent<PlayerBehavior> ().isMoving = false;
-		yield return new WaitForSeconds (1);
-		player.GetComponent<PlayerBehavior> ().canJump = true;
+		playerScript.cancelMoves = true;
+		yield return new WaitForSeconds (0.5f);
 		key.SetActive (false);
-		player.GetComponent<PlayerBehavior> ().hasKey = false;
-		this.gameObject.SetActive (false);
+		playerScript.hasKey = false;
+		keyMecanism.SetActive (true);
+		animMecanism.Play ("MécanismeActivé");
+		yield return new WaitForSeconds (0.25f);
+		particles.SetActive (true);
+		yield return new WaitForSeconds (openingTime);
+		animDoor.Play ("Porte_Exit");
+	}
+	public void EndLoop()
+	{
+		animDoor.GetComponent<SpriteRenderer> ().sortingOrder = -1;
+		playerScript.cancelMoves = false;
+		playerScript.EnableMovements ();
+		passingBehind.SetActive (false);
+		particleLight.loop = false;
+		particleLightWay.loop = false;
 	}
 }

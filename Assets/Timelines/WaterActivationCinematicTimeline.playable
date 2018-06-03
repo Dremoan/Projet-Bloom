@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 114203744536213778}
   m_FixedDuration: 0
   m_EditorSettings:
-    m_Framerate: 60
+    fps: 60
   m_DurationMode: 0
 --- !u!74 &74012069934474158
 AnimationClip:
@@ -38,20 +38,20 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0.033333335
-        value: {x: 211.3, y: 401.2, z: 1}
+        time: 0
+        value: {x: 115.6, y: 254.5, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 1.0333333
-        value: {x: 211.3, y: 401.2, z: 1}
+        value: {x: 115.6, y: 254.5, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 2.0333333
-        value: {x: 311.3, y: 255.9, z: 1}
+        value: {x: 231.5, y: 120, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -131,13 +131,13 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0.033333335
+        time: 0
         value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 3.0333333
+        time: 3.1666667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -153,13 +153,13 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0.033333335
+        time: 0
         value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 3.0333333
+        time: 3.1666667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -175,8 +175,26 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0.033333335
+        time: 2.75
         value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 2.8333333
+        value: 0.6862745
+        inSlope: -3.9999979
+        outSlope: -3.9999979
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 2.9166667
+        value: 0.33333334
+        inSlope: -4.1176453
+        outSlope: -4.1176453
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -191,8 +209,26 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0.033333335
+        time: 2.75
         value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 2.8333333
+        value: 0.6862745
+        inSlope: -3.9999979
+        outSlope: -3.9999979
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 2.9166667
+        value: 0.33333334
+        inSlope: -4.1176453
+        outSlope: -4.1176453
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -200,38 +236,6 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: BandesNoires/BandeNoire1
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 3.0333333
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Enabled
-    path: BandesNoires/BandeNoire2
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 3.0333333
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Enabled
     path: BandesNoires/BandeNoire1
     classID: 212
     script: {fileID: 0}
@@ -283,20 +287,6 @@ AnimationClip:
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2560944060
-      attribute: 3305885265
-      script: {fileID: 0}
-      typeID: 212
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 28161542
-      attribute: 3305885265
-      script: {fileID: 0}
-      typeID: 212
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
@@ -405,13 +395,13 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0.033333335
+        time: 0
         value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 3.0333333
+        time: 3.1666667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -427,13 +417,13 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0.033333335
+        time: 0
         value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 3.0333333
+        time: 3.1666667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -449,20 +439,20 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0.033333335
-        value: 211.3
+        time: 0
+        value: 115.6
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
         time: 1.0333333
-        value: 211.3
+        value: 115.6
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
         time: 2.0333333
-        value: 311.3
+        value: 231.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -477,20 +467,20 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0.033333335
-        value: 401.2
+        time: 0
+        value: 254.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
         time: 1.0333333
-        value: 401.2
+        value: 254.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
         time: 2.0333333
-        value: 255.9
+        value: 120
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -505,7 +495,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0.033333335
+        time: 0
         value: 1
         inSlope: 0
         outSlope: 0
@@ -533,8 +523,26 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0.033333335
+        time: 2.75
         value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 2.8333333
+        value: 0.6862745
+        inSlope: -3.9999979
+        outSlope: -3.9999979
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 2.9166667
+        value: 0.33333334
+        inSlope: -4.1176453
+        outSlope: -4.1176453
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -549,8 +557,26 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0.033333335
+        time: 2.75
         value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 2.8333333
+        value: 0.6862745
+        inSlope: -3.9999979
+        outSlope: -3.9999979
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 2.9166667
+        value: 0.33333334
+        inSlope: -4.1176453
+        outSlope: -4.1176453
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -558,38 +584,6 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: BandesNoires/BandeNoire1
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 3.0333333
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Enabled
-    path: BandesNoires/BandeNoire2
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 3.0333333
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Enabled
     path: BandesNoires/BandeNoire1
     classID: 212
     script: {fileID: 0}
@@ -794,7 +788,7 @@ MonoBehaviour:
   m_Parent: {fileID: 11400000}
   m_Children: []
   m_Clips:
-  - m_Start: 0.03333333333333333
+  - m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 114361991800329022}
     m_UnderlyingAsset: {fileID: 114361991800329022}
@@ -825,7 +819,19 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -840,7 +846,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: LookRockSlot
     m_Version: 1
-  - m_Start: 1.0333333333333332
+  - m_Start: 0.9999999999999999
     m_ClipIn: 0
     m_Asset: {fileID: 114580031430357440}
     m_UnderlyingAsset: {fileID: 114580031430357440}
@@ -874,7 +880,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: LookWaterSource
     m_Version: 1
-  - m_Start: 3.033333333333333
+  - m_Start: 3
     m_ClipIn: 0
     m_Asset: {fileID: 114538733868978364}
     m_UnderlyingAsset: {fileID: 114538733868978364}
