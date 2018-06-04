@@ -158,6 +158,17 @@ public class PlayerBehavior : MonoBehaviour {
 		canCharge = true;
 	}
 
+	public void CancelMovementsTuto()
+	{
+		canLaunchAction = false;
+		body.velocity = Vector2.zero;
+		isMoving = false;
+		canJump = false;
+		canMove = false;
+		canCharge = true;
+	}
+
+
 	public void CancelMovementsAfricanus()
 	{
 		canLaunchAction = false;
@@ -175,6 +186,15 @@ public class PlayerBehavior : MonoBehaviour {
 		canJump = true;
 		canMove = true;
 	}
+
+	public void EnableMovementsTuto()
+	{
+		canLaunchAction = true;
+		canCharge = false;
+		canJump = true;
+		canMove = true;
+	}
+
 	public void EnableMovementsCave()
 	{
 		canJump = true;

@@ -29,7 +29,7 @@ public class GrapplinInstructions : MonoBehaviour {
 	public void EnableDownArrowWater()
 	{
 		FindObjectOfType<PlayerBehavior> ().EnableMovements ();
-		downArrowWater.SetActive (true);
+		StartCoroutine (TextWaterDisappear ());
 	}
 
 
@@ -43,6 +43,12 @@ public class GrapplinInstructions : MonoBehaviour {
 		canvasLaunchWater.SetActive (false);
 	}
 
+	IEnumerator TextWaterDisappear()
+	{
+		canvasLaunchWater.SetActive (true);
+		yield return new WaitForSeconds (3f);
+		canvasLaunchWater.SetActive (false);
+	}
 	void TimeCanRunTrue()
 	{
 		FindObjectOfType<PlayerBehavior> ().CancelMovements ();

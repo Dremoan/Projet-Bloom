@@ -66,13 +66,30 @@ public class StairButtonScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if(col.gameObject.tag == "Player" && !timeCanRun)
+		if(col.gameObject.tag == "Player")
 		{
-			timeCanRun = true;
+			timeCanRun = false;
 			isActive = true;
 			buttonPressed = true;
 		}
 	}
+
+	void OnTriggerStay2D(Collider2D col)
+	{
+		if(col.gameObject.tag == "Player")
+		{
+			isActive = true;
+			buttonPressed = true;
+		}
+	}
+	void OnTriggerExit2D(Collider2D col)
+	{
+		if(col.gameObject.tag == "Player" && !timeCanRun)
+		{
+			timeCanRun = true;
+		}
+	}
+
 
 	IEnumerator DelayActivation()
 	{
@@ -81,7 +98,7 @@ public class StairButtonScript : MonoBehaviour {
 		hasPlayedAnimations = true;
 		yield return new WaitForSeconds (0.85f);
 		gap.SetActive (false);
-		grapplinPlant.GetComponent<GrapplinScript> ().canSetActiveCollider = false;
+		grapplinPlant.GetComponent<GrapplinScriptStairs> ().canSetActiveCollider = false;
 		buttonStair1.GetComponent<SpriteRenderer> ().enabled = false;
 		buttonStair2.GetComponent<SpriteRenderer> ().enabled = false;
 		grapplinPlant.GetComponent<Rigidbody2D>().transform.Translate(0, -15f, 0);

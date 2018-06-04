@@ -38,12 +38,4 @@ public class Projectile : MonoBehaviour
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D coll)
-	{
-		if(coll.gameObject.tag == "ModifyingZone")
-		{
-			coll.GetComponent<ModifyingZone> ().Modified ();
-			DropManagerComponent.RemoveDrop (this);
-		}
-	}
 }

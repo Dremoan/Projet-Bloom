@@ -21,6 +21,7 @@ public class DetectionTimelineTuto: MonoBehaviour {
 
 		if(timeline.time > timelineDuration -0.05f && !hasPlayedCinematic)
 		{
+			GetComponent<Collider2D> ().enabled = false;
 			hasPlayedCinematic = true;
 			playerScript.cancelMoves = false;
 			playerScript.EnableMovementsCave ();

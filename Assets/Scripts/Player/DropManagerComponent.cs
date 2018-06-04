@@ -6,7 +6,7 @@ public class DropManagerComponent : MonoBehaviour {
 
 
 	public static DropManagerComponent globalDropManager;
-	public Projectile[] WaterProjectilePool;
+	public ProjectileWater[] WaterProjectilePool;
 	public Projectile[] RockProjectilePool;
 
 	void Start () 
