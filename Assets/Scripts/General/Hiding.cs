@@ -9,17 +9,14 @@ public class Hiding : MonoBehaviour {
 	public GameObject receptionSand;
 	public GameObject chuteSand;
 
-	void Update () 
-	{
-	
-	}
+
 
 	void OnTriggerStay2D(Collider2D coll)
 	{
 		if(coll.gameObject.tag == "Player")
 		{
 			mainCamera.XMaxValue = -260;
-			mainCamera.XMinValue = -300;
+			mainCamera.XMinValue = -270;
 			chuteSand.SetActive (false);
 			receptionSand.SetActive (false);
 			hidingZones [0].SetActive (true);
@@ -34,7 +31,7 @@ public class Hiding : MonoBehaviour {
 		if (coll.gameObject.tag == "Player") 
 		{
 			mainCamera.XMaxValue = -260;
-			mainCamera.XMinValue = -300;
+			mainCamera.XMinValue = -270;
 			chuteSand.SetActive (false);
 			receptionSand.SetActive (false);
 		}

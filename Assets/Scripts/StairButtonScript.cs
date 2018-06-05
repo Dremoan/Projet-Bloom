@@ -117,9 +117,9 @@ public class StairButtonScript : MonoBehaviour {
 		yield return new WaitForSeconds (0.5f);
 		animPilarDestroyed.SetBool ("IsDestroying", true);
 		yield return new WaitForSeconds (animDestroyPilarTime);
-		FindObjectOfType<RockBoss> ().enabled = true;
-		animBoss.SetBool("IsHit", true);
+		animBoss.SetBool("LaunchIdle", true);
 		yield return new WaitForSeconds (0.8f);
-		animBoss.SetBool ("IsHit", false);
+//		animBoss.SetBool ("IsHit", false);
+		FindObjectOfType<RockBoss> ().enabled = true;
 	}
 }

@@ -191,6 +191,7 @@ public class LaunchFlower : MonoBehaviour {
 			hookedThing = coll.gameObject;
 			onWater = true;
 			FindObjectOfType<PlayerBehavior> ().canLaunchAction = false;
+			animFlower.SetBool ("Launched", false);
 		}
 		if(coll.gameObject.tag == "FlowerTarget")
 		{
@@ -201,6 +202,7 @@ public class LaunchFlower : MonoBehaviour {
 			isHooked = false;
 			isLaunched = false;
 			animFlower.SetBool ("Launched", false);
+			FindObjectOfType<PlayerBehavior> ().canLaunchAction = false;
 		}
 		if(coll.gameObject.tag == "BlockingRock")
 		{
@@ -215,6 +217,7 @@ public class LaunchFlower : MonoBehaviour {
 			isHooked = true;
 			hookedThing = coll.gameObject;
 			onGrapplinSpot = true;
+			animFlower.SetBool ("Launched", false);
 		}
 		if(coll.gameObject.tag == "RockToLaunch")
 		{

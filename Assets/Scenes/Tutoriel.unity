@@ -13157,11 +13157,11 @@ Prefab:
       objectReference: {fileID: 1687808581}
     - target: {fileID: 4916318881920620, guid: 00090c67565ff41479cf2aa673fe914f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -929
       objectReference: {fileID: 0}
     - target: {fileID: 4916318881920620, guid: 00090c67565ff41479cf2aa673fe914f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 915
+      value: 1222
       objectReference: {fileID: 0}
     - target: {fileID: 114316968853620100, guid: 00090c67565ff41479cf2aa673fe914f,
         type: 2}
@@ -13444,6 +13444,7 @@ MonoBehaviour:
   colliderRock: {fileID: 0}
   hookedRock: {fileID: 0}
   launchSpeed: 500
+  colliderEnableTime: 0
   isDead: 0
 --- !u!1 &381170082
 GameObject:
@@ -20191,7 +20192,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1860967596437374, guid: b7f4c8ecab02a04439819a6f9ecd3576, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
         type: 2}
@@ -20246,7 +20247,7 @@ Prefab:
     - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
         type: 2}
       propertyPath: canLaunch
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
         type: 2}
@@ -23117,6 +23118,7 @@ MonoBehaviour:
   colliderRock: {fileID: 0}
   hookedRock: {fileID: 0}
   launchSpeed: 500
+  colliderEnableTime: 0
   isDead: 0
 --- !u!60 &1475630971
 PolygonCollider2D:

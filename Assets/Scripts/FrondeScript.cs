@@ -10,14 +10,16 @@ public class FrondeScript : MonoBehaviour {
 	public PolygonCollider2D colliderRock;
 	public GameObject hookedRock;
 	private Vector2 dirToPlayer;
+	private Vector2 dirRockToBoss;
 	public float launchSpeed = 200f;
-//	private bool canLaunch = true;
+	public float colliderEnableTime;
 	[HideInInspector] public bool isDead;
 
 
 
 	void Update () 
 	{
+		Debug.Log (dirRockToBoss.magnitude);
 		if(flowerScript.onLaunchingRock)
 		{
 			if(Input.GetMouseButton(1))
@@ -37,13 +39,14 @@ public class FrondeScript : MonoBehaviour {
 
 	IEnumerator LaunchRock()
 	{
+		dirRockToBoss = transform.position - hookedRock.transform.position;
 		hookedRock.GetComponent<SpriteRenderer> ().sortingOrder += 8;
 		flowerScript.isHooked = false;
 		flowerScript.isBacking = true;
-//		canLaunch = false;
+		colliderEnableTime = dirRockToBoss.magnitude/500;
 		hookedRock.GetComponent<Rigidbody2D> ().AddForce (dirToPlayer.normalized * launchSpeed, ForceMode2D.Impulse);
 		colliderRock.enabled = false;
-		yield return new WaitForSeconds (0.5f);
+		yield return new WaitForSeconds (colliderEnableTime);
 		colliderRock.enabled = true;
 	}
 

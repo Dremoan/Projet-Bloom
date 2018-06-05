@@ -21,6 +21,7 @@ public class DialogueManagerSousSol : MonoBehaviour
 		if(hasPlayDialog)
 		{
 			delayAppear = false;
+			dialogZone.SetActive (false);
 		}
 
 		if(goatScript.isNearGoat)
