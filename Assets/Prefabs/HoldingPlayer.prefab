@@ -53,8 +53,8 @@ GameObject:
   - component: {fileID: 4477352186265058}
   - component: {fileID: 212978108366968154}
   - component: {fileID: 50223020331832962}
-  - component: {fileID: 114196673435971652}
   - component: {fileID: 58583144967699488}
+  - component: {fileID: 114894370207080140}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -106,7 +106,6 @@ GameObject:
   - component: {fileID: 114316968853620100}
   - component: {fileID: 114679089432408336}
   - component: {fileID: 95280962036296978}
-  - component: {fileID: 320269294175577044}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -254,7 +253,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1037836600914726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -781, y: 3, z: 0}
+  m_LocalPosition: {x: 225, y: 44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4916318881920620}
@@ -295,7 +294,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1408772437908588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 933, y: -4, z: 0}
+  m_LocalPosition: {x: -2, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 4969371189643238}
@@ -478,25 +477,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114196673435971652
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1306905213065056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9c24ea314eb4b74fb2b4d132fcb44ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootSpeed: 100
-  projectileBody: {fileID: 50223020331832962}
-  launcher: {fileID: 50889859142061146}
-  launchPlace: {fileID: 0}
-  target: {fileID: 1137388327027256}
-  targetPosition: {x: 0, y: 0, z: 0}
-  needForce: 1
-  dispo: 1
 --- !u!114 &114316968853620100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -509,7 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 85
-  jumpSpeed: 15000
+  jumpSpeed: 10000
   jumpTime: 0.5
   jumpCoolDown: 1
   actualSpeed: 0
@@ -522,6 +502,7 @@ MonoBehaviour:
   isAiming: 0
   hasKey: 0
   isMoving: 0
+  cancelMoves: 0
   canLaunchAction: 1
   player: {fileID: 4916318881920620}
   eau: {fileID: 1137388327027256}
@@ -546,6 +527,25 @@ MonoBehaviour:
   ObjectToHide3: {fileID: 212712635895049406}
   marcheSpit: {fileID: 199082154446944628}
   layerNumber: 3
+--- !u!114 &114894370207080140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306905213065056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a1d89f6d00b944da4cc873c0385af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootSpeed: 100
+  projectileBody: {fileID: 50223020331832962}
+  launcher: {fileID: 50889859142061146}
+  launchPlace: {fileID: 0}
+  target: {fileID: 1137388327027256}
+  targetPosition: {x: 0, y: 0, z: 0}
+  needForce: 1
+  dispo: 1
 --- !u!198 &198222625648824380
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -4182,25 +4182,3 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!320 &320269294175577044
-PlayableDirector:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1408772437908588}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 0}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 0}
-    value: {fileID: 1408772437908588}
-  - key: {fileID: 0}
-    value: {fileID: 1408772437908588}
-  - key: {fileID: 0}
-    value: {fileID: 0}
-  m_ExposedReferences:
-    m_References: []
