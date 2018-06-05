@@ -30,7 +30,7 @@ public class ProjectileRock : Projectile
 
 	IEnumerator ShootDelay()
 	{
-		this.GetComponent<SpriteRenderer> ().sortingOrder = -4;
+		this.GetComponent<SpriteRenderer> ().sortingOrder = -1;
 		yield return new WaitForSeconds (waitTillLaunch);
 		if (needForce)
 		{

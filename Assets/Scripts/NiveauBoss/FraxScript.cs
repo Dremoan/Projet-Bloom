@@ -64,7 +64,7 @@ public class FraxScript : MonoBehaviour
 	{
 		if(canSetFire)
 		{
-			yield return new WaitForSeconds (0.75f);
+			yield return new WaitForSeconds (0.15f);
 			canMove = false;
 			bodyFrax.velocity = Vector3.zero;
 			animFrax.SetBool ("CanBurn", true);

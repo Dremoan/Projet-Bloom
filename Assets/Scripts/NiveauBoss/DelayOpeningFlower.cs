@@ -20,7 +20,26 @@ public class DelayOpeningFlower : MonoBehaviour {
 			canLaunchCount = true;
 			FindObjectOfType<DrowningWater> ().Plateforme = edgeOpen;
 			edgeClose.enabled = false;
+		}
+		if(coll.gameObject.tag =="Player")
+		{
+			canLaunchCount = false;
+		}
+	}
 
+	void OnTriggerStay2D(Collider2D coll)
+	{
+		if(coll.gameObject.tag =="Player")
+		{
+			canLaunchCount = false;
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D coll)
+	{
+		if(coll.gameObject.tag =="Player")
+		{
+			canLaunchCount = true;
 		}
 	}
 

@@ -6,37 +6,27 @@ using UnityEngine.SceneManagement;
 public class DrowningWater : MonoBehaviour {
 
 	public EdgeCollider2D Plateforme;
-	public EdgeCollider2D rive;
-	public PolygonCollider2D eauCollider;
+	public GameObject rives;
+	public GameObject eau1;
+	public GameObject eau2;
 	public PlayerBehavior playerScript;
+	public string nameScene;
 
 	void Update()
 	{
 		if(playerScript.isJumping == true)
 		{
-			eauCollider.enabled = false;
+			eau1.SetActive (false);
+			eau2.SetActive (false);
 			Plateforme.enabled = false;
-			rive.enabled = false;
+			rives.SetActive (false);
 		}
 		if(playerScript.isJumping == false)
 		{
-			eauCollider.enabled = true;
+			eau1.SetActive (true);
+			eau2.SetActive (true);
 			Plateforme.enabled = true;
-			rive.enabled = true;
-		}
-	}
-	void OnTriggerEnter2D(Collider2D coll)
-	{
-		if(coll.gameObject.tag == "Player")
-		{
-			SceneManager.LoadScene("Niveau1");
-		}
-	}
-	void OnTriggerStay2D(Collider2D coll)
-	{
-		if(coll.gameObject.tag == "Player")
-		{
-			SceneManager.LoadScene("Niveau1");
+			rives.SetActive (true);
 		}
 	}
 }

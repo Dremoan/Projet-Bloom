@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerBehavior : MonoBehaviour {
 
@@ -11,7 +12,7 @@ public class PlayerBehavior : MonoBehaviour {
 	public float actualSpeed;
 	public float maxCibleDist = 20f;
 	[HideInInspector] public bool canMove = true;
-	 public bool canJump = true;
+	public bool canJump = true;
 	[HideInInspector] public bool isJumping = false;
 	[HideInInspector] public bool pressingA = false;
 	[HideInInspector] public bool canCharge = false;
@@ -20,6 +21,7 @@ public class PlayerBehavior : MonoBehaviour {
 	[HideInInspector] public bool isMoving;
 	[HideInInspector] public bool cancelMoves = false;
 	public bool canLaunchAction = true;
+	public string sceneName;
 
 	private bool holdsWater;
 
@@ -220,6 +222,10 @@ public class PlayerBehavior : MonoBehaviour {
 		}
 	}
 
+	public void ReloadScene()
+	{
+		SceneManager.LoadScene (sceneName);
+	}
 
 
 }

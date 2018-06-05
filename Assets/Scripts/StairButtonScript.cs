@@ -22,6 +22,7 @@ public class StairButtonScript : MonoBehaviour {
 	public GameObject lightWayHaut;
 	public GameObject lightWayMid;
 	public GameObject lightWayFinal;
+	public GameObject goingDown;
 	public ParticleSystem EtincellesHaut;
 	public ParticleSystem EtincellesBas;
 
@@ -98,6 +99,7 @@ public class StairButtonScript : MonoBehaviour {
 		hasPlayedAnimations = true;
 		yield return new WaitForSeconds (0.85f);
 		gap.SetActive (false);
+		goingDown.SetActive (false);
 		grapplinPlant.GetComponent<GrapplinScriptStairs> ().canSetActiveCollider = false;
 		buttonStair1.GetComponent<SpriteRenderer> ().enabled = false;
 		buttonStair2.GetComponent<SpriteRenderer> ().enabled = false;

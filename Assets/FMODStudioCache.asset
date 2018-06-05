@@ -26,7 +26,7 @@ MonoBehaviour:
   - {fileID: 114512812225322826}
   MasterBankRef: {fileID: 114929925631985106}
   StringsBankRef: {fileID: 114904742564432158}
-  stringsBankWriteTime: 636637904177962297
+  stringsBankWriteTime: 636638055608253661
   cacheVersion: 2
 --- !u!114 &114109597261291548
 MonoBehaviour:
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD\BLOOM\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636637904177962297
+  lastModified: 636638055608253661
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\R.seignolles\Desktop\Projet-Bloom\Assets\FMOD\BLOOM\Build\Desktop\Master
     Bank.bank
-  lastModified: 636637904177952291
+  lastModified: 636638055608253661
   LoadResult: 0
   FileSizes:
   - Name: Desktop

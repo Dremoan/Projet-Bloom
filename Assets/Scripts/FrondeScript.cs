@@ -12,14 +12,13 @@ public class FrondeScript : MonoBehaviour {
 	private Vector2 dirToPlayer;
 	private Vector2 dirRockToBoss;
 	public float launchSpeed = 200f;
-	public float colliderEnableTime;
+	private float colliderEnableTime;
 	[HideInInspector] public bool isDead;
 
 
 
 	void Update () 
 	{
-		Debug.Log (dirRockToBoss.magnitude);
 		if(flowerScript.onLaunchingRock)
 		{
 			if(Input.GetMouseButton(1))

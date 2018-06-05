@@ -9,6 +9,8 @@ public class BossCamera : MonoBehaviour {
 	public GameObject canvasBossButtons;
 	public Camera mainCamera;
 	public CinemachineVirtualCamera lookingPlayer;
+	public BoxCollider2D trigger;
+	public BoxCollider2D blocking;
 	public float dezoomSize = 180f;
 	public float zoomSize = 150f;
 	private bool inZone;
@@ -44,7 +46,7 @@ public class BossCamera : MonoBehaviour {
 		}
 		if(canDezoom)
 		{
-			cameraScript.XMinValue = Mathf.Lerp (cameraScript.XMinValue, 600f, Time.deltaTime * 1f);
+			cameraScript.XMinValue = Mathf.Lerp (cameraScript.XMinValue, 575f, Time.deltaTime * 1f);
 			mainCamera.orthographicSize = Mathf.Lerp (mainCamera.orthographicSize, dezoomSize, Time.deltaTime * 1f);
 		}
 	}
@@ -57,6 +59,8 @@ public class BossCamera : MonoBehaviour {
 			Destroy (lookingPlayer);
 			inZone = true;
 			canDezoom = true;
+			trigger.enabled = false;
+			blocking.enabled = true;
 		}
 	}
 
@@ -66,7 +70,7 @@ public class BossCamera : MonoBehaviour {
 		cameraScript.XMinEnabled = true;
 		cameraScript.YMaxEnabled = true;
 		cameraScript.YMinEnabled = true;
-		cameraScript.XMaxValue = 650f;
+		cameraScript.XMaxValue = 575f;
 		cameraScript.YMaxValue = -900f;
 		cameraScript.YMinValue = -900f;
 	}
