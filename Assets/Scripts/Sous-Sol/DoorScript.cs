@@ -18,11 +18,6 @@ public class DoorScript : MonoBehaviour {
 	private bool isNearDoor;
 	public float openingTime =2.5f;
 
-		void Start () 
-	{
-		
-	}
-
 
 
 	void Update () 

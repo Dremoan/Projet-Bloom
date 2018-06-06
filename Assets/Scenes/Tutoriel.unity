@@ -850,7 +850,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 52128208}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.26, y: -0.15, z: -19.23}
+  m_LocalPosition: {x: 4.28, y: -0.15, z: -19.23}
   m_LocalScale: {x: 0.027674422, y: 0.06849417, z: 0.06849417}
   m_Children: []
   m_Father: {fileID: 1115721330}
@@ -13161,11 +13161,11 @@ Prefab:
       objectReference: {fileID: 1687808581}
     - target: {fileID: 4916318881920620, guid: 00090c67565ff41479cf2aa673fe914f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -929
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4916318881920620, guid: 00090c67565ff41479cf2aa673fe914f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1172.9
+      value: 912
       objectReference: {fileID: 0}
     - target: {fileID: 114316968853620100, guid: 00090c67565ff41479cf2aa673fe914f,
         type: 2}
@@ -13448,7 +13448,6 @@ MonoBehaviour:
   colliderRock: {fileID: 0}
   hookedRock: {fileID: 0}
   launchSpeed: 500
-  colliderEnableTime: 0
   isDead: 0
 --- !u!1 &381170082
 GameObject:
@@ -15741,7 +15740,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1208666273
   m_SortingLayer: 1
-  m_SortingOrder: 52
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: b3c434102f103d844b095f00c86a9d67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -15974,6 +15973,60 @@ Prefab:
         type: 2}
       propertyPath: passWithInputButton
       value: Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 224285068964533070, guid: 9d173c5fdd96430478226dd748b71154,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224285068964533070, guid: 9d173c5fdd96430478226dd748b71154,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224285068964533070, guid: 9d173c5fdd96430478226dd748b71154,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224285068964533070, guid: 9d173c5fdd96430478226dd748b71154,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224285068964533070, guid: 9d173c5fdd96430478226dd748b71154,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224285068964533070, guid: 9d173c5fdd96430478226dd748b71154,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114108486930003230, guid: 9d173c5fdd96430478226dd748b71154,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114108486930003230, guid: 9d173c5fdd96430478226dd748b71154,
+        type: 2}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114531997863990662, guid: 9d173c5fdd96430478226dd748b71154,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114531997863990662, guid: 9d173c5fdd96430478226dd748b71154,
+        type: 2}
+      propertyPath: m_Text
+      value: Fleur
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174568816966886, guid: 9d173c5fdd96430478226dd748b71154, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d173c5fdd96430478226dd748b71154, type: 2}
@@ -17634,7 +17687,7 @@ Prefab:
     - target: {fileID: 20009268081783512, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
       propertyPath: orthographic size
-      value: 125
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4500646115548208, guid: fca5c091d6c63084fb2e552554a8307e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -17666,22 +17719,22 @@ Prefab:
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
       propertyPath: YMaxEnabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
       propertyPath: YMinEnabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
       propertyPath: XMaxEnabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
       propertyPath: XMinEnabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
@@ -18162,7 +18215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &987973677
 Transform:
   m_ObjectHideFlags: 0
@@ -20196,7 +20249,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1860967596437374, guid: b7f4c8ecab02a04439819a6f9ecd3576, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
         type: 2}
@@ -20251,7 +20304,7 @@ Prefab:
     - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
         type: 2}
       propertyPath: canLaunch
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
         type: 2}
@@ -23155,7 +23208,6 @@ MonoBehaviour:
   colliderRock: {fileID: 0}
   hookedRock: {fileID: 0}
   launchSpeed: 500
-  colliderEnableTime: 0
   isDead: 0
 --- !u!60 &1475630971
 PolygonCollider2D:
@@ -26255,7 +26307,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1208666273
   m_SortingLayer: 1
-  m_SortingOrder: 5
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 6708697ea158b5f4385ca6bbfc6d0b81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

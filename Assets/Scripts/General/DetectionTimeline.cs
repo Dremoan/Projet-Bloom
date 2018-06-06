@@ -9,7 +9,6 @@ public class DetectionTimeline : MonoBehaviour {
 
 	public PlayableDirector timeline;
 	public PlayerBehavior playerScript;
-	public GameObject activationItem;
 	private bool canPlayWaterSourceTimeline = true;
 	private bool canPlayFlowerCinematic = true;
 	private bool canPlayBlockingRockCinematic = true;
@@ -46,17 +45,11 @@ public class DetectionTimeline : MonoBehaviour {
 	}
 
 
-//	public void RockSlotActive()
-//	{
-//		if(activationItem.GetComponent<ActivationRock>().isActive && canPlayWaterSourceTimeline)
-//		{
-//			canIncrease = true;
-//			playerScript.cancelMoves = true;
-//			timeline.Play ();
-//			canPlayWaterSourceTimeline = false;
-//		}
-//	}
-
+	public void DoorActive()
+	{
+		playerScript.cancelMoves = true;
+		timeline.Play ();
+	}
 	public void DalleActive()
 	{
 		playerScript.cancelMoves = true;

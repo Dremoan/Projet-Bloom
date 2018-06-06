@@ -5,6 +5,7 @@ using UnityEngine;
 public class DalleSecrète : MonoBehaviour {
 
 	public GameObject blockingDoorOther;
+	public PlayerBehavior playerScript;
 	public Animator animInterrupteur;
 	public DetectionTimeline timelineScriptIncomplet;
 	public DetectionTimeline timelineScriptComplet;
@@ -31,15 +32,21 @@ public class DalleSecrète : MonoBehaviour {
 	{
 		if(coll.gameObject.tag == "Player" && canPlayTimeline && otherInterrupteur.active == false)
 		{
-			active = true;
-			canPlayTimeline = false;
-			timelineScriptIncomplet.DalleActive ();
+			if(playerScript.pressingA == true)
+			{
+				active = true;
+				canPlayTimeline = false;
+				timelineScriptIncomplet.DalleActive ();
+			}
 		}
 		if(coll.gameObject.tag == "Player" && canPlayTimeline && otherInterrupteur.active == true)
 		{
-			active = true;
-			canPlayTimeline = false;
-			timelineScriptComplet.DalleActive ();
+			if (playerScript.pressingA == true)
+			{
+				active = true;
+				canPlayTimeline = false;
+				timelineScriptComplet.DalleActive ();
+			}
 		}
 	}
 }

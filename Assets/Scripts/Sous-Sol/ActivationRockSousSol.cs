@@ -7,6 +7,7 @@ public class ActivationRockSousSol: MonoBehaviour {
 
 	public GameObject keyRock;
 	public GameObject keyRockPlace;
+	public GameObject cacheEau;
 	public Animator anim;
 	public bool isActive = false;
 
@@ -20,6 +21,7 @@ public class ActivationRockSousSol: MonoBehaviour {
 	{
 		if(coll.gameObject.Equals(keyRock))
 		{
+			cacheEau.SetActive (false);
 			isActive = true;
             FMODUnity.RuntimeManager.PlayOneShot("event:/IMPACT_DOOR");
 			keyRock.transform.position = keyRockPlace.transform.position;
