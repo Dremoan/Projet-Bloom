@@ -17,6 +17,7 @@ MonoBehaviour:
   - {fileID: 114706459664787236}
   - {fileID: 114126306407041202}
   - {fileID: 114504222300494894}
+  - {fileID: 114527290542809604}
   m_FixedDuration: 0
   m_EditorSettings:
     fps: 60
@@ -47,7 +48,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 9
+        time: 9.016666
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -69,7 +70,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 9
+        time: 9.016666
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -91,7 +92,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 9
+        time: 9.016666
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -113,7 +114,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 9
+        time: 9.016666
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -167,7 +168,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 9
+    m_StopTime: 9.016666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -193,7 +194,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 9
+        time: 9.016666
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -215,7 +216,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 9
+        time: 9.016666
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -237,7 +238,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 9
+        time: 9.016666
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -259,7 +260,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 9
+        time: 9.016666
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -311,11 +312,11 @@ MonoBehaviour:
   m_Parent: {fileID: 11400000}
   m_Children: []
   m_Clips:
-  - m_Start: 6.75
+  - m_Start: 5.1
     m_ClipIn: 0
-    m_Asset: {fileID: 114571949995799406}
-    m_UnderlyingAsset: {fileID: 7400000, guid: 417c51f9ad3684d49a8bc592ccc0d310, type: 2}
-    m_Duration: 0.5
+    m_Asset: {fileID: 114556461490313710}
+    m_UnderlyingAsset: {fileID: 7400000, guid: 2e46162cb87605b4ca7aada7f36a5311, type: 2}
+    m_Duration: 1.6
     m_TimeScale: 1
     m_ParentTrack: {fileID: 114126306407041202}
     m_EaseInDuration: 0
@@ -366,7 +367,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 0
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 6.75
+    m_PreExtrapolationTime: 5.1
     m_DisplayName: BlockingDoorOpened
     m_Version: 1
   m_OpenClipPreExtrapolation: 0
@@ -394,6 +395,23 @@ MonoBehaviour:
   VirtualCamera:
     exposedName: c0b9481f9bb19964485d845ec9034131
     defaultValue: {fileID: 0}
+--- !u!114 &114197471179188164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2024714994, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+  m_Name: "AnimationPlayableAsset of PorteIllumin\xE9e"
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 7400000, guid: 2cb9e67a8ea26b545b5f3b455786757d, type: 2}
+  m_Position: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_UseTrackMatchFields: 0
+  m_MatchTargetFields: 63
+  m_RemoveStartOffset: 1
 --- !u!114 &114452314727591468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -430,7 +448,7 @@ MonoBehaviour:
     m_ClipIn: 0
     m_Asset: {fileID: 114051537441436844}
     m_UnderlyingAsset: {fileID: 7400000, guid: a319445f44bc7094fbcd8d2b33e2a4de, type: 2}
-    m_Duration: 1
+    m_Duration: 0.8
     m_TimeScale: 1
     m_ParentTrack: {fileID: 114504222300494894}
     m_EaseInDuration: 0
@@ -495,7 +513,94 @@ MonoBehaviour:
   m_ApplyOffsets: 0
   m_AvatarMask: {fileID: 0}
   m_ApplyAvatarMask: 1
---- !u!114 &114571949995799406
+--- !u!114 &114527290542809604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1467732076, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+  m_Name: Animation Track3
+  m_EditorClassIdentifier: 
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_AnimClip: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Start: 4.166666666666667
+    m_ClipIn: 0
+    m_Asset: {fileID: 114197471179188164}
+    m_UnderlyingAsset: {fileID: 7400000, guid: 2cb9e67a8ea26b545b5f3b455786757d, type: 2}
+    m_Duration: 0.8333333333333334
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114527290542809604}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 1
+    m_PostExtrapolationTime: Infinity
+    m_PreExtrapolationTime: 4.166666666666667
+    m_DisplayName: "PorteIllumin\xE9e"
+    m_Version: 1
+  m_OpenClipPreExtrapolation: 0
+  m_OpenClipPostExtrapolation: 0
+  m_OpenClipOffsetPosition: {x: 0, y: 0, z: 0}
+  m_OpenClipOffsetRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_OpenClipTimeOffset: 0
+  m_MatchTargetFields: 63
+  m_Position: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_ApplyOffsets: 0
+  m_AvatarMask: {fileID: 0}
+  m_ApplyAvatarMask: 1
+--- !u!114 &114556461490313710
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -506,7 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 2024714994, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
   m_Name: AnimationPlayableAsset of BlockingDoorOpened
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 7400000, guid: 417c51f9ad3684d49a8bc592ccc0d310, type: 2}
+  m_Clip: {fileID: 7400000, guid: 2e46162cb87605b4ca7aada7f36a5311, type: 2}
   m_Position: {x: 0, y: 0, z: 0}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_UseTrackMatchFields: 0
@@ -606,22 +711,46 @@ MonoBehaviour:
     m_ClipIn: 0
     m_Asset: {fileID: 114164883885855880}
     m_UnderlyingAsset: {fileID: 114592400646636838}
-    m_Duration: 5.5
+    m_Duration: 7
     m_TimeScale: 1
     m_ParentTrack: {fileID: 114706459664787236}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: 2
-    m_BlendOutDuration: 2
+    m_BlendOutDuration: 1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -636,54 +765,32 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: LookingLight
     m_Version: 1
-  - m_Start: 4.5
-    m_ClipIn: 0
-    m_Asset: {fileID: 114980449423549876}
-    m_UnderlyingAsset: {fileID: 114592400646636838}
-    m_Duration: 4.333333333333334
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: 114706459664787236}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: 2
-    m_BlendOutDuration: 1.333333333333334
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: LookingBlockingDoor
-    m_Version: 1
-  - m_Start: 7.5
+  - m_Start: 7
     m_ClipIn: 0
     m_Asset: {fileID: 114452314727591468}
     m_UnderlyingAsset: {fileID: 114592400646636838}
-    m_Duration: 1.5333333333319992
+    m_Duration: 2
     m_TimeScale: 1
     m_ParentTrack: {fileID: 114706459664787236}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 1.333333333333334
+    m_BlendInDuration: 1
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -745,17 +852,3 @@ MonoBehaviour:
   m_ApplyOffsets: 0
   m_AvatarMask: {fileID: 0}
   m_ApplyAvatarMask: 1
---- !u!114 &114980449423549876
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90fb794a295e73545af71bcdb7375791, type: 3}
-  m_Name: CinemachineShot
-  m_EditorClassIdentifier: 
-  VirtualCamera:
-    exposedName: 86e5961a2c9bd304d9fb96b92e065a33
-    defaultValue: {fileID: 0}

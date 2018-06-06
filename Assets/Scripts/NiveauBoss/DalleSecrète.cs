@@ -5,6 +5,7 @@ using UnityEngine;
 public class DalleSecrète : MonoBehaviour {
 
 	public GameObject blockingDoorOther;
+	public GameObject cadreDoor;
 	public PlayerBehavior playerScript;
 	public Animator animInterrupteur;
 	public DetectionTimeline timelineScriptIncomplet;
@@ -17,23 +18,27 @@ public class DalleSecrète : MonoBehaviour {
 
 	void Update()
 	{
+		Debug.Log (active);
 		if(active)
 		{
 			animInterrupteur.SetBool ("Active", true);
 			if(canInactiveDoor)
 			{
+				cadreDoor.SetActive (false);
 				blockingDoorOther.SetActive (false);
 				canInactiveDoor = false;
 			}
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D coll)
+	void OnTriggerStay2D(Collider2D coll)
 	{
 		if(coll.gameObject.tag == "Player" && canPlayTimeline && otherInterrupteur.active == false)
 		{
-			if(playerScript.pressingA == true)
+			Debug.Log ("coucou");
+			if (Input.GetKeyDown (KeyCode.A))
 			{
+				Debug.Log ("re !");
 				active = true;
 				canPlayTimeline = false;
 				timelineScriptIncomplet.DalleActive ();
@@ -41,7 +46,7 @@ public class DalleSecrète : MonoBehaviour {
 		}
 		if(coll.gameObject.tag == "Player" && canPlayTimeline && otherInterrupteur.active == true)
 		{
-			if (playerScript.pressingA == true)
+			if(Input.GetKeyDown(KeyCode.A))
 			{
 				active = true;
 				canPlayTimeline = false;
