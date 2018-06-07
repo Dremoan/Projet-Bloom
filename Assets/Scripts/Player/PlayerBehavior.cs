@@ -117,7 +117,7 @@ public class PlayerBehavior : MonoBehaviour {
 			if(Input.GetMouseButtonDown(1))
 			{
                 FMODUnity.RuntimeManager.PlayOneShot("event:/JET_BULLE");
-				DropManagerComponent.SpawnDropWater (Fleur.transform.position, Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg, eauPos);
+				DropManagerComponent.SpawnDropWater (FindObjectOfType<LaunchFlower>().flowerPlace.transform.position, Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg, eauPos);
 				Fleur.holdsWater = false;
 			}
 		}
@@ -225,6 +225,23 @@ public class PlayerBehavior : MonoBehaviour {
 	public void ReloadScene()
 	{
 		SceneManager.LoadScene (sceneName);
+	}
+
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if(col.gameObject.tag == "WaterKilling")
+		{
+			cancelMoves = true;
+			anim.Play ("CactusPlanche");
+		}
+	}
+	void OnTriggerStay2D(Collider2D col)
+	{
+		if(col.gameObject.tag == "WaterKilling")
+		{
+			cancelMoves = true;
+			anim.Play ("CactusPlanche");
+		}
 	}
 
 

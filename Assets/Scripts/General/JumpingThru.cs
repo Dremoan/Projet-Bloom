@@ -6,21 +6,11 @@ public class JumpingThru : MonoBehaviour {
 
 
 	public GameObject player;
-	public Collider2D obstacleCollider;
 	private bool touchedPlayer;
 	public float ignoreTime = 0.5f;
 
 	void Update () 
 	{
-		if(player.GetComponent<PlayerBehavior>().isJumping)
-		{
-			obstacleCollider.enabled = false;
-			StartCoroutine (InactiveCollider ());
-		}
-		if (player.GetComponent<PlayerBehavior> ().isJumping == false) 
-		{
-			obstacleCollider.enabled = true;
-		}
 		if(player.GetComponent<PlayerBehavior>().isJumping && touchedPlayer)
 		{
 			StartCoroutine (InactiveCollider ());

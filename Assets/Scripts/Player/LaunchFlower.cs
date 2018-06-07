@@ -245,6 +245,12 @@ public class LaunchFlower : MonoBehaviour {
 			hookedThing = coll.gameObject.GetComponent<AfricanusScriptSecret> ().mouthPlace.gameObject;
 			FindObjectOfType<AfricanusScriptSecret> ().touchedFlower = true;
 		}
+		if(coll.gameObject.tag == "Africanus3")
+		{
+			isHooked = true;
+			hookedThing = coll.gameObject.GetComponent<AfricanusScript3> ().mouthPlace.gameObject;
+			FindObjectOfType<AfricanusScript3> ().touchedFlower = true;
+		}
 	}
 		
 

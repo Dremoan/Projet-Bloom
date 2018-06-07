@@ -16,10 +16,10 @@ public class DelayOpeningFlower : MonoBehaviour {
 	{
 		if(coll.gameObject.Equals(waterDrop))
 		{
+			edgeClose.enabled = false;
 			animPlatform.Play ("Opening");
 			canLaunchCount = true;
-			FindObjectOfType<DrowningWater> ().Plateforme = edgeOpen;
-			edgeClose.enabled = false;
+			edgeOpen.enabled = true;
 		}
 		if(coll.gameObject.tag =="Player")
 		{
@@ -51,10 +51,10 @@ public class DelayOpeningFlower : MonoBehaviour {
 		}
 		if(increaseFloat > maxTimeClose)
 		{
+			edgeOpen.enabled = false;
 			canLaunchCount = false;
 			increaseFloat = 0f;
-			FindObjectOfType<DrowningWater> ().Plateforme = edgeClose;
-			edgeOpen.enabled = false;
+			edgeClose.enabled = true;
 			animPlatform.Play ("Closing");
 		}
 	}

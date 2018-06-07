@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class AfricanusScriptSecret
-	: MonoBehaviour {
+public class AfricanusScript3 : MonoBehaviour {
 
 	public Transform mouthPlace;
 	public Transform initialPos;
@@ -14,6 +13,7 @@ public class AfricanusScriptSecret
 	public GameObject player;
 	public GameObject africanusAltPos;
 	public GameObject africanusGround;
+
 
 	public PlayerBehavior playerScript;
 
@@ -156,6 +156,8 @@ public class AfricanusScriptSecret
 		player.GetComponent<SpriteRenderer> ().enabled = true;
 		shadow.enabled = true;
 		flower.enabled = true;
+		playerScript.lastMove.x = 1;
+		playerScript.lastMove.y = 0;
 		playerScript.cancelMoves = false;
 		playerScript.EnableMovements ();
 		ChangeAnim ();

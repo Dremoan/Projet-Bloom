@@ -5,15 +5,14 @@ using UnityEngine;
 public class ChangingOrderDoor : MonoBehaviour {
 
 	public SpriteRenderer shinyDoor;
+	public string layerName;
 	public int orderLayer;
 
-
-	void ChangeOrder()
+	void Update()
 	{
-		GetComponent<SpriteRenderer> ().enabled = false;
-		shinyDoor.sortingLayerName = "Background";
+		shinyDoor.sortingLayerName = layerName;
 		shinyDoor.sortingOrder = orderLayer;
-
 	}
+
 	
 }

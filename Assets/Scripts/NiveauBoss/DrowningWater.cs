@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class DrowningWater : MonoBehaviour {
 
-	public EdgeCollider2D Plateforme;
-	public GameObject rives;
+	public GameObject Plateformes;
 	public GameObject eau1;
 	public GameObject eau2;
+	public GameObject eauNiveau;
+	public GameObject killingWater;
 	public PlayerBehavior playerScript;
 	public string nameScene;
 
@@ -18,15 +19,17 @@ public class DrowningWater : MonoBehaviour {
 		{
 			eau1.SetActive (false);
 			eau2.SetActive (false);
-			Plateforme.enabled = false;
-			rives.SetActive (false);
+			eauNiveau.SetActive (false);
+			killingWater.SetActive (false);
+			Plateformes.SetActive (false);
 		}
 		if(playerScript.isJumping == false)
 		{
 			eau1.SetActive (true);
 			eau2.SetActive (true);
-			Plateforme.enabled = true;
-			rives.SetActive (true);
+			eauNiveau.SetActive (true);
+			killingWater.SetActive (true);
+			Plateformes.SetActive (true);
 		}
 	}
 }

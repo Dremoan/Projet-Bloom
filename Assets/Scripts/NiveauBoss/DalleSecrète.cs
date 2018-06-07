@@ -35,10 +35,8 @@ public class DalleSecrète : MonoBehaviour {
 	{
 		if(coll.gameObject.tag == "Player" && canPlayTimeline && otherInterrupteur.active == false)
 		{
-			Debug.Log ("coucou");
 			if (Input.GetKeyDown (KeyCode.A))
 			{
-				Debug.Log ("re !");
 				active = true;
 				canPlayTimeline = false;
 				timelineScriptIncomplet.DalleActive ();
@@ -48,6 +46,7 @@ public class DalleSecrète : MonoBehaviour {
 		{
 			if(Input.GetKeyDown(KeyCode.A))
 			{
+				canInactiveDoor = false;
 				active = true;
 				canPlayTimeline = false;
 				timelineScriptComplet.DalleActive ();

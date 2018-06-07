@@ -13114,11 +13114,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4497474133540896, guid: 00090c67565ff41479cf2aa673fe914f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -781
+      value: -1102
       objectReference: {fileID: 0}
     - target: {fileID: 4497474133540896, guid: 00090c67565ff41479cf2aa673fe914f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: -990
       objectReference: {fileID: 0}
     - target: {fileID: 4497474133540896, guid: 00090c67565ff41479cf2aa673fe914f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13161,11 +13161,11 @@ Prefab:
       objectReference: {fileID: 1687808581}
     - target: {fileID: 4916318881920620, guid: 00090c67565ff41479cf2aa673fe914f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 8
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4916318881920620, guid: 00090c67565ff41479cf2aa673fe914f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 912
+      value: 1240
       objectReference: {fileID: 0}
     - target: {fileID: 114316968853620100, guid: 00090c67565ff41479cf2aa673fe914f,
         type: 2}
@@ -17687,7 +17687,7 @@ Prefab:
     - target: {fileID: 20009268081783512, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
       propertyPath: orthographic size
-      value: 150
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 4500646115548208, guid: fca5c091d6c63084fb2e552554a8307e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -18215,7 +18215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &987973677
 Transform:
   m_ObjectHideFlags: 0
@@ -22669,7 +22669,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1714321263}
-  obstacleCollider: {fileID: 1421858634}
   ignoreTime: 0.5
 --- !u!1 &1429109325
 GameObject:

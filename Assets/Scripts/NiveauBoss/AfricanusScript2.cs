@@ -12,6 +12,7 @@ public class AfricanusScript2 : MonoBehaviour {
 
 	public GameObject player;
 	public GameObject africanusAltPos;
+	public GameObject africanusGround;
 
 	public PlayerBehavior playerScript;
 
@@ -211,6 +212,7 @@ public class AfricanusScript2 : MonoBehaviour {
 
 	void SetPos()
 	{
+		africanusGround.transform.position = africanusAltPos.transform.position;
 		transform.position = initialPos.position;
 	}
 

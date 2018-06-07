@@ -17,7 +17,7 @@ public class PassingBehindPlayer : MonoBehaviour {
 		{
 			marcheSpit.sortingOrder = ObjectToHide.sortingOrder - layerNumber;
 			ObjectToHide.sortingOrder = ObjectToHide.sortingOrder - layerNumber;
-			ObjectToHide2.sortingOrder = ObjectToHide.sortingOrder -1;
+			ObjectToHide2.sortingOrder = ObjectToHide.sortingOrder +1;
 			ObjectToHide3.sortingOrder = ObjectToHide.sortingOrder - 1;
 			isBehind = true;
 		}
@@ -28,8 +28,8 @@ public class PassingBehindPlayer : MonoBehaviour {
 		{
 			marcheSpit.sortingOrder = ObjectToHide.sortingOrder + layerNumber;
 			ObjectToHide.sortingOrder = ObjectToHide.sortingOrder + layerNumber;
-			ObjectToHide2.sortingOrder = ObjectToHide.sortingOrder - 1;
-			ObjectToHide3.sortingOrder = ObjectToHide.sortingOrder + 1;
+			ObjectToHide2.sortingOrder = ObjectToHide.sortingOrder + 1;
+			ObjectToHide3.sortingOrder = ObjectToHide.sortingOrder - 1;
 			isBehind = false;
 		}
 	}
