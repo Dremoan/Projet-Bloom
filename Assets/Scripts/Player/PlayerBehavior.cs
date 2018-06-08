@@ -24,13 +24,15 @@ public class PlayerBehavior : MonoBehaviour {
 	public string sceneName;
 
 	private bool holdsWater;
+	private bool isDying;
 
 	public Transform player;
 	public GameObject eau;
 	public LaunchFlower Fleur;
 	public Rigidbody2D body;
-	public Vector2 move;
-	public Vector3 eauPos;
+	[HideInInspector] public Vector2 move;
+	[HideInInspector] public Vector3 eauPos;
+	[HideInInspector]public Vector3 jumpPos;
 	[HideInInspector] public Vector2 lastMove;
 
 	private float idleCount = 0;
@@ -68,6 +70,7 @@ public class PlayerBehavior : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.Space) && canJump == true && !isJumping && !canCharge) 
 		{
+			jumpPos = transform.position;
 			isJumping = true;
 			canCharge = true;
 			StartCoroutine (DashingDelay ());
@@ -227,6 +230,26 @@ public class PlayerBehavior : MonoBehaviour {
 		SceneManager.LoadScene (sceneName);
 	}
 
+	public void LaunchCanvas()
+	{
+		anim.Play ("DyingBlackScreen");
+	}
+
+	public void Reviving()
+	{
+		StartCoroutine (WaitBlackScreen ());
+	}
+
+	IEnumerator WaitBlackScreen()
+	{
+		cancelMoves = false;
+		EnableMovements ();
+		transform.position = jumpPos;
+		yield return new WaitForSeconds (1.5f);
+		anim.Play ("RevivingBlackScreen");
+	}
+
+
 	void OnTriggerEnter2D(Collider2D col)
 	{
 		if(col.gameObject.tag == "WaterKilling")
@@ -237,10 +260,11 @@ public class PlayerBehavior : MonoBehaviour {
 	}
 	void OnTriggerStay2D(Collider2D col)
 	{
-		if(col.gameObject.tag == "WaterKilling")
+		if(col.gameObject.tag == "WaterKilling" && !isDying)
 		{
 			cancelMoves = true;
 			anim.Play ("CactusPlanche");
+			isDying = true;
 		}
 	}
 

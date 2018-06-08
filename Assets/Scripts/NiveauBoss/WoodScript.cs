@@ -9,7 +9,7 @@ public class WoodScript : MonoBehaviour {
 	public Animator animWood;
 	private bool canDie;
 
-	void OnTriggerEnter2D(Collider2D coll)
+	void OnCollisionEnter2D(Collision2D coll)
 	{
 		if(coll.gameObject.tag == "Fraxinelle")
 		{
@@ -27,14 +27,14 @@ public class WoodScript : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerStay2D(Collider2D coll)
+	void OnCollisionStay2D(Collision2D coll)
 	{
 		if(coll.gameObject.tag == "Fraxinelle")
 		{
 			canDie = true;
 		}
 	}
-	void OnTriggerExit2D(Collider2D coll)
+	void OnCollisionExit2D(Collision2D coll)
 	{
 		if(coll.gameObject.tag == "Fraxinelle")
 		{
@@ -47,6 +47,7 @@ public class WoodScript : MonoBehaviour {
 		fraxinelleScript.canMove = false;
 		fraxinelleScript.enabled = false;
 		fraxinelle.GetComponent<Rigidbody2D> ().velocity = Vector3.zero;
+		fraxinelle.GetComponent<Collider2D> ().enabled = false;
 		fraxinelle.GetComponent<Animator> ().Play ("DyingFrax");
 		animWood.SetBool ("Burnt", true);
 		yield return new WaitForSeconds (2.5f);

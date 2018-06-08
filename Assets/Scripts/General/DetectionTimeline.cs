@@ -13,18 +13,31 @@ public class DetectionTimeline : MonoBehaviour {
 	private bool canPlayFlowerCinematic = true;
 	private bool canPlayBlockingRockCinematic = true;
 	public bool hasPlayedCinematic = false;
+	public bool onAwake;
 	public float timelineDuration;
 	private float timeIncreasing = 0f;
 
 
 	void Update () 
 	{
-
+		if(onAwake)
+		{
+			playerScript.cancelMoves = true;
+			timeline.Play ();
+		}
+		if(hasPlayedCinematic)
+		{
+			if(this.GetComponent<Collider2D>() != null)
+			{
+				this.GetComponent<Collider2D> ().enabled = false;		
+			}
+		}
 		if(timeline.time > timelineDuration -0.05f && !hasPlayedCinematic)
 		{
 			hasPlayedCinematic = true;
 			playerScript.cancelMoves = false;
 			playerScript.EnableMovements ();
+			onAwake = false;
 		}
 
 	}
