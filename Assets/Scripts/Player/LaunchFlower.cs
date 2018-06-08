@@ -231,24 +231,28 @@ public class LaunchFlower : MonoBehaviour {
 		{
 			isHooked = true;
 			hookedThing = coll.gameObject.GetComponent<AfricanusScript> ().mouthPlace.gameObject;
+			player.GetComponent<Collider2D> ().enabled = false;
 			FindObjectOfType<AfricanusScript> ().touchedFlower = true;
 		}
 		if(coll.gameObject.tag == "Africanus2")
 		{
 			isHooked = true;
 			hookedThing = coll.gameObject.GetComponent<AfricanusScript2> ().mouthPlace.gameObject;
+			player.GetComponent<Collider2D> ().enabled = false;
 			FindObjectOfType<AfricanusScript2> ().touchedFlower = true;
 		}
 		if(coll.gameObject.tag == "AfricanusSecret")
 		{
 			isHooked = true;
 			hookedThing = coll.gameObject.GetComponent<AfricanusScriptSecret> ().mouthPlace.gameObject;
+			player.GetComponent<Collider2D> ().enabled = false;
 			FindObjectOfType<AfricanusScriptSecret> ().touchedFlower = true;
 		}
 		if(coll.gameObject.tag == "Africanus3")
 		{
 			isHooked = true;
 			hookedThing = coll.gameObject.GetComponent<AfricanusScript3> ().mouthPlace.gameObject;
+			player.GetComponent<Collider2D> ().enabled = false;
 			FindObjectOfType<AfricanusScript3> ().touchedFlower = true;
 		}
 	}

@@ -156,6 +156,7 @@ public class AfricanusScript2 : MonoBehaviour {
 		shadow.enabled = true;
 		flower.enabled = true;
 		playerScript.cancelMoves = false;
+		player.GetComponent<Collider2D> ().enabled = true;
 		playerScript.EnableMovements ();
 		ChangeAnim ();
 	}
@@ -182,7 +183,6 @@ public class AfricanusScript2 : MonoBehaviour {
 
 	void AttractFlower()
 	{
-		playerScript.cancelMoves = true;
 		player.GetComponent<Rigidbody2D> ().velocity = dirToMouthPlace.normalized * speedAttraction * Time.fixedDeltaTime;
 		playerScript.isJumping = true;
 		if(dirToMouthPlace.magnitude < 10f)

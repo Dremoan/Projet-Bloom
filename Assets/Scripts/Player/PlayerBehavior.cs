@@ -24,7 +24,6 @@ public class PlayerBehavior : MonoBehaviour {
 	public string sceneName;
 
 	private bool holdsWater;
-	private bool isDying;
 
 	public Transform player;
 	public GameObject eau;
@@ -230,23 +229,14 @@ public class PlayerBehavior : MonoBehaviour {
 		SceneManager.LoadScene (sceneName);
 	}
 
-	public void LaunchCanvas()
-	{
-		anim.Play ("DyingBlackScreen");
-	}
 
-	public void Reviving()
+	void ReloadAtJumpPos()
 	{
-		StartCoroutine (WaitBlackScreen ());
-	}
-
-	IEnumerator WaitBlackScreen()
-	{
+		transform.position = jumpPos;
+		Fleur.GetComponent<SpriteRenderer> ().enabled = true;
 		cancelMoves = false;
 		EnableMovements ();
-		transform.position = jumpPos;
-		yield return new WaitForSeconds (1.5f);
-		anim.Play ("RevivingBlackScreen");
+		anim.Play ("Idle");
 	}
 
 
@@ -256,15 +246,16 @@ public class PlayerBehavior : MonoBehaviour {
 		{
 			cancelMoves = true;
 			anim.Play ("CactusPlanche");
+			Fleur.GetComponent<SpriteRenderer> ().enabled = false;
 		}
 	}
 	void OnTriggerStay2D(Collider2D col)
 	{
-		if(col.gameObject.tag == "WaterKilling" && !isDying)
+		if(col.gameObject.tag == "WaterKilling")
 		{
 			cancelMoves = true;
 			anim.Play ("CactusPlanche");
-			isDying = true;
+			Fleur.GetComponent<SpriteRenderer> ().enabled = false;
 		}
 	}
 

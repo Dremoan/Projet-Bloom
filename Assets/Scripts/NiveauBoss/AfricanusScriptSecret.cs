@@ -157,6 +157,7 @@ public class AfricanusScriptSecret
 		shadow.enabled = true;
 		flower.enabled = true;
 		playerScript.cancelMoves = false;
+		player.GetComponent<Collider2D> ().enabled = true;
 		playerScript.EnableMovements ();
 		ChangeAnim ();
 	}

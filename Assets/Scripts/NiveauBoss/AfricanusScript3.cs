@@ -159,6 +159,7 @@ public class AfricanusScript3 : MonoBehaviour {
 		playerScript.lastMove.x = 1;
 		playerScript.lastMove.y = 0;
 		playerScript.cancelMoves = false;
+		player.GetComponent<Collider2D> ().enabled = true;
 		playerScript.EnableMovements ();
 		ChangeAnim ();
 	}
