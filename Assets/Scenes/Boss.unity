@@ -26975,7 +26975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &1987975893
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -27090,7 +27090,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1043752468
+  randomSeed: 364700759
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -27486,7 +27486,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 20
+    maxNumParticles: 10
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -30354,8 +30354,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1987975892}
   m_LocalRotation: {x: -0.25881928, y: -0, z: -0, w: 0.9659258}
-  m_LocalPosition: {x: -22.1, y: 16, z: -2.8}
-  m_LocalScale: {x: 4.489174, y: 4.4891753, z: 4.4891753}
+  m_LocalPosition: {x: -317.3, y: 17.4, z: -3.7}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 24
