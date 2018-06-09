@@ -27,6 +27,7 @@ public class LaunchFlower : MonoBehaviour {
 	[HideInInspector] public bool onBlockingRock = false;
 	[HideInInspector] public bool onGrapplinSpot = false;
 	[HideInInspector] public bool onLaunchingRock = false;
+	[HideInInspector] public bool onFrog = false;
 
 
 	private Vector3 launchDir;
@@ -254,6 +255,12 @@ public class LaunchFlower : MonoBehaviour {
 			hookedThing = coll.gameObject.GetComponent<AfricanusScript3> ().mouthPlace.gameObject;
 			player.GetComponent<Collider2D> ().enabled = false;
 			FindObjectOfType<AfricanusScript3> ().touchedFlower = true;
+		}
+		if(coll.gameObject.tag == "GrenouilleBoss")
+		{
+			isHooked = true;
+			hookedThing = coll.gameObject;
+			onFrog = true;
 		}
 	}
 		

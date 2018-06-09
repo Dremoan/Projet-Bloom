@@ -21,14 +21,12 @@ public class GoatBehaviour : MonoBehaviour {
 	private int currentPatrolIndex;
 	private bool targetAcquired = false;
 
-	// Use this for initialization
 	void Start () 
 	{
 		currentPatrolIndex = 0;
 		currentPatrolPoint = patrolPoints [currentPatrolIndex];
 	}
-	
-	// Update is called once per frame
+
 	void Update () 
 	{
 		if(!targetAcquired)

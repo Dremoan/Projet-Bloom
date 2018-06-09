@@ -18373,15 +18373,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 609107209}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -60, y: -62, z: 0}
-  m_LocalScale: {x: 0.1210426, y: 0.605213, z: 0.15754281}
+  m_LocalPosition: {x: -55.399994, y: -47, z: 0}
+  m_LocalScale: {x: 0.1210426, y: 0.5, z: 0.15754281}
   m_Children: []
   m_Father: {fileID: 2142412272}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -60, y: -62}
+  m_AnchoredPosition: {x: -55.4, y: -47}
   m_SizeDelta: {x: 467.93, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609107211
@@ -18403,7 +18403,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 516a1f29c217b064284c91cdbd75f55d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f27961eebde76f043b94f3e7db3092ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19804,15 +19804,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 804956923}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 167, y: -48, z: -22.411074}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 164.6, y: -62, z: -22.411074}
+  m_LocalScale: {x: 0.6, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 1482924341}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 167, y: -48}
+  m_AnchoredPosition: {x: 164.6, y: -62}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &804956925
@@ -19834,7 +19834,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0b57b4dd4b35b0c4182de83640eb9e53, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07a28079430ad40478e75516c80dd25a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20262,15 +20262,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 852606021}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -122, y: -113, z: 0}
-  m_LocalScale: {x: 0.13954644, y: 0.6977322, z: 0.18162666}
+  m_LocalPosition: {x: -122, y: -126.8, z: 0}
+  m_LocalScale: {x: 0.13954644, y: 0.8, z: 0.18162666}
   m_Children: []
   m_Father: {fileID: 2142412272}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -122, y: -113}
+  m_AnchoredPosition: {x: -122, y: -126.8}
   m_SizeDelta: {x: 467.93, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852606023
@@ -20292,7 +20292,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0b57b4dd4b35b0c4182de83640eb9e53, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07a28079430ad40478e75516c80dd25a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21089,15 +21089,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4500646115548208, guid: fca5c091d6c63084fb2e552554a8307e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1036.2
+      value: -657
       objectReference: {fileID: 0}
     - target: {fileID: 4500646115548208, guid: fca5c091d6c63084fb2e552554a8307e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -72.09991
+      value: -466
       objectReference: {fileID: 0}
     - target: {fileID: 4500646115548208, guid: fca5c091d6c63084fb2e552554a8307e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -10.0000305
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
@@ -21161,7 +21161,7 @@ Prefab:
     - target: {fileID: 20009268081783512, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
       propertyPath: near clip plane
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114911023907292314, guid: fca5c091d6c63084fb2e552554a8307e, type: 2}
@@ -22991,7 +22991,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 25303126945a4f74982dddad7722e680, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 589c4f1c4fd5ad64bbb277216d6c6028, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26327,16 +26327,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1429392793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 145, y: -44, z: -22.411074}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 162.7, y: -61.6, z: -22.411074}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 1482924341}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 145, y: -44}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 162.7, y: -61.6}
+  m_SizeDelta: {x: 71, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1429392795
 MonoBehaviour:
@@ -26357,7 +26357,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c9c66b56aa68e8b47b86b63d3a290505, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa2286a5987d1594c9088d43b7aaf091, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -28216,7 +28216,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Maintenez la touche    pour viser, puis\n\n appuyez sur    pour lancer
+  m_Text: "Maintenez la touche     pour viser, puis\n\n\n appuyez sur      pour lancer
     l'eau"
 --- !u!222 &1651005573
 CanvasRenderer:
@@ -28590,7 +28590,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1714321263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1240, y: 1000, z: 0}
+  m_LocalPosition: {x: 1243, y: 998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 2011587499}

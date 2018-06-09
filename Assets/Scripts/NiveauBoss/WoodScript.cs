@@ -50,7 +50,7 @@ public class WoodScript : MonoBehaviour {
 		fraxinelle.GetComponent<Collider2D> ().enabled = false;
 		fraxinelle.GetComponent<Animator> ().Play ("DyingFrax");
 		animWood.SetBool ("Burnt", true);
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (3f);
 		this.gameObject.SetActive (false);
 	}
 }

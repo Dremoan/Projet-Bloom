@@ -75,5 +75,10 @@ public class DetectionTimeline : MonoBehaviour {
 		timeline.Play ();
 	}
 
+	public void EmptyBassinActive()
+	{
+		playerScript.cancelMoves = true;
+		timeline.Play ();
+	}
 
 }
