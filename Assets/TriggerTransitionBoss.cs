@@ -14,7 +14,7 @@ public class TriggerTransitionBoss : MonoBehaviour {
 
 	void Update()
 	{
-		if(woodCount > 5f && canActiveTimeline)
+		if(woodCount > 8f && canActiveTimeline)
 		{
 			StartCoroutine (TimelineBassin ());
 		}

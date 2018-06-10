@@ -11,7 +11,6 @@ public class DrowningWater : MonoBehaviour {
 	public GameObject eauNiveau;
 	public GameObject killingWater;
 	public PlayerBehavior playerScript;
-	public string nameScene;
 
 	void Update()
 	{
