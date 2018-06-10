@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{a0b95e45-9f2e-40e8-9633-c30230a051e3}">
+        <property name="assetPath">
+            <value>fleur_prends_feu.ogg</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>2.7740362811791384</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{bab87c6f-6221-4a38-964d-a7a1d6eb19d5}</destination>
+        </relationship>
+    </object>
+</objects>

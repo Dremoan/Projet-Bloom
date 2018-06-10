@@ -11,6 +11,7 @@ public class ButtonScript : MonoBehaviour {
 	public GameObject keyRock;
 	public Animator animKeyRock;
 	public float waitBeforeSpawn = 0.5f;
+    private bool canPlaySound = true;
 
 	[HideInInspector ]public bool isActive;
 
@@ -21,7 +22,8 @@ public class ButtonScript : MonoBehaviour {
 		{
 			FindObjectOfType<CanvasGestion> ().InstructionsPilarInactive ();
 			FindObjectOfType<ActivationRock> ().hasPrintHelp = false;
-			StartCoroutine (RockActive ());
+            FindObjectOfType<MusicManagerTuto>().toSection2.setValue(1f);
+            StartCoroutine(RockActive ());
 		}
 	}
 
@@ -41,5 +43,11 @@ public class ButtonScript : MonoBehaviour {
 		animKeyRock.Play ("KeyRockAppear");
 		yield return new WaitForSeconds (waitBeforeSpawn);
 		keyRock.SetActive (true);
-	}
+        if (keyRock && canPlaySound)
+        {
+            canPlaySound = false;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/APPARITION_PALET");
+        }
+
+    }
 }

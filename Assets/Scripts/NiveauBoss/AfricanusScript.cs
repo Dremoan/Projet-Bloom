@@ -44,8 +44,13 @@ public class AfricanusScript : MonoBehaviour {
 	public float speedAttraction = 50f;
 	public float spitOffset = 50f;
 
+    public FMOD.Studio.EventInstance Africanus_mange;
 
-	void Update () 
+    private void Start()
+    {
+        Africanus_mange = FMODUnity.RuntimeManager.CreateInstance("event:/LVL1/SFX/Africanus_mange");
+    }
+    void Update () 
 	{
 		dirToMouthPlace = mouthPlace.position - player.transform.position;
 		barFilling.fillAmount = numberForSpam * 0.1f;
@@ -118,6 +123,7 @@ public class AfricanusScript : MonoBehaviour {
 		player.GetComponent<Rigidbody2D> ().velocity = Vector3.zero;
 		player.transform.position = mouthPlace.position;
 		canSpam = true;
+        Africanus_mange.start();
 	}
 
 	void Spam()
@@ -176,6 +182,7 @@ public class AfricanusScript : MonoBehaviour {
 			animBlackScreen.Play("EmptyingBlackScreen");
 			africanusAltPos.SetActive (true);
 			playerScript.CancelMovementsAfricanus ();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/LVL1/SFX/Africanus_spit");
 			africanusAltPos.GetComponent<Animator> ().Play ("AfricanusSpit");
 			FindObjectOfType<LaunchFlower> ().isHooked = false;
 			FindObjectOfType<LaunchFlower> ().isBacking = true;
@@ -236,7 +243,8 @@ public class AfricanusScript : MonoBehaviour {
 			player.transform.position = transform.position;
 			yield return new WaitForSeconds (1.5f);
 			animBlackScreen.Play("EmptyingBlackScreen");
-		}
+            FMODUnity.RuntimeManager.PlayOneShot("event:/LVL1/SFX/Africanus_spit");
+        }
 	}
 
 	void SpammedEnough()
@@ -244,6 +252,8 @@ public class AfricanusScript : MonoBehaviour {
 		barFilling.gameObject.SetActive (false);
 		numberForSpam = 3f;
 		canSpit = true;
+        Africanus_mange.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/LVL1/SFX/Africanus_solospit");
 		canDecrease = false;
 		canSpam = false;
 	}

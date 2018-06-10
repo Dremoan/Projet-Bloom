@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{0519ffea-b405-41a9-b377-a4f61bf3167e}">
+        <property name="assetPath">
+            <value>noyade.ogg</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>3.7980725623582767</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{bab87c6f-6221-4a38-964d-a7a1d6eb19d5}</destination>
+        </relationship>
+    </object>
+</objects>

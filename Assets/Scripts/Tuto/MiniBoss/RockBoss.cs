@@ -65,7 +65,16 @@ public class RockBoss : MonoBehaviour {
 		targetSprite.transform.position = player.transform.position;
 		yield return new WaitForSeconds (1f);
 		targetSprite.SetActive (false);
-		yield return new WaitForSeconds (0.9f);
+        StartCoroutine(LaunchMusic());
+        yield return new WaitForSeconds (0.9f);
 		bossAnim.SetBool ("LaunchingRock", false);
 	}
+
+    private IEnumerator LaunchMusic()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Rock Launch");
+        yield return new WaitForSeconds(0.2f);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Rock Fall");
+    }
+
 }

@@ -64,6 +64,7 @@ public class FrondeScript : MonoBehaviour {
 	IEnumerator DelayAnimDeath()
 	{
 		yield return new WaitForSeconds (0.8f);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Bigorpion_die");
 		animBoss.Play ("MiniBossDeath");
 		yield return new WaitForSeconds (2f);
 		isDead = true;

@@ -245,6 +245,7 @@ public class PlayerBehavior : MonoBehaviour {
 		if(col.gameObject.tag == "WaterKilling")
 		{
 			cancelMoves = true;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/noyade");
 			anim.Play ("CactusPlanche");
 			Fleur.GetComponent<SpriteRenderer> ().enabled = false;
 		}

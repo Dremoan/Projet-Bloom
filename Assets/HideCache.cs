@@ -8,7 +8,7 @@ public class HideCache : MonoBehaviour {
 	{
 		if(coll.gameObject.tag == "Player")
 		{
-			GetComponent<SpriteRenderer> ().enabled = false;
+            GetComponent<SpriteRenderer> ().enabled = false;
 		}
 	}
 
@@ -16,6 +16,7 @@ public class HideCache : MonoBehaviour {
 	{
 		if(coll.gameObject.tag == "Player")
 		{
+            
 			GetComponent<SpriteRenderer> ().enabled = false;
 		}
 	}
@@ -24,7 +25,7 @@ public class HideCache : MonoBehaviour {
 	{
 		if(coll.gameObject.tag == "Player")
 		{
-			GetComponent<SpriteRenderer> ().enabled = true;
+            GetComponent<SpriteRenderer> ().enabled = true;
 		}
 	}
 }

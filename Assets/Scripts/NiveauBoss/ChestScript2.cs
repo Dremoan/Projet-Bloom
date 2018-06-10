@@ -25,8 +25,9 @@ public class ChestScript2 : MonoBehaviour {
 			isNearChest = false;
 		}
 
-		if(isNearChest && player.GetComponent<PlayerBehavior>().pressingA)
+		if(isNearChest && player.GetComponent<PlayerBehavior>().pressingA && !isOpened)
 		{
+            FMODUnity.RuntimeManager.PlayOneShot("event:/recup_clef");
 			keyOnScreen.SetActive (true);
 			player.GetComponent<PlayerBehavior> ().hasKey = true;
 			isOpened = true;

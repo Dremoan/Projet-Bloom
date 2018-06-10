@@ -44,6 +44,7 @@ public class DoorScript2 : MonoBehaviour
 
 	IEnumerator ActiveDoor()
 	{
+        FMODUnity.RuntimeManager.PlayOneShot("event:/switches");
 		timelineScript.DoorActive ();
 		playerScript.cancelMoves = true;
 		yield return new WaitForSeconds (0.5f);
@@ -56,6 +57,7 @@ public class DoorScript2 : MonoBehaviour
 		yield return new WaitForSeconds (1.5f);
 		particles2.SetActive (true);
 		yield return new WaitForSeconds (openingTime);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/IMPACT_DOOR");
 		animDoor.Play ("Porte_Exit");
 	}
 

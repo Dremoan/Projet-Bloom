@@ -108,7 +108,9 @@ public class StairButtonScript : MonoBehaviour {
 		player.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
 		grapplinPlant.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
 		grapplinAnchor.SetActive (false);
-		FindObjectOfType<PlayerBehavior> ().EnableMovements ();
+        FindObjectOfType<MusicManagerTuto>().backgroundMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        FindObjectOfType<MusicManagerTuto>().bossMusic.start();
+        FindObjectOfType<PlayerBehavior> ().EnableMovements ();
 		activeTrails = true;
 		yield return new WaitForSeconds (timeParticlesPlaying);
 		lightWayMid.SetActive (true);

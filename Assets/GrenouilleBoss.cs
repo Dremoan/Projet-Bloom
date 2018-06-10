@@ -25,6 +25,7 @@ public class GrenouilleBoss : MonoBehaviour {
 		if(tiredCount > 5f)
 		{
 			tired = true;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/BOSS/SFX/BOSS_fatigue");
 			tiredCount = 0;
 		}
 
@@ -46,6 +47,7 @@ public class GrenouilleBoss : MonoBehaviour {
 	{
 		countAttack = Random.Range (1, 4);
 		tiredCount += 1;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/BOSS/SFX/BOSS_ATTACK");
 	}
 
 	void TiredFalse()

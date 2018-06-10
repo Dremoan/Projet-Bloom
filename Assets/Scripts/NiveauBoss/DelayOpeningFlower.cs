@@ -17,6 +17,7 @@ public class DelayOpeningFlower : MonoBehaviour {
 		if(coll.gameObject.Equals(waterDrop))
 		{
 			edgeClose.enabled = false;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/LVL1/SFX/fleur_deau_eclos");
 			animPlatform.Play ("Opening");
 			canLaunchCount = true;
 			edgeOpen.enabled = true;

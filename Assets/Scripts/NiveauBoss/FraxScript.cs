@@ -19,6 +19,8 @@ public class FraxScript : MonoBehaviour
 	[HideInInspector] public bool canSetFire = true;
 	[HideInInspector] public bool canLaunchFunction = true;
 	private Vector3 moveDirection;
+    private bool canPlayRunFireSound = false;
+    private bool isMoving = false;
 
 	void Update ()
 	{
@@ -30,7 +32,14 @@ public class FraxScript : MonoBehaviour
 			Move ();
 		}
 
-		if(distToPlayer < moveDirection.magnitude)
+        if (isMoving && onFire && !canPlayRunFireSound)
+        {
+            PlayRunFireSound();
+
+        }
+
+
+        if (distToPlayer < moveDirection.magnitude)
 		{
 			StopMove ();
 		}
@@ -49,14 +58,17 @@ public class FraxScript : MonoBehaviour
 	{
 		Vector3 invertMove = - moveDirection;
 		bodyFrax.velocity = invertMove.normalized * moveSpeed * Time.fixedDeltaTime;
+        isMoving = true;
 	}
 
 	void StopMove()
 	{
+        
 		bodyFrax.velocity = bodyFrax.velocity * 0.9f;
 		if(bodyFrax.velocity.magnitude < 10f)
 		{
-			bodyFrax.velocity = Vector3.zero;
+            isMoving = false;
+            bodyFrax.velocity = Vector3.zero;
 		}
 	}
 
@@ -64,6 +76,7 @@ public class FraxScript : MonoBehaviour
 	{
 		if(canSetFire)
 		{
+            FMODUnity.RuntimeManager.PlayOneShot("event:/LVL1/SFX/fleur_prends_feu");
 			yield return new WaitForSeconds (0.15f);
 			canMove = false;
 			bodyFrax.velocity = Vector3.zero;
@@ -71,13 +84,18 @@ public class FraxScript : MonoBehaviour
 			boxColl.enabled = false;
 			circleColl.enabled = true;
 			moveSpeed = moveSpeed + speedOffset;
-			onFire = true;
 			yield return new WaitForSeconds (animTime);
 			fireParticles.SetActive (true);
 			canMove = true;
 			animFrax.SetBool ("GoToFireIdle", true);
-		}
+            onFire = true;
+        }
 	}
 
+    void PlayRunFireSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/LVL1/SFX/fleur_court_feu");
+        canPlayRunFireSound = true;
+    }
 
 }
