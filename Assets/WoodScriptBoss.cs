@@ -56,6 +56,7 @@ public class WoodScriptBoss : MonoBehaviour {
 
 	IEnumerator DestroyWood()
 	{
+        FMODUnity.RuntimeManager.PlayOneShot("event:/LVL1/SFX/ronce_feu");
 		this.GetComponent<Collider2D> ().enabled = false;
 		animWood.SetBool ("Burnt", true);
 		transitionScript.woodCount += 1;

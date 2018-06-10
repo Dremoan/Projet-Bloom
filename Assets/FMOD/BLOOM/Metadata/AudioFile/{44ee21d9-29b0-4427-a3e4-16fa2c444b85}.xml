@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{44ee21d9-29b0-4427-a3e4-16fa2c444b85}">
+        <property name="assetPath">
+            <value>Lance_lancepierre.ogg</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.90385487528344666</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{bab87c6f-6221-4a38-964d-a7a1d6eb19d5}</destination>
+        </relationship>
+    </object>
+</objects>

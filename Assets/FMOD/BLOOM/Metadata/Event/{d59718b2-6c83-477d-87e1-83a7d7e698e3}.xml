@@ -62,6 +62,7 @@
     <object class="GroupTrack" id="{d1092fee-7da9-4d0b-a305-3b601656ab70}">
         <relationship name="modules">
             <destination>{0a606ae5-3b6c-4620-b7f1-f8b3b8eddc31}</destination>
+            <destination>{91e5c55d-b954-43af-8cae-db98af9c0299}</destination>
         </relationship>
         <relationship name="mixerGroup">
             <destination>{e853e328-701a-4f64-ba0b-244f48bb2f39}</destination>
@@ -75,6 +76,7 @@
     <object class="Timeline" id="{84bf99e8-3437-4aeb-8d30-6e1ea2bae6e9}">
         <relationship name="modules">
             <destination>{0a606ae5-3b6c-4620-b7f1-f8b3b8eddc31}</destination>
+            <destination>{91e5c55d-b954-43af-8cae-db98af9c0299}</destination>
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{a729d689-6e0b-4cc4-9c86-caaa366c798c}">
@@ -100,6 +102,20 @@
         </property>
         <property name="length">
             <value>1.6923129251700679</value>
+        </property>
+        <relationship name="audioFile">
+            <destination>{351408ad-c7ec-4339-8131-e2a7a8122678}</destination>
+        </relationship>
+    </object>
+    <object class="SingleSound" id="{91e5c55d-b954-43af-8cae-db98af9c0299}">
+        <property name="start">
+            <value>3.252312925170068</value>
+        </property>
+        <property name="length">
+            <value>0.90768707482993216</value>
+        </property>
+        <property name="timelockedOffset">
+            <value>0.16768707482993195</value>
         </property>
         <relationship name="audioFile">
             <destination>{351408ad-c7ec-4339-8131-e2a7a8122678}</destination>

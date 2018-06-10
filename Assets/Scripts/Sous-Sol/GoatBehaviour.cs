@@ -93,6 +93,7 @@ public class GoatBehaviour : MonoBehaviour {
 
 	IEnumerator ChargingGoat()
 	{
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Charge_bouc");
 		body.velocity = Vector2.zero;
 		yield return new WaitForSeconds (waitTime);
 		Vector3 dirToTarget = target.position - transform.position;

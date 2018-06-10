@@ -59,7 +59,8 @@ public class StairButtonScript : MonoBehaviour {
 		animButtonStair.SetBool ("ButtonPressed", buttonPressed);
 		if(buttonStair1.GetComponent<StairButtonScript>().isActive && buttonStair2.GetComponent<StairButtonScript>().isActive && !hasPlayedAnimations)
 		{
-			animStairs.SetBool ("IsActive", true);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Escalier");
+            animStairs.SetBool ("IsActive", true);
 			FindObjectOfType<PlayerBehavior> ().CancelMovements ();
 			StartCoroutine (DelayActivation ());
 		}
@@ -69,6 +70,7 @@ public class StairButtonScript : MonoBehaviour {
 	{
 		if(col.gameObject.tag == "Player")
 		{
+            FMODUnity.RuntimeManager.PlayOneShot("event:/switches");
 			timeCanRun = false;
 			isActive = true;
 			buttonPressed = true;
@@ -117,8 +119,10 @@ public class StairButtonScript : MonoBehaviour {
 		yield return new WaitForSeconds (1f);
 		lightWayFinal.SetActive (true);
 		yield return new WaitForSeconds (1.75f);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Escalier2");
 		animBigStairs.SetBool ("IsActive", true);
 		yield return new WaitForSeconds (0.5f);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/DESTROY");
 		animPilarDestroyed.SetBool ("IsDestroying", true);
 		yield return new WaitForSeconds (animDestroyPilarTime);
 		animBoss.SetBool("LaunchIdle", true);

@@ -10590,8 +10590,8 @@ MonoBehaviour:
   photos: []
   UIPhoto: {fileID: 0}
   shouldStayOnScreen: 0
-  textAudio: {fileID: 0}
-  passAudio: {fileID: 0}
+  textAudio: {fileID: 8300000, guid: 314da68e49cb78141817793a1d7c32fb, type: 3}
+  passAudio: {fileID: 8300000, guid: e21080c598575844dad4ab0a9fdcf93f, type: 3}
   passWithMouse: 1
   passWithInputButton: Jump
   enablePass: 0

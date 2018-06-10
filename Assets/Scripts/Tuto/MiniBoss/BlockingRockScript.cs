@@ -36,6 +36,7 @@ public class BlockingRockScript : MonoBehaviour {
 		flowerScript.isBacking = true;
 		flowerScript.isHooked = false;
 		backingCount = 0;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Cascade");
 		animWater.Play ("FillingFountain");
 		blockingRockAnim.Play ("DestroyRock");
 	}

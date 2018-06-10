@@ -9,6 +9,8 @@ public class QuickSand : MonoBehaviour
 	public Animator anim;
 	private bool isInSand = false;
 
+    private bool canPlaySound = true;
+
 	void Start () 
 	{
 		
@@ -18,8 +20,10 @@ public class QuickSand : MonoBehaviour
 	void Update () 
 	{
 
-		if(isInSand)
+		if(isInSand && canPlaySound)
 		{
+            FMODUnity.RuntimeManager.PlayOneShot("event:/BOUC_COULE");
+            canPlaySound = false;
 			goat.SetActive (false);
 			goatInSand.SetActive (true);
 			this.GetComponent<PolygonCollider2D> ().enabled = false;

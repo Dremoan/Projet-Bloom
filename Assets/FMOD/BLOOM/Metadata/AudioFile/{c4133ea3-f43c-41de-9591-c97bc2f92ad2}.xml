@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{c4133ea3-f43c-41de-9591-c97bc2f92ad2}">
+        <property name="assetPath">
+            <value>Cascade.ogg</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>5.3124943310657597</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{bab87c6f-6221-4a38-964d-a7a1d6eb19d5}</destination>
+        </relationship>
+    </object>
+</objects>

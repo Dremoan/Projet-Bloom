@@ -29,5 +29,7 @@ public class TriggerTransitionBoss : MonoBehaviour {
 		animBassin.SetBool ("EmptyBassin", true);
 		yield return new WaitForSeconds (waitForTransitionBoss);
 		animGrenouille.SetBool ("PlayCinematic", true);
+        FindObjectOfType<MusicManagerBoss>().firstMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        FindObjectOfType<MusicManagerBoss>().bossMusic.start();
 	}
 }

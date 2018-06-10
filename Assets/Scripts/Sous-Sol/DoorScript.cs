@@ -44,10 +44,12 @@ public class DoorScript : MonoBehaviour {
 		key.SetActive (false);
 		playerScript.hasKey = false;
 		keyMecanism.SetActive (true);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/switches");
 		animMecanism.Play ("MécanismeActivé");
 		yield return new WaitForSeconds (0.25f);
 		particles.SetActive (true);
 		yield return new WaitForSeconds (openingTime);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/IMPACT_DOOR");
 		animDoor.Play ("Porte_Exit");
 	}
 	public void EndLoop()

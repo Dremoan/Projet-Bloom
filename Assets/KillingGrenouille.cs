@@ -8,7 +8,7 @@ public class KillingGrenouille : MonoBehaviour {
 	public Animator animGrenouille;
 	public GrenouilleBoss scriptGrenouille;
 	private bool canHit;
-
+    private bool canPlaySound = true;
 
 	void Update () 
 	{
@@ -26,8 +26,10 @@ public class KillingGrenouille : MonoBehaviour {
 			FindObjectOfType<LaunchFlower> ().isBacking = true;
 			animGrenouille.SetBool ("Tired", false);
 		}
-		if(killingCount > 2f)
+		if(killingCount > 2f && canPlaySound)
 		{
+            FMODUnity.RuntimeManager.PlayOneShot("event:/BOSS/SFX/BOSS_MORT");
+            canPlaySound = false;
 			animGrenouille.SetBool ("Die", true);
 			scriptGrenouille.clampCamera = false;
 		}

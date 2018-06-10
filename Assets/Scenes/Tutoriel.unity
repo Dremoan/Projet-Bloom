@@ -19382,6 +19382,16 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -300
       objectReference: {fileID: 0}
+    - target: {fileID: 114352426658976170, guid: 9d173c5fdd96430478226dd748b71154,
+        type: 2}
+      propertyPath: textAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 314da68e49cb78141817793a1d7c32fb, type: 3}
+    - target: {fileID: 114352426658976170, guid: 9d173c5fdd96430478226dd748b71154,
+        type: 2}
+      propertyPath: passAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: e21080c598575844dad4ab0a9fdcf93f, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d173c5fdd96430478226dd748b71154, type: 2}
   m_IsPrefabParent: 0
@@ -23875,7 +23885,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1860967596437374, guid: b7f4c8ecab02a04439819a6f9ecd3576, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
         type: 2}
@@ -24286,6 +24296,10 @@ PlayableDirector:
   - key: {fileID: 0}
     value: {fileID: 0}
   - key: {fileID: 114345540401532862, guid: ddc95f63c9e8af343be57b79df3241e6, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 114321729365035728, guid: ddc95f63c9e8af343be57b79df3241e6, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 114834471964407186, guid: ddc95f63c9e8af343be57b79df3241e6, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References:
@@ -27816,7 +27830,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1560226864}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -487, y: -949, z: -10}
+  m_LocalPosition: {x: 391, y: -900, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 838103152}
@@ -28722,7 +28736,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1714321263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 615, y: 41, z: 0}
+  m_LocalPosition: {x: 1232, y: 993, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 2011587499}
