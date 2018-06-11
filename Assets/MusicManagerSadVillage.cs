@@ -9,8 +9,8 @@ public class MusicManagerSadVillage : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		backgroundMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Sad FlowerTown");
-		backgroundMusic.start ();
+        backgroundMusic = FMODUnity.RuntimeManager.CreateInstance("event:/VILLAGE/Sad_Flowertown");
+        backgroundMusic.start();
 		
 	}
 	
