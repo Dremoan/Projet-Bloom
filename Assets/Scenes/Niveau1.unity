@@ -1863,7 +1863,7 @@ Prefab:
         type: 2}
       propertyPath: profile
       value: 
-      objectReference: {fileID: 11400000, guid: 58fc968f480ab8e42967de964b69998a,
+      objectReference: {fileID: 11400000, guid: 42b9b28bd61279d4aac668056ac5008e,
         type: 2}
     - target: {fileID: 114990079776654502, guid: fca5c091d6c63084fb2e552554a8307e,
         type: 2}
@@ -41048,7 +41048,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 49bc22df1c069d149b9ae98cd5455d9d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.64705884}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
