@@ -43,10 +43,10 @@ public class EjectingShockWave : MonoBehaviour {
 	IEnumerator EjectingPlayer()
 	{
 		flowerSprite.enabled = false;
+		animPlayer.Play ("CactusEjecting");
 		player.GetComponent<PlayerBehavior> ().CancelMovements ();
 		playerBody.velocity = Vector2.zero;
 		playerBody.AddForce (dirFrogToPlayer.normalized * ejectForce * Time.fixedDeltaTime, ForceMode2D.Impulse);
-		animPlayer.Play ("CactusEjecting");
 		yield return new WaitForSeconds (1f);
 		animCanvas.Play ("EjectPlayerBlackScreen");
 	}

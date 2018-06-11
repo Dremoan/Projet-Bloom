@@ -6,7 +6,6 @@ public class GrenouilleBoss : MonoBehaviour {
 
 	public PlayerBehavior playerScript;
 	public Animator animGrenouille;
-	public Camera mainCamera;
 	public CameraBehavior cameraScript;
 	public float countAttack = 0;
 	public float tiredCount = 0;
@@ -35,6 +34,13 @@ public class GrenouilleBoss : MonoBehaviour {
 			cameraScript.YMaxValue = Ymax;
 			cameraScript.XMinValue = Xmin;
 			cameraScript.YMinValue = Ymin;
+		}
+		if(!clampCamera)
+		{
+			cameraScript.XMaxValue = 300f;
+			cameraScript.YMaxValue = 500f;
+			cameraScript.XMinValue = 0f;
+			cameraScript.YMinValue = -600f;
 		}
 	}
 
@@ -77,6 +83,7 @@ public class GrenouilleBoss : MonoBehaviour {
 	{
 		if(coll.gameObject.tag =="Player")
 		{
+			clampCamera = false;
 			animGrenouille.SetBool ("Angry", false);
 		}
 	}

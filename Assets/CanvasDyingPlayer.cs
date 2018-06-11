@@ -5,6 +5,7 @@ using UnityEngine;
 public class CanvasDyingPlayer : MonoBehaviour {
 
 	public Animator animBlackScreen;
+	public Animator animPlayer;
 	public EjectingShockWave shockWaveScript;
 	public GrenouilleBoss grenouilleScript;
 	public PlayerBehavior playerScript;
@@ -22,6 +23,7 @@ public class CanvasDyingPlayer : MonoBehaviour {
 		yield return new WaitForSeconds (1f);
 		playerScript.transform.position = resetPos.transform.position;
 		animBlackScreen.Play ("ResetPlayerScreen");
+		animPlayer.Play ("Idle");
 		flowerSprite.enabled = true;
 		playerScript.EnableMovements ();
 		grenouilleScript.clampCamera = false;

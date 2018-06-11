@@ -72,4 +72,11 @@ public class DetectionTimeline : MonoBehaviour {
 		timeline.Play ();
 	}
 
+	public void KillBossActive()
+	{
+		playerScript.cancelMoves = true;
+		timeline.Play ();
+		FindObjectOfType<EndBoss> ().EndBossTimeline ();
+	}
+
 }
