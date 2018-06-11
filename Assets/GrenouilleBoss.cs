@@ -39,7 +39,7 @@ public class GrenouilleBoss : MonoBehaviour {
 		{
 			cameraScript.XMaxValue = 300f;
 			cameraScript.YMaxValue = 500f;
-			cameraScript.XMinValue = 0f;
+			cameraScript.XMinValue = -250f;
 			cameraScript.YMinValue = -600f;
 		}
 	}

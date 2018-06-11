@@ -22,7 +22,7 @@ MonoBehaviour:
   - {fileID: 114112193579771484}
   m_FixedDuration: 0
   m_EditorSettings:
-    fps: 60
+    m_Framerate: 60
   m_DurationMode: 0
 --- !u!74 &74042787848141338
 AnimationClip:
@@ -1673,19 +1673,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1704,13 +1692,13 @@ MonoBehaviour:
     m_ClipIn: 0
     m_Asset: {fileID: 114274563936850474}
     m_UnderlyingAsset: {fileID: 114778935416507894}
-    m_Duration: 27.166666666666657
+    m_Duration: 40.00000000000001
     m_TimeScale: 1
     m_ParentTrack: {fileID: 114466805491047426}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: 0.5833333333333335
-    m_BlendOutDuration: 0.833333333333325
+    m_BlendOutDuration: 1.500000000000007
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -1758,20 +1746,32 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: LookBoss
     m_Version: 1
-  - m_Start: 27.333333333333332
+  - m_Start: 39.5
     m_ClipIn: 0
     m_Asset: {fileID: 114406700053385048}
     m_UnderlyingAsset: {fileID: 114778935416507894}
-    m_Duration: 4.333333333333332
+    m_Duration: 10.866666666666667
     m_TimeScale: 1
     m_ParentTrack: {fileID: 114466805491047426}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0.833333333333325
+    m_BlendInDuration: 1.500000000000007
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -2019,11 +2019,11 @@ MonoBehaviour:
     m_Recordable: 0
     m_PostExtrapolationMode: 2
     m_PreExtrapolationMode: 1
-    m_PostExtrapolationTime: 25.433333333333334
+    m_PostExtrapolationTime: 38.833333333333336
     m_PreExtrapolationTime: 0
     m_DisplayName: PlayerIdleUp
     m_Version: 1
-  - m_Start: 27.016666666666666
+  - m_Start: 40.41666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 114163954627461158}
     m_UnderlyingAsset: {fileID: 7400000, guid: a6348a725a8e19c489c5473ae858c5bd, type: 2}
@@ -2326,11 +2326,11 @@ MonoBehaviour:
     m_Recordable: 0
     m_PostExtrapolationMode: 2
     m_PreExtrapolationMode: 1
-    m_PostExtrapolationTime: 25.433333333333334
+    m_PostExtrapolationTime: 38.833333333333336
     m_PreExtrapolationTime: 0
     m_DisplayName: FlowerIdleUp
     m_Version: 1
-  - m_Start: 27.016666666666666
+  - m_Start: 40.41666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 114366318722353650}
     m_UnderlyingAsset: {fileID: 7400000, guid: ee037e80ca6a23c459a021023247e9a4, type: 2}
