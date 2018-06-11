@@ -9,9 +9,6 @@ public class DetectionTimeline : MonoBehaviour {
 
 	public PlayableDirector timeline;
 	public PlayerBehavior playerScript;
-	private bool canPlayWaterSourceTimeline = true;
-	private bool canPlayFlowerCinematic = true;
-	private bool canPlayBlockingRockCinematic = true;
 	public bool hasPlayedCinematic = false;
 	public bool onAwake;
 	public float timelineDuration;
@@ -45,12 +42,6 @@ public class DetectionTimeline : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col)
 	{
 		if(col.gameObject.tag == "Player")
-		{
-			playerScript.cancelMoves = true;
-			timeline.Play ();
-		}
-
-		if(col.gameObject.tag == "Player" && canPlayBlockingRockCinematic)
 		{
 			playerScript.cancelMoves = true;
 			timeline.Play ();

@@ -14,7 +14,7 @@ public class FraxScript : MonoBehaviour
 	public float speedOffset = 1000f;
 	public float distToPlayer;
 	public float animTime = 1f;
-	[HideInInspector] public bool onFire;
+	public bool onFire;
 	[HideInInspector] public bool canMove = true;
 	[HideInInspector] public bool canSetFire = true;
 	[HideInInspector] public bool canLaunchFunction = true;

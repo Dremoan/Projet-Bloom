@@ -1281,7 +1281,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 287227987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 469.5, y: 264, z: 0}
+  m_LocalPosition: {x: 567, y: 319, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 843989257}
@@ -2152,7 +2152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &494603214
 Transform:
   m_ObjectHideFlags: 0
@@ -4613,6 +4613,51 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198809167011700088, guid: e72b266f06647034aaa19e43f94e6811,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198809167011700088, guid: e72b266f06647034aaa19e43f94e6811,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198809167011700088, guid: e72b266f06647034aaa19e43f94e6811,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198809167011700088, guid: e72b266f06647034aaa19e43f94e6811,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198809167011700088, guid: e72b266f06647034aaa19e43f94e6811,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198809167011700088, guid: e72b266f06647034aaa19e43f94e6811,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198809167011700088, guid: e72b266f06647034aaa19e43f94e6811,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198809167011700088, guid: e72b266f06647034aaa19e43f94e6811,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198809167011700088, guid: e72b266f06647034aaa19e43f94e6811,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e72b266f06647034aaa19e43f94e6811, type: 2}
   m_IsPrefabParent: 0
@@ -5020,21 +5065,6 @@ Prefab:
       propertyPath: bodyPlayer
       value: 
       objectReference: {fileID: 2008212760}
-    - target: {fileID: 114802419286549496, guid: b7f4c8ecab02a04439819a6f9ecd3576,
-        type: 2}
-      propertyPath: layerNumber
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114802419286549496, guid: b7f4c8ecab02a04439819a6f9ecd3576,
-        type: 2}
-      propertyPath: ObjectToHide2
-      value: 
-      objectReference: {fileID: 1904101592}
-    - target: {fileID: 114426552848803006, guid: b7f4c8ecab02a04439819a6f9ecd3576,
-        type: 2}
-      propertyPath: maxDistanceToFlower
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7f4c8ecab02a04439819a6f9ecd3576, type: 2}
   m_IsPrefabParent: 0
@@ -7256,7 +7286,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1208666273
   m_SortingLayer: 1
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 60317ca4852edec468396c066766ffd7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10867,6 +10897,51 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198594963459050158, guid: 0696ed67221c00e4784539602b2d9ee0,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198594963459050158, guid: 0696ed67221c00e4784539602b2d9ee0,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198594963459050158, guid: 0696ed67221c00e4784539602b2d9ee0,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198594963459050158, guid: 0696ed67221c00e4784539602b2d9ee0,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198594963459050158, guid: 0696ed67221c00e4784539602b2d9ee0,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198594963459050158, guid: 0696ed67221c00e4784539602b2d9ee0,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198594963459050158, guid: 0696ed67221c00e4784539602b2d9ee0,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198594963459050158, guid: 0696ed67221c00e4784539602b2d9ee0,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198594963459050158, guid: 0696ed67221c00e4784539602b2d9ee0,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0696ed67221c00e4784539602b2d9ee0, type: 2}
   m_IsPrefabParent: 0
@@ -11724,11 +11799,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1513261105426252, guid: b7f4c8ecab02a04439819a6f9ecd3576,
     type: 2}
   m_PrefabInternal: {fileID: 796778560}
---- !u!212 &1904101592 stripped
-SpriteRenderer:
-  m_PrefabParentObject: {fileID: 212228433030129266, guid: b7f4c8ecab02a04439819a6f9ecd3576,
-    type: 2}
-  m_PrefabInternal: {fileID: 796778560}
 --- !u!1 &1911051389
 GameObject:
   m_ObjectHideFlags: 0
@@ -12570,6 +12640,11 @@ Prefab:
       propertyPath: playerScript
       value: 
       objectReference: {fileID: 2008212763}
+    - target: {fileID: 212104089430588046, guid: 85606d61d5916774ebce419322748f71,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85606d61d5916774ebce419322748f71, type: 2}
   m_IsPrefabParent: 0

@@ -26,7 +26,7 @@ public class TriggerTransitionBoss : MonoBehaviour {
 		canActiveTimeline = false;
 		timelineScript.EmptyBassinActive ();
 		yield return new WaitForSeconds (waitForEmptyBassin);
-		animBassin.SetBool ("EmptyBassin", true);
+		animBassin.Play ("EmptyGauche");
 		yield return new WaitForSeconds (waitForTransitionBoss);
 		animGrenouille.SetBool ("PlayCinematic", true);
         FindObjectOfType<MusicManagerBoss>().firstMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);

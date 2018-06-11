@@ -9,13 +9,15 @@ public class PassingBehindFlower : MonoBehaviour {
 	public int layerNumber;
 	private bool isBehind = false;
 
-
+	void Update()
+	{
+		ObjectToHide2.sortingOrder = ObjectToHide.sortingOrder;
+	}
 	void OnTriggerEnter2D(Collider2D coll)
 	{
 		if (coll.gameObject.tag == "OrderLayer" && !isBehind)
 		{
 			ObjectToHide.sortingOrder = ObjectToHide.sortingOrder - layerNumber;
-			ObjectToHide2.sortingOrder = ObjectToHide.sortingOrder;
 			isBehind = true;
 		}
 	}
@@ -24,7 +26,6 @@ public class PassingBehindFlower : MonoBehaviour {
 		if (coll.gameObject.tag == "OrderLayer" && isBehind)
 		{
 			ObjectToHide.sortingOrder = ObjectToHide.sortingOrder + layerNumber;
-			ObjectToHide2.sortingOrder = ObjectToHide.sortingOrder;
 			isBehind = false;
 		}
 	}

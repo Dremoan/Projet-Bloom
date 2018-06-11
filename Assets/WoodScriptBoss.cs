@@ -17,6 +17,7 @@ public class WoodScriptBoss : MonoBehaviour {
 		{
 			fraxinelleScript = coll.gameObject.GetComponent<FraxScript> ();
 			fraxinelle = coll.gameObject;
+			BurnWood ();
 		}
 	}
 
@@ -29,31 +30,16 @@ public class WoodScriptBoss : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionStay2D(Collision2D coll)
-	{
-		if(coll.gameObject.tag == "Fraxinelle")
-		{
-			fraxinelleScript.canMove = false;
-			fraxinelleScript.enabled = false;
-			fraxinelle.GetComponent<Rigidbody2D> ().velocity = Vector3.zero;
-			fraxinelle.GetComponent<Collider2D> ().enabled = false;
-			fraxinelle.GetComponent<Animator> ().Play ("DyingFrax");
-			this.GetComponent<WoodScriptBoss>().woodCount += 1;
-		}
-	}
-	void OnCollisionExit2D(Collision2D coll)
-	{
-		if(coll.gameObject.tag == "Fraxinelle")
-		{
-			fraxinelleScript.canMove = false;
-			fraxinelleScript.enabled = false;
-			fraxinelle.GetComponent<Rigidbody2D> ().velocity = Vector3.zero;
-			fraxinelle.GetComponent<Collider2D> ().enabled = false;
-			fraxinelle.GetComponent<Animator> ().Play ("DyingFrax");
-			this.GetComponent<WoodScriptBoss>().woodCount += 1;
-		}
-	}
 
+	void BurnWood()
+	{
+		fraxinelle.GetComponent<Collider2D> ().enabled = false;
+		fraxinelleScript.canMove = false;
+		fraxinelleScript.enabled = false;
+		fraxinelle.GetComponent<Rigidbody2D> ().velocity = Vector3.zero;
+		fraxinelle.GetComponent<Animator> ().Play ("DyingFrax");
+		this.GetComponent<WoodScriptBoss>().woodCount += 1;
+	}
 	IEnumerator DestroyWood()
 	{
         FMODUnity.RuntimeManager.PlayOneShot("event:/LVL1/SFX/ronce_feu");
