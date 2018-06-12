@@ -70,7 +70,7 @@ public class BossCamera : MonoBehaviour {
 		cameraScript.XMinEnabled = true;
 		cameraScript.YMaxEnabled = true;
 		cameraScript.YMinEnabled = true;
-		cameraScript.XMaxValue = 625f;
+		cameraScript.XMaxValue = 675f;
 		cameraScript.YMaxValue = -900f;
 		cameraScript.YMinValue = -900f;
 	}

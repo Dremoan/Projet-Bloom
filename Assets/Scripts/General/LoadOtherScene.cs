@@ -8,7 +8,7 @@ public class LoadOtherScene : MonoBehaviour {
 	public GameObject clouds1;
 	public GameObject clouds2;
 	public Animator anim;
-
+	public string sceneName;
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
@@ -18,5 +18,10 @@ public class LoadOtherScene : MonoBehaviour {
 			clouds2.SetActive (false);
 			anim.Play ("BecomingBlack");
 		}
+	}
+
+	void LoadScene()
+	{
+		SceneManager.LoadScene (sceneName);
 	}
 }

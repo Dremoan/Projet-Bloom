@@ -48,11 +48,13 @@ public class WoodScript : MonoBehaviour {
 		fraxinelleScript.enabled = false;
 		fraxinelle.GetComponent<Rigidbody2D> ().velocity = Vector3.zero;
 		fraxinelle.GetComponent<Collider2D> ().enabled = false;
+		fraxinelle.GetComponent<SpriteRenderer> ().enabled = false;
         FMODUnity.RuntimeManager.PlayOneShot("event:/LVL1/SFX/fleur_mort");
 		fraxinelle.GetComponent<Animator> ().Play ("DyingFrax");
         FMODUnity.RuntimeManager.PlayOneShot("event:/LVL1/SFX/ronce_feu");
 		animWood.SetBool ("Burnt", true);
-		yield return new WaitForSeconds (3f);
+		yield return new WaitForSeconds (2f);
+		fraxinelle.SetActive (false);
 		this.gameObject.SetActive (false);
 	}
 }

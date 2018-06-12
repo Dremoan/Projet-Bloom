@@ -6,17 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/RPGTALK/RPGTALK/Demo/Menu.unity
-    guid: 9b0b9c834cfab77458953de68f2a6e3d
-  - enabled: 1
-    path: Assets/Scenes/Sous-sol.unity
-    guid: 383f9650f76eeb4479f3d5067498024b
+    path: Assets/Scenes/Menu.unity
+    guid: 7c48abd4ba2d9bf4c809cd16fd0ede22
   - enabled: 1
     path: Assets/Scenes/Tutoriel.unity
     guid: 570d05981a0d8f4499a6f70ec0298b47
   - enabled: 1
     path: Assets/Scenes/VillageBegin.unity
-    guid: 2fb792b61adb23840aeac77fafd8244c
+    guid: 302ac843e4c3a6e47bfed2a410ad8f6e
+  - enabled: 1
+    path: Assets/Scenes/TransitionSousSol.unity
+    guid: 72126af6a0b79d84f81ca545adb0849f
+  - enabled: 1
+    path: Assets/Scenes/Sous-sol.unity
+    guid: 383f9650f76eeb4479f3d5067498024b
   - enabled: 1
     path: Assets/Scenes/Niveau1.unity
     guid: 368ddffb60fb2bd4a85b1fb051dc03f0
@@ -25,4 +28,4 @@ EditorBuildSettings:
     guid: 1e06df3ae9a53a94b85aa98358407401
   - enabled: 1
     path: Assets/Scenes/VillageEnd.unity
-    guid: f381f7c77de12e848a7f281158bb89e8
+    guid: 37c4aae07c837a74c96e5bd546a72561

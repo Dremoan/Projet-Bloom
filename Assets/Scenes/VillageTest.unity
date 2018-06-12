@@ -31132,7 +31132,7 @@ SpriteRenderer:
   m_Size: {x: 13.16, y: 10.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &1540866866
 Transform:
@@ -48286,6 +48286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Village
+  animBlackScreen: {fileID: 0}
 --- !u!4 &2068845833
 Transform:
   m_ObjectHideFlags: 0

@@ -1,0 +1,10 @@
+Fleur : Eh bien ! On y est !
+Cactus : Après tout ce qu'on a traversé, on a finalement réussi...
+Fleur : On n'aurait jamais réussi sans ton aide, merci !
+Vieillard : Grâce à toi jeune pousse, nous allons enfin retrouver notre belle région.
+Jeune : Merci !
+Femme : Merci beaucoup !
+Cactus : Je vous en prie, ne me remerciez pas, nous avons réalisé cela ensemble !
+Fleur : Quelle aventure...
+Vieillard : Jamais nous ne t'oublierons p'tit gars !
+Foule : MERCI !

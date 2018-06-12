@@ -33,6 +33,7 @@ public class WoodScriptBoss : MonoBehaviour {
 
 	void BurnWood()
 	{
+		fraxinelle.GetComponent<SpriteRenderer> ().enabled = false;
 		fraxinelle.GetComponent<Collider2D> ().enabled = false;
 		fraxinelleScript.canMove = false;
 		fraxinelleScript.enabled = false;

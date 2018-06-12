@@ -1,0 +1,6 @@
+Vieillard : Bonjour jeune pousse, qu'est-ce qui t'amène par ici ?
+Cactus : Votre village a besoin d'aide, c'est pour ça que je suis là !
+Vieillard : Ho ho ! Eh bien, sois prudent tout de même !
+Vieillard : Si tu souhaites continuer dans cette direction, prend garde !
+Vieillard : Les dangers qui t'attendent au-delà de cette caverne ne sont pas à prendre à la légère !
+Cactus : On fera attention, c'est promis !

@@ -18,7 +18,6 @@ public class DalleSecrète : MonoBehaviour {
 
 	void Update()
 	{
-		Debug.Log (active);
 		if(active)
 		{
 			animInterrupteur.SetBool ("Active", true);
